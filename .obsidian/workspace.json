@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "de4e7b797b89d8a0",
+        "id": "d1aca405da482e6a",
         "type": "tabs",
         "children": [
           {
-            "id": "41fb97a82d2a1698",
+            "id": "2fc13864a94093d6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Market Analysis/Templates/Market Analysis Template.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Market Analysis Template"
+              "title": "New tab"
             }
           }
         ]
@@ -172,9 +168,19 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "0e9488e548701bf2",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {},
+              "icon": "lucide-info",
+              "title": "File properties"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -183,6 +189,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian42-brat:BRAT": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "audio-recorder:Start/stop recording": false,
@@ -196,10 +203,10 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "41fb97a82d2a1698",
+  "active": "a93e9bfbbe1f9d98",
   "lastOpenFiles": [
-    "Market Analysis/Templates/Market-Analysis-2026-04-04.md",
     "Market Analysis/Templates/Market Analysis Template.md",
+    "Market Analysis/Templates/Market-Analysis-2026-04-04.md",
     "Market Analysis/Templates/Market Analysis App.html",
     "Market Analysis/Templates/Analyse No 33822a7c866a8049b991c0a1e671ddb2.md",
     "Market Analysis/Templates/Analyse No 33822a7c866a8049b991c0a1e671ddb2.html",
