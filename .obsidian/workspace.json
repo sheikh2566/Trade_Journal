@@ -1,0 +1,241 @@
+{
+  "main": {
+    "id": "e063607c51f7d696",
+    "type": "split",
+    "children": [
+      {
+        "id": "de4e7b797b89d8a0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "41fb97a82d2a1698",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Market Analysis/Templates/Market Analysis Template.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Market Analysis Template"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b1e36e7ee0788a02",
+    "type": "split",
+    "children": [
+      {
+        "id": "fde7940eb0993ebc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e47ebd2780a18436",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "06392238075dc1e3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "a93e9bfbbe1f9d98",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d99bc88f5a222a60",
+    "type": "split",
+    "children": [
+      {
+        "id": "b57285548e1a6530",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "392420d6b55d3586",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "8adc8570b890b9ee",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "0918eeb424321006",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "ec96c94573557de9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "ec7ce9eca680523a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "0a78d5a8328cf6a7",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "audio-recorder:Start/stop recording": false,
+      "daily-notes:Open today's daily note": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "workspaces:Manage workspace layouts": false,
+      "obsidian-git:Open Git source control": false,
+      "templater-obsidian:Templater": false,
+      "journalit:Open Journalit": false
+    }
+  },
+  "active": "41fb97a82d2a1698",
+  "lastOpenFiles": [
+    "Market Analysis/Templates/Market-Analysis-2026-04-04.md",
+    "Market Analysis/Templates/Market Analysis Template.md",
+    "Market Analysis/Templates/Market Analysis App.html",
+    "Market Analysis/Templates/Analyse No 33822a7c866a8049b991c0a1e671ddb2.md",
+    "Market Analysis/Templates/Analyse No 33822a7c866a8049b991c0a1e671ddb2.html",
+    "!Journalit/2026/Q2/04/W14/media/UNKNOWN-040426-T1/UNKNOWN-T1-1775322892544.png",
+    "!Journalit/2026/Q2/04/W14/media/UNKNOWN-040426-T1",
+    "!Journalit/2026/Q2/04/W14/media",
+    "!Journalit/2026/Q2/04/W14/trades",
+    "!Journalit/2026/Q2/04/W14",
+    "!Journalit/2026/Q2/04",
+    "!Journalit/2026/Q2",
+    "!Journalit/2026",
+    "!Journalit",
+    "Market Analysis/Templates/Market Analysis Template V2.md",
+    "Market Analysis/Chart Placeholder.png.md",
+    "Market Analysis/Untitled.md",
+    "Market Analysis/2026-04-04.md",
+    "Untitled.md",
+    "{{date}}.md",
+    "Market Analysis/Trading Analysis Template.md",
+    "Journalit/Trading Analysis Template.md",
+    "Market Analysis/date.md",
+    "2026/04/02.md",
+    "Insert BTC Chart.md",
+    "2026/04/04.md",
+    "Insert HeatMap Screenshot.md",
+    "Journalit/2026/2026-Review.md",
+    "Journalit/2026/Q2/Q2-Review.md",
+    "Journalit/2026/Q1/02/W06/trades/BTC-030226-T1.md",
+    "Journalit/2026/Q1/01/W05/DRC-260126.md",
+    "Journalit/2026/Q1/01/01-Review.md",
+    "Journalit/2026/Q1/01/W05/trades/BTC-280126-T1.md",
+    "Market Analysis/Analyse No .md",
+    "Long Term Analysis.md",
+    "Insert Market Map Screenshot.md",
+    "1hero-dashboard-new-1600.avif",
+    "Insert Chart Screenshot.md",
+    "Untitled.canvas"
+  ]
+}

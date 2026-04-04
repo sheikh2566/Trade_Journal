@@ -1,0 +1,251 @@
+{
+  "recentItems": [
+    {
+      "type": "file",
+      "title": "Market Analysis Template",
+      "path": "Market Analysis/Templates/Market Analysis Template.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-04T17:31:55.317Z"
+    },
+    {
+      "type": "file",
+      "title": "Market-Analysis-2026-04-04",
+      "path": "Market Analysis/Templates/Market-Analysis-2026-04-04.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-04T17:31:48.937Z"
+    },
+    {
+      "type": "file",
+      "title": "Analyse No 33822a7c866a8049b991c0a1e671ddb2",
+      "path": "Market Analysis/Templates/Analyse No 33822a7c866a8049b991c0a1e671ddb2.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-04T17:19:52.016Z"
+    },
+    {
+      "type": "view",
+      "title": "Layout Builder",
+      "viewType": "journalit-template-builder-view",
+      "icon": "lucide-blocks",
+      "openedAt": "2026-04-04T17:05:48.599Z"
+    },
+    {
+      "type": "file",
+      "title": "Market Analysis Template V2",
+      "path": "Market Analysis/Templates/Market Analysis Template V2.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-04T16:45:03.571Z"
+    },
+    {
+      "type": "file",
+      "title": "Chart Placeholder.png",
+      "path": "Market Analysis/Chart Placeholder.png.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-04T16:44:59.965Z"
+    },
+    {
+      "type": "file",
+      "title": "Untitled",
+      "path": "Market Analysis/Untitled.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-04T16:42:08.086Z"
+    },
+    {
+      "type": "file",
+      "title": "Trading Analysis Template",
+      "path": "Market Analysis/Templates/Trading Analysis Template.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-04T16:31:30.573Z"
+    },
+    {
+      "type": "file",
+      "title": "Recording 20260404175152",
+      "path": "Recording 20260404175152.m4a",
+      "icon": "file-text",
+      "openedAt": "2026-04-04T12:51:52.886Z"
+    },
+    {
+      "type": "file",
+      "title": "2026-04-04",
+      "path": "Market Analysis/2026-04-04.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-04T12:38:52.988Z"
+    },
+    {
+      "type": "file",
+      "title": "Untitled",
+      "path": "Untitled.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-04T12:36:15.475Z"
+    },
+    {
+      "type": "file",
+      "title": "{{date}}",
+      "path": "{{date}}.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-04T12:34:41.161Z"
+    },
+    {
+      "type": "file",
+      "title": "Trading Analysis Template",
+      "path": "Market Analysis/Trading Analysis Template.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-04T12:33:42.028Z"
+    },
+    {
+      "type": "file",
+      "title": "Trading Analysis Template",
+      "path": "Journalit/Trading Analysis Template.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-04T12:31:05.149Z"
+    },
+    {
+      "type": "file",
+      "title": "date",
+      "path": "Market Analysis/date.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-04T12:20:39.178Z"
+    },
+    {
+      "type": "file",
+      "title": "02",
+      "path": "2026/04/02.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-04T12:20:32.971Z"
+    },
+    {
+      "type": "view",
+      "title": "Account Dashboard",
+      "viewType": "account-dashboard",
+      "icon": "users",
+      "openedAt": "2026-04-04T12:20:04.020Z"
+    },
+    {
+      "type": "file",
+      "title": "Insert BTC Chart",
+      "path": "Insert BTC Chart.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-04T12:12:23.920Z"
+    },
+    {
+      "type": "file",
+      "title": "04",
+      "path": "2026/04/04.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-04T12:11:07.077Z"
+    },
+    {
+      "type": "file",
+      "title": "Insert HeatMap Screenshot",
+      "path": "Insert HeatMap Screenshot.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-04T12:06:19.786Z"
+    }
+  ],
+  "gettingStartedDismissed": true,
+  "gettingStartedOpenedTradeLog": true,
+  "gettingStartedOpenedLayoutBuilder": true,
+  "lastUsedFilters": {
+    "dateRange": [
+      null,
+      null
+    ],
+    "accounts": [],
+    "tickers": [],
+    "setups": [],
+    "tags": [],
+    "mistakes": [],
+    "tradeTypes": [],
+    "statuses": [],
+    "customFieldFilters": {}
+  },
+  "viewFilters": {
+    "dashboard": {
+      "dateRange": [
+        null,
+        null
+      ],
+      "accounts": [],
+      "tickers": [],
+      "setups": [],
+      "tags": [],
+      "mistakes": [],
+      "tradeTypes": [],
+      "statuses": [],
+      "customFieldFilters": {}
+    },
+    "tradelog": {
+      "dateRange": [
+        null,
+        null
+      ],
+      "viewLevel": "trades",
+      "tradeTypes": [],
+      "statuses": [],
+      "accounts": [],
+      "tickers": [],
+      "setups": [],
+      "tags": [],
+      "mistakes": []
+    },
+    "reviews": {
+      "accounts": [],
+      "tickers": [],
+      "setups": [],
+      "tags": [],
+      "tradeTypes": [],
+      "statuses": []
+    }
+  },
+  "tradeLog": {
+    "columnVisibility": {
+      "select": false,
+      "image": true,
+      "account": true,
+      "ticker": true,
+      "status": true,
+      "pnl": true,
+      "direction": true,
+      "setups": true,
+      "mistakes": true,
+      "tags": true,
+      "date": true,
+      "reviewed": true,
+      "duration": false,
+      "positionSize": false,
+      "expirationDate": false,
+      "daysToExpiry": false,
+      "thesis": false
+    },
+    "columnOrder": [
+      "select",
+      "image",
+      "account",
+      "ticker",
+      "status",
+      "pnl",
+      "direction",
+      "setups",
+      "mistakes",
+      "tags",
+      "date",
+      "reviewed",
+      "duration",
+      "positionSize",
+      "expirationDate",
+      "daysToExpiry",
+      "thesis"
+    ],
+    "columnWidths": {}
+  },
+  "selectedPeriod": "lifetime",
+  "dashboardActiveLayout": "Default",
+  "homeActiveLayout": "Default",
+  "lastFuturesSymbol": "ES",
+  "lastForexSymbol": "EURUSD",
+  "lastAssetType": "crypto",
+  "selectedHomeAccounts": [
+    "BitFunded",
+    "Sheikh"
+  ],
+  "homeAccountFilterSelectAllActive": true
+}
