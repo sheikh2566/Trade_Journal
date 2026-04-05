@@ -1225,5 +1225,13 @@
         "color": "gray"
       }
     ]
+  },
+  "localMeta": {
+    "onboarding": {
+      "version": 1,
+      "completed": true,
+      "skipped": false,
+      "completedAt": 1775382203129
+    }
   }
 }
