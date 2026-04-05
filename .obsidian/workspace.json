@@ -26,9 +26,21 @@
               "icon": "users",
               "title": "Account Dashboard"
             }
+          },
+          {
+            "id": "c594f2cc7e1d7030",
+            "type": "leaf",
+            "state": {
+              "type": "journalit-account-page-view",
+              "state": {
+                "accountName": "Sheikh"
+              },
+              "icon": "user-circle",
+              "title": "Account: Sheikh"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -193,7 +205,7 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "e64c3720cee50a7d",
+  "active": "c594f2cc7e1d7030",
   "lastOpenFiles": [
     "Market Analysis/Templates/Market Analysis Template.md"
   ]
