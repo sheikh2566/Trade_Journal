@@ -257,7 +257,7 @@
     ],
     "recurringGoals": [],
     "autoCreateOnFirstTrade": true,
-    "autoCreateDRCOnNavigation": true
+    "autoCreateDRCOnNavigation": false
   },
   "dashboard": {
     "layouts": {

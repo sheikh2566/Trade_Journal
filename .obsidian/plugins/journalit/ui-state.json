@@ -1,6 +1,20 @@
 {
   "recentItems": [
     {
+      "type": "file",
+      "title": "Market Analysis Template",
+      "path": "Market Analysis/Templates/Market Analysis Template.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-05T19:02:08.790Z"
+    },
+    {
+      "type": "file",
+      "title": "README",
+      "path": "README.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-05T19:02:00.799Z"
+    },
+    {
       "type": "view",
       "title": "Trade Log",
       "viewType": "journalit-trade-log-view",
@@ -55,13 +69,6 @@
       "viewType": "journalit-account-page-view",
       "icon": "user",
       "openedAt": "2026-04-05T10:01:31.489Z"
-    },
-    {
-      "type": "file",
-      "title": "Market Analysis Template",
-      "path": "Market Analysis/Templates/Market Analysis Template.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-05T09:59:55.569Z"
     },
     {
       "type": "file",
@@ -132,13 +139,6 @@
       "path": "Recording 20260404175152.m4a",
       "icon": "file-text",
       "openedAt": "2026-04-04T12:51:52.886Z"
-    },
-    {
-      "type": "file",
-      "title": "2026-04-04",
-      "path": "Market Analysis/2026-04-04.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-04T12:38:52.988Z"
     }
   ],
   "gettingStartedDismissed": true,
