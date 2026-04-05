@@ -16,16 +16,6 @@
               "icon": "circle-dot-dashed",
               "title": "Journalit"
             }
-          },
-          {
-            "id": "bbb32ec4333b2f6d",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
           }
         ]
       }
@@ -202,15 +192,16 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "17c11d40a2467c8f",
+  "active": "c3038292cd79c1d3",
   "lastOpenFiles": [
+    "!Journalit/2026/Q2/04/W14/W14-Review.md",
+    "!Journalit/2026/Q2/04/W14/trades/ETH-010426-T1.md",
     "README.md",
     "!Journalit/Todo List.md",
     "!Journalit/2026/Q2/04/W14/trades/BTC-010426-T1.md",
     "!Journalit/2026/2026-Review.md",
     "!Journalit/2026/Q2/Q2-Review.md",
     "!Journalit/2026/Q2/04/04-Review.md",
-    "!Journalit/2026/Q2/04/W14/W14-Review.md",
     "!Journalit/2026/Q2/04/W14/DRC-010426.md",
     "!Journalit/2026/Q2/04/W14/trades",
     "!Journalit/2026/Q2/04/W14",
