@@ -1,7 +1,7 @@
 {
   "general": {
     "currency": "USD",
-    "displayName": "",
+    "displayName": "A2_Funded",
     "homeStartupBehavior": "always",
     "onboardingCompleted": false,
     "journalFolderPath": ""
@@ -257,7 +257,7 @@
     ],
     "recurringGoals": [],
     "autoCreateOnFirstTrade": true,
-    "autoCreateDRCOnNavigation": true
+    "autoCreateDRCOnNavigation": false
   },
   "dashboard": {
     "layouts": {

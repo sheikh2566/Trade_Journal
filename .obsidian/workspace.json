@@ -16,6 +16,16 @@
               "icon": "circle-dot-dashed",
               "title": "Journalit"
             }
+          },
+          {
+            "id": "bbb32ec4333b2f6d",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
         ]
       }
@@ -74,7 +84,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "20c6a57e5d2e7e8c",
@@ -157,8 +168,19 @@
               "icon": "lucide-list",
               "title": "Outline"
             }
+          },
+          {
+            "id": "17c11d40a2467c8f",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -183,6 +205,18 @@
   },
   "active": "c3038292cd79c1d3",
   "lastOpenFiles": [
+    "!Journalit/2026/Q2/04/W14/trades/BTC-010426-T1.md",
+    "!Journalit/2026/2026-Review.md",
+    "!Journalit/2026/Q2/Q2-Review.md",
+    "!Journalit/2026/Q2/04/04-Review.md",
+    "!Journalit/2026/Q2/04/W14/W14-Review.md",
+    "!Journalit/2026/Q2/04/W14/DRC-010426.md",
+    "!Journalit/2026/Q2/04/W14/trades",
+    "!Journalit/2026/Q2/04/W14",
+    "!Journalit/2026/Q2/04",
+    "!Journalit/2026/Q2",
+    "!Journalit/2026",
+    "!Journalit",
     "Market Analysis/Templates/Market Analysis Template.md"
   ]
 }
