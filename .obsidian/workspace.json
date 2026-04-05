@@ -84,7 +84,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "20c6a57e5d2e7e8c",
@@ -201,7 +202,7 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "17c11d40a2467c8f",
+  "active": "c3038292cd79c1d3",
   "lastOpenFiles": [
     "!Journalit/Todo List.md",
     "!Journalit/2026/Q2/04/W14/trades/BTC-010426-T1.md",
