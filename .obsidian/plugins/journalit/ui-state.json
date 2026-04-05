@@ -2,17 +2,38 @@
   "recentItems": [
     {
       "type": "view",
+      "title": "Account Dashboard",
+      "viewType": "account-dashboard",
+      "icon": "users",
+      "openedAt": "2026-04-05T10:04:01.225Z"
+    },
+    {
+      "type": "view",
+      "title": "Dashboard",
+      "viewType": "journalit-dashboard-view",
+      "icon": "grip",
+      "openedAt": "2026-04-05T10:03:54.599Z"
+    },
+    {
+      "type": "view",
+      "title": "Account: BitFunded",
+      "viewType": "journalit-account-page-view",
+      "icon": "user",
+      "openedAt": "2026-04-05T10:03:35.434Z"
+    },
+    {
+      "type": "view",
+      "title": "Trade Log",
+      "viewType": "journalit-trade-log-view",
+      "icon": "folder-tree",
+      "openedAt": "2026-04-05T10:03:30.272Z"
+    },
+    {
+      "type": "view",
       "title": "Account: Sheikh",
       "viewType": "journalit-account-page-view",
       "icon": "user",
       "openedAt": "2026-04-05T10:01:31.489Z"
-    },
-    {
-      "type": "view",
-      "title": "Account Dashboard",
-      "viewType": "account-dashboard",
-      "icon": "users",
-      "openedAt": "2026-04-05T10:01:23.063Z"
     },
     {
       "type": "file",
@@ -27,13 +48,6 @@
       "path": "Journalit/2026/Q2/04/W14/trades/BTC-010426-T1.md",
       "icon": "file-text",
       "openedAt": "2026-04-05T09:43:31.644Z"
-    },
-    {
-      "type": "view",
-      "title": "Trade Log",
-      "viewType": "journalit-trade-log-view",
-      "icon": "folder-tree",
-      "openedAt": "2026-04-05T09:43:28.712Z"
     },
     {
       "type": "view",
@@ -125,20 +139,6 @@
       "path": "Market Analysis/Trading Analysis Template.md",
       "icon": "file-text",
       "openedAt": "2026-04-04T12:33:42.028Z"
-    },
-    {
-      "type": "file",
-      "title": "Trading Analysis Template",
-      "path": "Journalit/Trading Analysis Template.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-04T12:31:05.149Z"
-    },
-    {
-      "type": "file",
-      "title": "date",
-      "path": "Market Analysis/date.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-04T12:20:39.178Z"
     }
   ],
   "gettingStartedDismissed": true,
@@ -247,5 +247,5 @@
     "BitFunded",
     "Sheikh"
   ],
-  "homeAccountFilterSelectAllActive": true
+  "homeAccountFilterSelectAllActive": false
 }

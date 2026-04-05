@@ -16,31 +16,8 @@
               "icon": "circle-dot-dashed",
               "title": "Journalit"
             }
-          },
-          {
-            "id": "e64c3720cee50a7d",
-            "type": "leaf",
-            "state": {
-              "type": "account-dashboard",
-              "state": {},
-              "icon": "users",
-              "title": "Account Dashboard"
-            }
-          },
-          {
-            "id": "c594f2cc7e1d7030",
-            "type": "leaf",
-            "state": {
-              "type": "journalit-account-page-view",
-              "state": {
-                "accountName": "Sheikh"
-              },
-              "icon": "user-circle",
-              "title": "Account: Sheikh"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -97,8 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "20c6a57e5d2e7e8c",
@@ -205,7 +181,7 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "c594f2cc7e1d7030",
+  "active": "c3038292cd79c1d3",
   "lastOpenFiles": [
     "Market Analysis/Templates/Market Analysis Template.md"
   ]

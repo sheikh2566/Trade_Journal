@@ -1071,22 +1071,6 @@
       "archived"
     ],
     "accountMetadata": {
-      "Sheikh": {
-        "name": "Sheikh",
-        "accountType": "Personal",
-        "createdDate": "2025-12-31T19:00:00.000Z",
-        "initialBalance": 325,
-        "drawdownType": "none",
-        "drawdownAmount": 0,
-        "hasProfitTarget": false,
-        "profitTarget": 100,
-        "profitTargetType": "absolute",
-        "monthlyCost": 0,
-        "manualTransactions": [],
-        "manualDrawdownSnapshots": [],
-        "lastUpdated": "2026-03-31T08:06:48.041Z",
-        "currency": "USD"
-      },
       "BitFunded": {
         "name": "BitFunded",
         "accountType": "Funded",
@@ -1184,7 +1168,6 @@
     ],
     "account_type": [
       "Demo",
-      "Personal",
       "Funded",
       "Archived"
     ],
