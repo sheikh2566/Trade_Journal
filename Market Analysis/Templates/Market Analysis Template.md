@@ -17,20 +17,21 @@ Confidence: ⭐⭐⭐
 
 ## <span style="background: rgba(74, 222, 128, 0.1); border: 1px solid #4ade80; color: #4ade80; padding: 4px 12px; border-radius: 20px; font-size: 0.9em; display: inline-flex; align-items: center; gap: 6px;">📈 Technical Analysis</span>
 
-### Main Coin
+### BTC:
 
 
-1. **BTC:**
-
-
-2. **USDT.D:**
+### USDT:.D
 
 
 ---
 
 ## <span style="background: rgba(96, 165, 250, 0.1); border: 1px solid #60a5fa; color: #60a5fa; padding: 4px 12px; border-radius: 20px; font-size: 0.9em; display: inline-flex; align-items: center; gap: 6px;">📰 Fundamental Analysis</span>
 
-1. **Economy Data:**
+### CME Gap Chart:
+
+
+### Economy Data:**
+ 
 
 
 ---
@@ -44,6 +45,12 @@ Confidence: ⭐⭐⭐
 
 
 ### Funding Rates:
+
+
+### Super-Chart:
+
+
+### Legend:
 
 
 ---
