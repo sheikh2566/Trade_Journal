@@ -2,6 +2,13 @@
   "recentItems": [
     {
       "type": "file",
+      "title": "Pasted image 20260406230022",
+      "path": "Pasted image 20260406230022.png",
+      "icon": "file-text",
+      "openedAt": "2026-04-06T18:03:12.054Z"
+    },
+    {
+      "type": "file",
       "title": "Market Analysis Template",
       "path": "Market Analysis/Templates/Market Analysis Template.md",
       "icon": "file-text",
@@ -132,13 +139,6 @@
       "path": "Market Analysis/Untitled.md",
       "icon": "file-text",
       "openedAt": "2026-04-04T16:42:08.086Z"
-    },
-    {
-      "type": "file",
-      "title": "Trading Analysis Template",
-      "path": "Market Analysis/Templates/Trading Analysis Template.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-04T16:31:30.573Z"
     }
   ],
   "gettingStartedDismissed": true,
