@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5a820935727daa3d",
+        "id": "3aaf7c0fc79c18a9",
         "type": "tabs",
         "children": [
           {
-            "id": "2c413f7b5355d5ed",
+            "id": "46e908b6d35fa5a9",
             "type": "leaf",
             "state": {
               "type": "journalit-home-view",
@@ -74,7 +74,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "20c6a57e5d2e7e8c",
@@ -191,7 +192,7 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "17c11d40a2467c8f",
+  "active": "46e908b6d35fa5a9",
   "lastOpenFiles": [
     "Market Analysis/6th April 2026.md",
     "Market Analysis/Attachments Images/_BTC Liquidation Heatmap(24 hour)-2026-04-06_23_09_07.png",
