@@ -74,7 +74,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "20c6a57e5d2e7e8c",
@@ -191,7 +192,7 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "2c413f7b5355d5ed",
+  "active": "17c11d40a2467c8f",
   "lastOpenFiles": [
     "README.md",
     "!Journalit/2026/Q2/04/W14/W14-Review.md",
