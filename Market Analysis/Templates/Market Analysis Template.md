@@ -19,8 +19,7 @@ Confidence: ⭐⭐⭐
 
 ### BTC:
 
-
-### USDT:.D
+### USDT.D:
 
 
 ---
@@ -29,10 +28,8 @@ Confidence: ⭐⭐⭐
 
 ### CME Gap Chart:
 
-
-### Economy Data:**
+### Economy Data:
  
-
 
 ---
 
@@ -40,15 +37,11 @@ Confidence: ⭐⭐⭐
 
 ### Liquidation Heatmap:
 
-
 ### Liquidations Map:
-
 
 ### Funding Rates:
 
-
 ### Super-Chart:
-
 
 ### Legend:
 

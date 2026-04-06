@@ -1,6 +1,13 @@
 {
   "recentItems": [
     {
+      "type": "file",
+      "title": "Market Analysis Template",
+      "path": "Market Analysis/Templates/Market Analysis Template.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-06T18:14:38.078Z"
+    },
+    {
       "type": "view",
       "title": "Account Dashboard",
       "viewType": "account-dashboard",
@@ -20,13 +27,6 @@
       "path": "Pasted image 20260406230022.png",
       "icon": "file-text",
       "openedAt": "2026-04-06T18:03:12.054Z"
-    },
-    {
-      "type": "file",
-      "title": "Market Analysis Template",
-      "path": "Market Analysis/Templates/Market Analysis Template.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-06T17:52:02.635Z"
     },
     {
       "type": "file",
