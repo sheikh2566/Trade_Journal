@@ -37,7 +37,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -191,8 +191,9 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "17c11d40a2467c8f",
+  "active": "e0102f65c1944fde",
   "lastOpenFiles": [
+    "Market Analysis/Attachments Images",
     "Market Analysis/Templates/Market Analysis Template.md",
     "Market Analysis/6th April 2026.md",
     "Pasted image 20260406231130.png",
