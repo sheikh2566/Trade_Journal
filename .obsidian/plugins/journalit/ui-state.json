@@ -1,6 +1,20 @@
 {
   "recentItems": [
     {
+      "type": "view",
+      "title": "Account Dashboard",
+      "viewType": "account-dashboard",
+      "icon": "users",
+      "openedAt": "2026-04-06T18:11:55.307Z"
+    },
+    {
+      "type": "file",
+      "title": "Untitled",
+      "path": "Market Analysis/Untitled.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-06T18:03:54.495Z"
+    },
+    {
       "type": "file",
       "title": "Pasted image 20260406230022",
       "path": "Pasted image 20260406230022.png",
@@ -34,13 +48,6 @@
       "viewType": "journalit-dashboard-view",
       "icon": "grip",
       "openedAt": "2026-04-06T17:07:26.970Z"
-    },
-    {
-      "type": "view",
-      "title": "Account Dashboard",
-      "viewType": "account-dashboard",
-      "icon": "users",
-      "openedAt": "2026-04-06T17:07:22.688Z"
     },
     {
       "type": "view",
@@ -132,13 +139,6 @@
       "path": "Market Analysis/Chart Placeholder.png.md",
       "icon": "file-text",
       "openedAt": "2026-04-04T16:44:59.965Z"
-    },
-    {
-      "type": "file",
-      "title": "Untitled",
-      "path": "Market Analysis/Untitled.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-04T16:42:08.086Z"
     }
   ],
   "gettingStartedDismissed": true,
