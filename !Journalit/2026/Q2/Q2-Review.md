@@ -3,7 +3,11 @@ type: quarterly-review
 date: 2026-04-01
 quarter: 2
 year: 2026
-tags: ["periodic/quarterly","q2-review","h1-review","first-half"]
+tags:
+  - periodic/quarterly
+  - q2-review
+  - h1-review
+  - first-half
 templateId: builtin-quarterly-standard
 templateVersion: 1
 ---

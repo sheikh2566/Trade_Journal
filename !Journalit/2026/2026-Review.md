@@ -2,7 +2,10 @@
 type: yearly-review
 date: 2026-04-01
 year: 2026
-tags: ["periodic/yearly","year-2026-review","decade-2020s"]
+tags:
+  - periodic/yearly
+  - year-2026-review
+  - decade-2020s
 templateId: builtin-yearly-standard
 templateVersion: 1
 ---

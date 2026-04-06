@@ -1173,23 +1173,33 @@
     ],
     "setup": [
       "Breakout Setup",
-      "Reversal Pattern"
+      "Reversal Strategy",
+      "3T's",
+      "CME Gap",
+      "SMC"
     ],
     "mistake": [
-      "Early Entry",
-      "Poor Position Sizing"
+      "Wrong Entry",
+      "Poor Position Sizing",
+      "Wrong Exit",
+      "News Influence",
+      "Lack of Patience",
+      "Emotional Trading",
+      "Forgotten Trade Plan",
+      "Lack of Research",
+      "Overconfidence",
+      "Revenge Trading",
+      "Risk Management Error",
+      "Slippage"
     ],
     "tag": [
       "Swing Trade",
-      "Day Trade",
-      "Momentum",
-      "Reversal",
-      "Earnings"
+      "Day Trade"
     ],
     "event": [
       {
         "name": "FOMC Meeting",
-        "color": "gray"
+        "color": "red"
       },
       {
         "name": "Earnings Announcement",
@@ -1197,11 +1207,11 @@
       },
       {
         "name": "Economic Data Release",
-        "color": "gray"
+        "color": "orange"
       },
       {
         "name": "Fed Speech",
-        "color": "gray"
+        "color": "red"
       },
       {
         "name": "Market Holiday",
