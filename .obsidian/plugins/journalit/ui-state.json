@@ -2,10 +2,17 @@
   "recentItems": [
     {
       "type": "file",
+      "title": "Final Trade Calc",
+      "path": "Final Trade Calc.html",
+      "icon": "file-text",
+      "openedAt": "2026-04-07T16:54:25.038Z"
+    },
+    {
+      "type": "file",
       "title": "6th April 2026",
       "path": "Market Analysis/6th April 2026.md",
       "icon": "file-text",
-      "openedAt": "2026-04-07T08:47:14.865Z"
+      "openedAt": "2026-04-07T16:48:31.998Z"
     },
     {
       "type": "view",
@@ -132,13 +139,6 @@
       "viewType": "journalit-template-builder-view",
       "icon": "lucide-blocks",
       "openedAt": "2026-04-04T17:05:48.599Z"
-    },
-    {
-      "type": "file",
-      "title": "Market Analysis Template V2",
-      "path": "Market Analysis/Templates/Market Analysis Template V2.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-04T16:45:03.571Z"
     }
   ],
   "gettingStartedDismissed": true,
