@@ -2,6 +2,13 @@
   "recentItems": [
     {
       "type": "file",
+      "title": "6th April 2026",
+      "path": "Market Analysis/6th April 2026.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-07T17:38:01.489Z"
+    },
+    {
+      "type": "file",
       "title": "Final Trade Calc",
       "path": "Final Trade Calc.html",
       "icon": "file-text",
@@ -13,13 +20,6 @@
       "viewType": "journalit-trade-log-view",
       "icon": "folder-tree",
       "openedAt": "2026-04-07T17:36:59.699Z"
-    },
-    {
-      "type": "file",
-      "title": "6th April 2026",
-      "path": "Market Analysis/6th April 2026.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-07T17:33:32.943Z"
     },
     {
       "type": "view",

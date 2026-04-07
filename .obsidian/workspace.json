@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "63cd6ef7e83be94e",
+        "id": "901b5c0694d33d70",
         "type": "tabs",
         "children": [
           {
-            "id": "0d6ec7064764db1e",
+            "id": "766f8f95877c9127",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -193,10 +193,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "17c11d40a2467c8f",
+  "active": "766f8f95877c9127",
   "lastOpenFiles": [
-    "Final Trade Calc.html",
     "Market Analysis/6th April 2026.md",
+    "Final Trade Calc.html",
     "Market Analysis/Attachments Images/Recording 20260407221704.m4a",
     "Market Analysis/Attachments Images/_BTC Liquidation Heatmap(24 hour)-2026-04-06_23_09_07.png",
     "Market Analysis/Attachments Images/Pasted image 20260406231130.png",
