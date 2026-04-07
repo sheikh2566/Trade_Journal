@@ -1,6 +1,6 @@
 {
   "promptDelete": false,
-  "showUnsupportedFiles": true,
+  "showUnsupportedFiles": false,
   "trashOption": "local",
   "newFileLocation": "folder",
   "newFileFolderPath": "Market Analysis",

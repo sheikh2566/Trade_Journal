@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "42fffdbbe10e63ab",
+        "id": "63cd6ef7e83be94e",
         "type": "tabs",
         "children": [
           {
-            "id": "27e8b3bc74f533dc",
+            "id": "0d6ec7064764db1e",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -85,24 +85,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0831dadfcbbd0727",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks"
-            }
-          },
-          {
             "id": "fef842e6562a52e0",
             "type": "leaf",
             "state": {
@@ -167,9 +149,27 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "99986b88d19b821d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -189,13 +189,15 @@
       "templater-obsidian:Templater": false,
       "obsidian42-brat:BRAT": false,
       "journalit:Open Journalit": false,
-      "publish:Publish changes...": false
+      "publish:Publish changes...": false,
+      "bases:Create new base": false
     }
   },
-  "active": "e0102f65c1944fde",
+  "active": "17c11d40a2467c8f",
   "lastOpenFiles": [
     "Final Trade Calc.html",
     "Market Analysis/6th April 2026.md",
+    "Market Analysis/Attachments Images/Recording 20260407221704.m4a",
     "Market Analysis/Attachments Images/_BTC Liquidation Heatmap(24 hour)-2026-04-06_23_09_07.png",
     "Market Analysis/Attachments Images/Pasted image 20260406231130.png",
     "Market Analysis/Attachments Images/Pasted image 20260406231104.png",
