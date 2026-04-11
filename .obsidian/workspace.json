@@ -8,7 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "766f8f95877c9127",
+            "id": "1b4cde873f847218",
+            "type": "leaf",
+            "state": {
+              "type": "html-view",
+              "state": {
+                "file": "Risk Calc.html"
+              },
+              "icon": "code-glyph",
+              "title": "Risk Calc"
+            }
+          },
+          {
+            "id": "896607c58a2393b9",
             "type": "leaf",
             "state": {
               "type": "journalit-home-view",
@@ -17,7 +29,8 @@
               "title": "Journalit"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -173,8 +186,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,10 +199,11 @@
       "audio-recorder:Start/stop recording": false,
       "obsidian-git:Open Git source control": false,
       "templater-obsidian:Templater": false,
-      "obsidian42-brat:BRAT": false
+      "obsidian42-brat:BRAT": false,
+      "journalit:Open Journalit": false
     }
   },
-  "active": "e0102f65c1944fde",
+  "active": "896607c58a2393b9",
   "lastOpenFiles": [
     "Market Analysis/6th April 2026.md",
     "Final Trade Calc.html",

@@ -2,6 +2,27 @@
   "recentItems": [
     {
       "type": "file",
+      "title": "Risk Calc",
+      "path": "Risk Calc.html",
+      "icon": "file-text",
+      "openedAt": "2026-04-11T17:38:40.035Z"
+    },
+    {
+      "type": "view",
+      "title": "Trade Log",
+      "viewType": "journalit-trade-log-view",
+      "icon": "folder-tree",
+      "openedAt": "2026-04-11T17:29:15.566Z"
+    },
+    {
+      "type": "view",
+      "title": "Account Dashboard",
+      "viewType": "account-dashboard",
+      "icon": "users",
+      "openedAt": "2026-04-11T17:26:55.212Z"
+    },
+    {
+      "type": "file",
       "title": "6th April 2026",
       "path": "Market Analysis/6th April 2026.md",
       "icon": "file-text",
@@ -13,20 +34,6 @@
       "path": "Final Trade Calc.html",
       "icon": "file-text",
       "openedAt": "2026-04-07T17:37:06.892Z"
-    },
-    {
-      "type": "view",
-      "title": "Trade Log",
-      "viewType": "journalit-trade-log-view",
-      "icon": "folder-tree",
-      "openedAt": "2026-04-07T17:36:59.699Z"
-    },
-    {
-      "type": "view",
-      "title": "Account Dashboard",
-      "viewType": "account-dashboard",
-      "icon": "users",
-      "openedAt": "2026-04-07T17:14:03.566Z"
     },
     {
       "type": "file",
@@ -132,13 +139,6 @@
       "path": "Market Analysis/Templates/Analyse No 33822a7c866a8049b991c0a1e671ddb2.md",
       "icon": "file-text",
       "openedAt": "2026-04-04T17:19:52.016Z"
-    },
-    {
-      "type": "view",
-      "title": "Layout Builder",
-      "viewType": "journalit-template-builder-view",
-      "icon": "lucide-blocks",
-      "openedAt": "2026-04-04T17:05:48.599Z"
     }
   ],
   "gettingStartedDismissed": true,
