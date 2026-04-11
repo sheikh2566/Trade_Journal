@@ -97,8 +97,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "20c6a57e5d2e7e8c",
@@ -214,7 +213,7 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "ae28446d82c1c4fd",
+  "active": "17c11d40a2467c8f",
   "lastOpenFiles": [
     "Market Analysis/6th April 2026.md",
     "Final Trade Calc.html",
