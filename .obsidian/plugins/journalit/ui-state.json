@@ -1,6 +1,20 @@
 {
   "recentItems": [
     {
+      "type": "file",
+      "title": "Untitled",
+      "path": "Untitled.canvas",
+      "icon": "file-text",
+      "openedAt": "2026-04-11T18:29:24.686Z"
+    },
+    {
+      "type": "file",
+      "title": "conflict-files-obsidian-git",
+      "path": "conflict-files-obsidian-git.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-11T18:29:09.956Z"
+    },
+    {
       "type": "view",
       "title": "Account Dashboard",
       "viewType": "account-dashboard",
@@ -125,20 +139,6 @@
       "viewType": "journalit-onboarding-view",
       "icon": "circle-dot-dashed",
       "openedAt": "2026-04-05T09:42:50.056Z"
-    },
-    {
-      "type": "file",
-      "title": "Market-Analysis-2026-04-04",
-      "path": "Market Analysis/Templates/Market-Analysis-2026-04-04.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-04T17:31:48.937Z"
-    },
-    {
-      "type": "file",
-      "title": "Analyse No 33822a7c866a8049b991c0a1e671ddb2",
-      "path": "Market Analysis/Templates/Analyse No 33822a7c866a8049b991c0a1e671ddb2.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-04T17:19:52.016Z"
     }
   ],
   "gettingStartedDismissed": true,
