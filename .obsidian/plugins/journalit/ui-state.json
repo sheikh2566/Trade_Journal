@@ -2,6 +2,13 @@
   "recentItems": [
     {
       "type": "file",
+      "title": "Recording 20260405220717",
+      "path": "Recording 20260405220717.m4a",
+      "icon": "file-text",
+      "openedAt": "2026-04-11T18:30:39.438Z"
+    },
+    {
+      "type": "file",
       "title": "Untitled",
       "path": "Untitled.canvas",
       "icon": "file-text",
@@ -132,13 +139,6 @@
       "path": "Journalit/2026/Q2/04/W14/trades/BTC-010426-T1.md",
       "icon": "file-text",
       "openedAt": "2026-04-05T09:43:31.644Z"
-    },
-    {
-      "type": "view",
-      "title": "Journalit Onboarding",
-      "viewType": "journalit-onboarding-view",
-      "icon": "circle-dot-dashed",
-      "openedAt": "2026-04-05T09:42:50.056Z"
     }
   ],
   "gettingStartedDismissed": true,
