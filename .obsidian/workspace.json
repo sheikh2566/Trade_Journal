@@ -8,28 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1b4cde873f847218",
-            "type": "leaf",
-            "state": {
-              "type": "html-view",
-              "state": {
-                "file": "Risk Calc.html"
-              },
-              "icon": "code-glyph",
-              "title": "Risk Calc"
-            }
-          },
-          {
-            "id": "02b46702cfc16657",
-            "type": "leaf",
-            "state": {
-              "type": "account-dashboard",
-              "state": {},
-              "icon": "users",
-              "title": "Account Dashboard"
-            }
-          },
-          {
             "id": "ae28446d82c1c4fd",
             "type": "leaf",
             "state": {
@@ -39,8 +17,7 @@
               "title": "Journalit"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -213,7 +190,7 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "17c11d40a2467c8f",
+  "active": "e0102f65c1944fde",
   "lastOpenFiles": [
     "Market Analysis/6th April 2026.md",
     "Final Trade Calc.html",
