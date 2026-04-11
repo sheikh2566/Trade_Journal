@@ -1,1 +1,1 @@
-{"name":"trades","entries":[]}
+{"name":"trades","entries":[{"path":"!Journalit/2026/Q2/04/W15/trades/ETH-110426-T1.md","values":{"instrument":"ETH","direction":"long","pnl":1439.68,"entryTime":"2026-04-11T17:30:00","exitTime":"2026-04-11T22:30:00","account":["BitFunded"],"setup":["Reversal Pattern"],"mistake":["Poor Position Sizing"],"tags":["Day Trade"],"assetType":"crypto"}}]}

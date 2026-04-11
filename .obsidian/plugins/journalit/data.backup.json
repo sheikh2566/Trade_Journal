@@ -12,7 +12,7 @@
     "use24HourTime": false,
     "skipWeekends": false,
     "weekStartDay": "monday",
-    "useDirectPnLInput": false,
+    "useDirectPnLInput": true,
     "useDollarValueInput": false,
     "maeMfeInputMode": "dollar",
     "tradingDayCutoffTime": "00:00",
@@ -257,7 +257,7 @@
     ],
     "recurringGoals": [],
     "autoCreateOnFirstTrade": true,
-    "autoCreateDRCOnNavigation": true
+    "autoCreateDRCOnNavigation": false
   },
   "dashboard": {
     "layouts": {
