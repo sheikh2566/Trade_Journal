@@ -4,11 +4,41 @@
     "type": "split",
     "children": [
       {
+<<<<<<< HEAD
         "id": "070f394eb2cefaa1",
         "type": "tabs",
         "children": [
           {
             "id": "9f37a97996d219d8",
+=======
+        "id": "901b5c0694d33d70",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1b4cde873f847218",
+            "type": "leaf",
+            "state": {
+              "type": "html-view",
+              "state": {
+                "file": "Risk Calc.html"
+              },
+              "icon": "code-glyph",
+              "title": "Risk Calc"
+            }
+          },
+          {
+            "id": "02b46702cfc16657",
+            "type": "leaf",
+            "state": {
+              "type": "account-dashboard",
+              "state": {},
+              "icon": "users",
+              "title": "Account Dashboard"
+            }
+          },
+          {
+            "id": "ae28446d82c1c4fd",
+>>>>>>> 2dbede455bedeb981c94c7de777fab2e84ce89db
             "type": "leaf",
             "state": {
               "type": "journalit-home-view",
@@ -17,7 +47,8 @@
               "title": "Journalit"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -37,7 +68,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -84,24 +115,6 @@
         "id": "b004dbcebffc2864",
         "type": "tabs",
         "children": [
-          {
-            "id": "0831dadfcbbd0727",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks"
-            }
-          },
           {
             "id": "fef842e6562a52e0",
             "type": "leaf",
@@ -167,9 +180,27 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "99986b88d19b821d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -184,13 +215,13 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "audio-recorder:Start/stop recording": false,
-      "workspaces:Manage workspace layouts": false,
       "obsidian-git:Open Git source control": false,
       "templater-obsidian:Templater": false,
       "obsidian42-brat:BRAT": false,
       "journalit:Open Journalit": false
     }
   },
+<<<<<<< HEAD
   "active": "9f37a97996d219d8",
   "lastOpenFiles": [
     "!Journalit/2026/Q2/04/W15/W15-Review.md",
@@ -213,13 +244,41 @@
     "!Journalit/2026/Q2/04/W14/W14-Review.md",
     "!Journalit/2026/Q2/04/W14/trades/ETH-010426-T1.md",
     "README.md",
-    "!Journalit/2026/Q2/04/W14/trades/BTC-010426-T1.md",
+=======
+  "active": "ae28446d82c1c4fd",
+  "lastOpenFiles": [
+    "Market Analysis/6th April 2026.md",
+    "Final Trade Calc.html",
+    "Market Analysis/Attachments Images/Recording 20260407221704.m4a",
+    "Market Analysis/Attachments Images/_BTC Liquidation Heatmap(24 hour)-2026-04-06_23_09_07.png",
+    "Market Analysis/Attachments Images/Pasted image 20260406231130.png",
+    "Market Analysis/Attachments Images/Pasted image 20260406231104.png",
+    "Market Analysis/Attachments Images/Pasted image 20260406230859.png",
+    "Market Analysis/Attachments Images/Pasted image 20260406230824.png",
+    "Market Analysis/Attachments Images/Pasted image 20260406230754.png",
+    "Market Analysis/Attachments Images/Pasted image 20260406230706.png",
+    "Market Analysis/Attachments Images/Pasted image 20260406230607.png",
+    "Market Analysis/Attachments Images/Pasted image 20260406230600.png",
+    "Market Analysis/Attachments Images/Pasted image 20260406230443.png",
+    "Market Analysis/Attachments Images",
+    "Market Analysis/Templates/Market Analysis Template.md",
     "!Journalit/2026/2026-Review.md",
+    "README.md",
+    "!Journalit/2026/Q2/04/W14/W14-Review.md",
+    "!Journalit/2026/Q2/04/W14/trades/ETH-010426-T1.md",
+    "!Journalit/Todo List.md",
+>>>>>>> 2dbede455bedeb981c94c7de777fab2e84ce89db
+    "!Journalit/2026/Q2/04/W14/trades/BTC-010426-T1.md",
     "!Journalit/2026/Q2/Q2-Review.md",
     "!Journalit/2026/Q2/04/W14/trades",
     "!Journalit/2026/Q2/04/W14",
     "!Journalit/2026/Q2/04",
     "!Journalit/2026/Q2",
+<<<<<<< HEAD
     "!Journalit/2026"
+=======
+    "!Journalit/2026",
+    "!Journalit"
+>>>>>>> 2dbede455bedeb981c94c7de777fab2e84ce89db
   ]
 }

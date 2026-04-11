@@ -9,9 +9,24 @@
     },
     {
       "type": "view",
+      "title": "Account Dashboard",
+      "viewType": "account-dashboard",
+      "icon": "users",
+      "openedAt": "2026-04-11T17:56:05.836Z"
+    },
+    {
+      "type": "file",
+      "title": "Risk Calc",
+      "path": "Risk Calc.html",
+      "icon": "file-text",
+      "openedAt": "2026-04-11T17:38:40.035Z"
+    },
+    {
+      "type": "view",
       "title": "Trade Log",
       "viewType": "journalit-trade-log-view",
       "icon": "folder-tree",
+<<<<<<< HEAD
       "openedAt": "2026-04-11T18:03:49.017Z"
     },
     {
@@ -69,12 +84,30 @@
       "path": "!Journalit/Todo List.md",
       "icon": "file-text",
       "openedAt": "2026-04-11T17:41:05.555Z"
+=======
+      "openedAt": "2026-04-11T17:29:15.566Z"
+    },
+    {
+      "type": "file",
+      "title": "6th April 2026",
+      "path": "Market Analysis/6th April 2026.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-07T17:38:01.489Z"
+    },
+    {
+      "type": "file",
+      "title": "Final Trade Calc",
+      "path": "Final Trade Calc.html",
+      "icon": "file-text",
+      "openedAt": "2026-04-07T17:37:06.892Z"
+>>>>>>> 2dbede455bedeb981c94c7de777fab2e84ce89db
     },
     {
       "type": "file",
       "title": "Market Analysis Template",
       "path": "Market Analysis/Templates/Market Analysis Template.md",
       "icon": "file-text",
+<<<<<<< HEAD
       "openedAt": "2026-04-11T17:40:49.550Z"
     },
     {
@@ -90,20 +123,52 @@
       "path": "Market Analysis/Untitled 1.md",
       "icon": "file-text",
       "openedAt": "2026-04-05T17:05:13.864Z"
+=======
+      "openedAt": "2026-04-06T18:14:38.078Z"
+>>>>>>> 2dbede455bedeb981c94c7de777fab2e84ce89db
     },
     {
       "type": "file",
       "title": "Untitled",
       "path": "Market Analysis/Untitled.md",
       "icon": "file-text",
+<<<<<<< HEAD
       "openedAt": "2026-04-05T17:03:28.806Z"
+=======
+      "openedAt": "2026-04-06T18:03:54.495Z"
+    },
+    {
+      "type": "file",
+      "title": "Pasted image 20260406230022",
+      "path": "Pasted image 20260406230022.png",
+      "icon": "file-text",
+      "openedAt": "2026-04-06T18:03:12.054Z"
+    },
+    {
+      "type": "file",
+      "title": "2026-Review",
+      "path": "!Journalit/2026/2026-Review.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-06T17:51:59.329Z"
+    },
+    {
+      "type": "file",
+      "title": "README",
+      "path": "README.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-06T17:40:58.826Z"
+>>>>>>> 2dbede455bedeb981c94c7de777fab2e84ce89db
     },
     {
       "type": "view",
       "title": "Dashboard",
       "viewType": "journalit-dashboard-view",
       "icon": "grip",
+<<<<<<< HEAD
       "openedAt": "2026-04-05T17:01:46.718Z"
+=======
+      "openedAt": "2026-04-06T17:07:26.970Z"
+>>>>>>> 2dbede455bedeb981c94c7de777fab2e84ce89db
     },
     {
       "type": "file",
@@ -139,6 +204,37 @@
       "viewType": "journalit-account-page-view",
       "icon": "user",
       "openedAt": "2026-04-05T10:01:31.489Z"
+<<<<<<< HEAD
+=======
+    },
+    {
+      "type": "file",
+      "title": "BTC-010426-T1",
+      "path": "Journalit/2026/Q2/04/W14/trades/BTC-010426-T1.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-05T09:43:31.644Z"
+    },
+    {
+      "type": "view",
+      "title": "Journalit Onboarding",
+      "viewType": "journalit-onboarding-view",
+      "icon": "circle-dot-dashed",
+      "openedAt": "2026-04-05T09:42:50.056Z"
+    },
+    {
+      "type": "file",
+      "title": "Market-Analysis-2026-04-04",
+      "path": "Market Analysis/Templates/Market-Analysis-2026-04-04.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-04T17:31:48.937Z"
+    },
+    {
+      "type": "file",
+      "title": "Analyse No 33822a7c866a8049b991c0a1e671ddb2",
+      "path": "Market Analysis/Templates/Analyse No 33822a7c866a8049b991c0a1e671ddb2.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-04T17:19:52.016Z"
+>>>>>>> 2dbede455bedeb981c94c7de777fab2e84ce89db
     }
   ],
   "gettingStartedDismissed": true,
@@ -247,5 +343,5 @@
   "selectedHomeAccounts": [
     "BitFunded"
   ],
-  "homeAccountFilterSelectAllActive": false
+  "homeAccountFilterSelectAllActive": true
 }

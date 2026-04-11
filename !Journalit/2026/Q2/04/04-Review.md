@@ -3,7 +3,9 @@ type: monthly-review
 date: 2026-04-01
 month: 4
 year: 2026
-tags: ["periodic/monthly","q2-review"]
+tags:
+  - periodic/monthly
+  - q2-review
 templateId: builtin-monthly-standard
 templateVersion: 3
 ---

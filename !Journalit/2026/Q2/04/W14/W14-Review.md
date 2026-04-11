@@ -1,9 +1,10 @@
 ---
 type: weekly-review
 date: 2026-03-30
-tags: ["periodic/weekly"]
+tags:
+  - periodic/weekly
 week: W14
-month: 04
+month: 4
 year: 2026
 templateId: builtin-weekly-standard
 templateVersion: 4

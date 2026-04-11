@@ -3,24 +3,25 @@ Result:
   - Win
   - Loss
   - Break-even
-date: <% tp.date.now("dddd,  Do MMMM YYYY, h:mm a") %>
-Funding Rates:
-L/S Ratio:
-24h Rekt (M):
+date: Monday,  6th April 2026, 11:03 pm
+Funding Rates: green
+L/S Ratio: "1"
+24h Rekt (M): "330"
 Trend:
-  - Bullish
   - Bearish
 Confidence: ⭐⭐⭐
 ---
 
-# 📊 Market Analysis: <% tp.date.now("dddd, Do MMMM YYYY, h:mm a") %>
+# 📊 Market Analysis: Monday, 6th April 2026, 11:03 pm
 
 ## <span style="background: rgba(74, 222, 128, 0.1); border: 1px solid #4ade80; color: #4ade80; padding: 4px 12px; border-radius: 20px; font-size: 0.9em; display: inline-flex; align-items: center; gap: 6px;">📈 Technical Analysis</span>
 
 ### BTC:
 
+![[Pasted image 20260406230443.png]]
 ### USDT.D:
 
+![[Pasted image 20260406230607.png]]
 
 ---
 
@@ -28,8 +29,10 @@ Confidence: ⭐⭐⭐
 
 ### CME Gap Chart:
 
+![[Pasted image 20260406230706.png]]
 ### Economy Data:
  
+![[Pasted image 20260406230754.png]]
 
 ---
 
@@ -37,14 +40,17 @@ Confidence: ⭐⭐⭐
 
 ### Liquidation Heatmap:
 
+![[_BTC Liquidation Heatmap(24 hour)-2026-04-06_23_09_07.png]]
 ### Liquidations Map:
 
-### Funding Rates:
+### Funding Rates: 
+GREEN,...
 
 ### Super-Chart:
+![[Pasted image 20260406231130.png]]
 
 ### Legend:
-
+![[Pasted image 20260406231104.png]]
 
 ---
 

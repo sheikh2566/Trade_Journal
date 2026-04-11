@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ultimate Futures Terminal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0f172a;
+    }
+
+    /* Input Styling */
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+
+    .input-group {
+      background: #1e293b;
+      border: 1px solid #334155;
+      transition: all 0.2s;
+    }
+
+    .input-group:focus-within {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 3px;
+    }
+
+    /* Range Slider */
+    input[type=range] {
+      -webkit-appearance: none;
+      background: transparent;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      background: #3b82f6;
+      cursor: pointer;
+      margin-top: -6px;
+      box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 4px;
+      background: #334155;
+      border-radius: 2px;
+    }
+
+    /* Result Card Gradient */
+    .glass-panel {
+      background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+    }
+
+    .journal-row:hover {
+      background: #1e293b;
+    }
+  </style>
+</head>
+
+<body class="text-slate-200 min-h-screen flex flex-col items-center p-2 sm:p-6 sm:pt-10 font-sans gap-6">
+
+  <div
+    class="w-full max-w-5xl bg-slate-900 rounded-3xl shadow-2xl border border-slate-800 overflow-hidden flex flex-col lg:flex-row">
+
+    <div class="w-full lg:w-5/12 p-6 sm:p-8 border-b lg:border-b-0 lg:border-r border-slate-800 bg-slate-900/50">
+
+      <div class="flex items-center gap-3 mb-6">
+        <div
+          class="w-8 h-8 rounded bg-gradient-to-tr from-blue-500 to-indigo-600 flex items-center justify-center font-bold text-white">
+          ⚡</div>
+        <h1 class="text-xl font-bold tracking-tight text-white">Trade Planner</h1>
+      </div>
+
+      <div class="space-y-5">
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="bg-slate-800 p-1 rounded-xl flex border border-slate-700">
+            <button id="btnLong" onclick="setDirection('long')"
+              class="flex-1 py-2 rounded-lg text-sm font-bold transition-all bg-emerald-500 text-white shadow-lg shadow-emerald-500/20">Long</button>
+            <button id="btnShort" onclick="setDirection('short')"
+              class="flex-1 py-2 rounded-lg text-sm font-bold text-slate-400 hover:text-white transition-all">Short</button>
+          </div>
+
+          <div class="bg-slate-800 p-1 rounded-xl flex border border-slate-700 relative">
+            <button id="modeIso" onclick="setMarginMode('iso')"
+              class="flex-1 py-2 rounded-lg text-xs font-bold transition-all bg-slate-600 text-white">Isolated</button>
+            <button id="modeCross" onclick="setMarginMode('cross')"
+              class="flex-1 py-2 rounded-lg text-xs font-bold text-slate-400 hover:text-white">Cross</button>
+          </div>
+        </div>
+
+        <div>
+          <label class="text-xs text-slate-400 uppercase font-bold ml-1 mb-1 block">Trading Symbol (e.g. BTC,
+            ETH)</label>
+          <div class="input-group rounded-xl flex items-center px-3 border-l-4 border-l-orange-500">
+            <span class="text-slate-500 mr-2"><i class="fas fa-coins"></i></span>
+            <input id="symbol" type="text"
+              class="w-full bg-transparent py-3 text-sm font-mono focus:outline-none uppercase" placeholder="BTCUSDT"
+              value="BTCUSDT">
+          </div>
+        </div>
+
+        <hr class="border-slate-800">
+
+        <div>
+          <div class="flex justify-between text-xs text-slate-400 mb-2 uppercase font-semibold">
+            <span>Leverage</span>
+            <span id="levDisplay" class="text-blue-400 font-mono">20x</span>
+          </div>
+          <input id="leverage" type="range" min="1" max="125" value="20" class="w-full mb-2"
+            oninput="updateLev(this.value)">
+        </div>
+
+        <div>
+          <label class="text-xs text-slate-400 uppercase font-bold ml-1 mb-1 block">Account Balance ($)</label>
+          <div class="input-group rounded-xl flex items-center px-3">
+            <span class="text-slate-500 mr-2"><i class="fas fa-wallet"></i></span>
+            <input id="balance" type="number" class="w-full bg-transparent py-3 text-sm font-mono focus:outline-none"
+              placeholder="10000">
+          </div>
+        </div>
+
+        <div class="flex justify-end mb-1">
+          <button onclick="toggleCalcMode()" id="calcModeToggle"
+            class="text-[10px] uppercase font-bold text-blue-400 hover:text-blue-300">
+            Switch to Manual Qty <i class="fas fa-exchange-alt ml-1"></i>
+          </button>
+        </div>
+
+        <div id="riskInputGroup">
+          <label class="text-xs text-slate-400 uppercase font-bold ml-1 mb-1 block">Risk per Trade (%)</label>
+          <div class="input-group rounded-xl flex items-center px-3 border-l-4 border-l-blue-500">
+            <span class="text-slate-500 mr-2"><i class="fas fa-shield-alt"></i></span>
+            <input id="riskPercent" type="number"
+              class="w-full bg-transparent py-3 text-sm font-mono focus:outline-none" value="1">
+            <span class="text-slate-500 text-xs font-bold">%</span>
+          </div>
+        </div>
+
+        <div id="qtyInputGroup" class="hidden">
+          <label class="text-xs text-slate-400 uppercase font-bold ml-1 mb-1 block">Position Size (Coins)</label>
+          <div class="input-group rounded-xl flex items-center px-3 border-l-4 border-l-purple-500">
+            <span class="text-slate-500 mr-2"><i class="fas fa-coins"></i></span>
+            <input id="manualQty" type="number" class="w-full bg-transparent py-3 text-sm font-mono focus:outline-none"
+              placeholder="e.g 0.5">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="col-span-2">
+            <div class="flex justify-between items-center mb-1">
+              <label class="text-xs text-slate-400 uppercase font-bold ml-1">Entry Prices</label>
+              <div class="flex items-center gap-2">
+                <span id="avgEntryDisplay" class="text-[10px] font-mono text-blue-400 hidden">Avg: --</span>
+                <button onclick="addEntryRow()"
+                  class="text-[10px] uppercase font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1">
+                  <i class="fas fa-plus"></i> Add Entry
+                </button>
+              </div>
+            </div>
+            <div id="entryRowsContainer" class="space-y-2">
+              <div class="input-group rounded-xl flex items-center px-3" data-entry-row>
+                <span class="text-slate-500 mr-2">@</span>
+                <input type="number"
+                  class="entry-price-input w-full bg-transparent py-3 text-sm font-mono focus:outline-none placeholder-slate-600"
+                  placeholder="0.00" oninput="onEntryInput()">
+              </div>
+            </div>
+            <input id="entry" type="hidden">
+          </div>
+
+          <div>
+            <label class="text-xs text-slate-400 uppercase font-bold ml-1 mb-1 block">Stop Loss</label>
+            <div class="input-group rounded-xl flex items-center px-3 border-l-4 border-l-red-500">
+              <input id="stop" type="number"
+                class="w-full bg-transparent py-3 text-sm font-mono focus:outline-none text-red-300 placeholder-slate-600"
+                placeholder="0.00">
+            </div>
+          </div>
+
+          <div class="col-span-2">
+            <div class="flex justify-between items-center mb-1">
+              <label class="text-xs text-slate-400 uppercase font-bold ml-1">Take Profits</label>
+              <button onclick="addTpRow()"
+                class="text-[10px] uppercase font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1"><i
+                  class="fas fa-plus"></i> Add TP</button>
+            </div>
+            <div id="tpRowsContainer" class="space-y-2">
+              <div class="flex gap-2 items-center" data-tp-row>
+                <div class="input-group rounded-xl flex items-center px-3 border-l-4 border-l-emerald-500 flex-1">
+                  <input type="number"
+                    class="tp-price-input w-full bg-transparent py-3 text-sm font-mono focus:outline-none text-emerald-300 placeholder-slate-600"
+                    placeholder="TP Price" oninput="calculate()">
+                </div>
+                <div class="input-group rounded-xl flex items-center px-2 w-20">
+                  <input type="number"
+                    class="tp-pct-input w-full bg-transparent py-2 text-xs font-mono focus:outline-none text-center"
+                    value="100" oninput="calculate()">
+                  <span class="text-slate-500 text-xs">%</span>
+                </div>
+              </div>
+            </div>
+            <input id="target" type="hidden">
+          </div>
+        </div>
+
+        <hr class="border-slate-800">
+        <div>
+          <div class="flex justify-between items-center">
+            <label class="text-xs text-slate-400 uppercase font-bold ml-1 flex items-center gap-1"><i
+                class="fas fa-layer-group text-[10px]"></i> DCA Orders</label>
+            <button onclick="toggleDca()" id="dcaToggleBtn" class="text-[10px] text-blue-400 hover:text-blue-300"><i
+                class="fas fa-chevron-down"></i></button>
+          </div>
+          <div id="dcaSection" class="hidden mt-2 space-y-2">
+            <div id="dcaRowsContainer" class="space-y-2"></div>
+            <button onclick="addDcaRow()"
+              class="w-full py-2 rounded-xl border border-dashed border-slate-700 text-slate-500 hover:text-slate-300 text-xs">+
+              Add Safety Order</button>
+          </div>
+        </div>
+
+        <hr class="border-slate-800">
+        <div>
+          <label class="text-xs text-slate-400 uppercase font-bold ml-1 mb-2 block">Fees</label>
+          <div class="grid grid-cols-2 gap-2">
+            <div class="input-group rounded-xl flex items-center px-3">
+              <span class="text-slate-500 text-[10px] mr-1">Mkr</span>
+              <input id="feeMaker" type="number"
+                class="w-full bg-transparent py-2 text-sm font-mono focus:outline-none text-center" value="0.02"
+                oninput="calculate()">
+              <span class="text-slate-500 text-xs">%</span>
+            </div>
+            <div class="input-group rounded-xl flex items-center px-3">
+              <span class="text-slate-500 text-[10px] mr-1">Tkr</span>
+              <input id="feeTaker" type="number"
+                class="w-full bg-transparent py-2 text-sm font-mono focus:outline-none text-center" value="0.05"
+                oninput="calculate()">
+              <span class="text-slate-500 text-xs">%</span>
+            </div>
+          </div>
+          <div class="flex gap-1 mt-2">
+            <button id="feeEntryType" onclick="toggleFeeType('entry')"
+              class="flex-1 py-1 rounded-lg bg-slate-800 border border-slate-700 text-[10px] font-bold text-slate-300">Entry:
+              Limit</button>
+            <button id="feeExitType" onclick="toggleFeeType('exit')"
+              class="flex-1 py-1 rounded-lg bg-slate-800 border border-slate-700 text-[10px] font-bold text-slate-300">Exit:
+              Market</button>
+          </div>
+        </div>
+
+        <hr class="border-slate-800">
+        <div>
+          <label class="text-xs text-slate-400 uppercase font-bold ml-1 mb-2 block"><i
+              class="fas fa-brain text-[10px] mr-1"></i>Kelly Criterion</label>
+          <div class="input-group rounded-xl flex items-center px-3 border-l-4 border-l-violet-500">
+            <span class="text-slate-500 text-[10px] mr-2">Win Rate</span>
+            <input id="winRate" type="number"
+              class="w-full bg-transparent py-2 text-sm font-mono focus:outline-none text-center text-violet-300"
+              value="50" oninput="calculate()">
+            <span class="text-slate-500 text-xs">%</span>
+          </div>
+          <div class="mt-2 bg-slate-800/50 rounded-lg p-2 flex justify-between items-center">
+            <span class="text-[10px] text-slate-500">Suggested Risk:</span>
+            <span id="kellyResult" class="text-sm font-mono font-bold text-violet-400">--%</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-[10px] text-slate-600 mt-6 text-center">
+        Leverage affects Liq & Margin only.<br>
+        Developed by Mughal1SmartBuy for P4PROVIDER.COM
+      </p>
+    </div>
+
+    <div class="w-full lg:w-7/12 bg-slate-950 p-6 sm:p-8 flex flex-col relative">
+
+      <div class="absolute inset-0 opacity-5 pointer-events-none"
+        style="background-image: radial-gradient(#3b82f6 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+      <div class="flex justify-between items-center mb-6 z-10">
+        <h2 class="text-lg font-bold text-slate-300">Analysis Dashboard</h2>
+        <span id="badge"
+          class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-500 border border-slate-700">Waiting
+          for data...</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 z-10 flex-1 content-start">
+
+        <div
+          class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-blue-500/30 transition-colors">
+          <div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
+            <i class="fas fa-layer-group text-4xl text-blue-500"></i>
+          </div>
+          <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-3">Capital Required</p>
+
+          <div class="flex justify-between items-end mb-2">
+            <span class="text-sm text-slate-500">Margin</span>
+            <span id="resMargin" class="text-2xl font-bold text-white font-mono">--</span>
+          </div>
+          <div class="flex justify-between items-end">
+            <span class="text-sm text-slate-500">Position Size</span>
+            <div class="text-right">
+              <div id="resQty" class="text-sm font-mono text-blue-400 font-bold">-- Coins</div>
+              <div id="resNotional" class="text-[10px] text-slate-500 font-mono">-- USDT</div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-red-500/30 transition-colors">
+          <div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
+            <i class="fas fa-heart-broken text-4xl text-red-500"></i>
+          </div>
+          <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-3">Risk Analysis</p>
+
+          <div class="flex justify-between items-end mb-2">
+            <span class="text-sm text-slate-500">Loss at Stop</span>
+            <span id="resLoss" class="text-2xl font-bold text-red-400 font-mono">--</span>
+          </div>
+          <div class="flex justify-between items-end">
+            <span class="text-sm text-slate-500">Risk of Portfolio</span>
+            <span id="resRiskPercent" class="text-sm font-mono text-slate-300">--%</span>
+          </div>
+        </div>
+
+        <div
+          class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-orange-500/30 transition-colors">
+          <div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
+            <i class="fas fa-skull text-4xl text-orange-500"></i>
+          </div>
+          <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-3">Safety (<span
+              id="liqModeLabel">Iso</span>)</p>
+
+          <div class="mb-1">
+            <span class="text-sm text-slate-500">Liquidation Price</span>
+          </div>
+          <div id="resLiq" class="text-2xl font-bold text-orange-500 font-mono mb-2">--</div>
+
+          <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden flex">
+            <div id="liqBar" class="bg-orange-500 h-full w-0 transition-all duration-500"></div>
+          </div>
+          <div class="flex justify-between text-[10px] text-slate-500 mt-1">
+            <span>Liq</span>
+            <span id="liqDist">0% away</span>
+            <span>Entry</span>
+          </div>
+        </div>
+
+        <div
+          class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-emerald-500/30 transition-colors">
+          <div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
+            <i class="fas fa-chart-line text-4xl text-emerald-500"></i>
+          </div>
+          <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-3">Profit & Fees</p>
+          <div class="flex justify-between items-end mb-1">
+            <span class="text-sm text-slate-500">Gross Profit</span>
+            <span id="resProfit" class="text-xl font-bold text-emerald-400 font-mono">--</span>
+          </div>
+          <div class="flex justify-between items-end mb-1">
+            <span class="text-sm text-slate-500">Fees</span>
+            <span id="resTotalFees" class="text-sm font-mono text-yellow-400">--</span>
+          </div>
+          <div class="flex justify-between items-end mb-2">
+            <span class="text-sm text-slate-500">Net Profit</span>
+            <span id="resNetProfit" class="text-lg font-bold font-mono text-emerald-300">--</span>
+          </div>
+          <div class="flex justify-between items-center mt-2">
+            <div class="bg-slate-800 px-2 py-1 rounded text-[10px] text-slate-400">ROE: <span id="resROE"
+                class="text-white font-mono">--</span></div>
+            <div class="bg-slate-800 px-2 py-1 rounded text-[10px] text-slate-400">RRR: <span id="resRRR"
+                class="text-white font-mono">--</span></div>
+          </div>
+          <div id="scaleOutSummary" class="mt-3 pt-2 border-t border-slate-800 hidden">
+            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Scale-Out</p>
+            <div id="scaleOutRows" class="space-y-1"></div>
+          </div>
+        </div>
+
+        <div id="dcaCard"
+          class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-cyan-500/30 transition-colors hidden">
+          <div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
+            <i class="fas fa-layer-group text-4xl text-cyan-500"></i>
+          </div>
+          <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-3">DCA Analysis</p>
+          <div class="flex justify-between items-end mb-2">
+            <span class="text-sm text-slate-500">New Avg Entry</span>
+            <span id="resDcaAvg" class="text-2xl font-bold text-cyan-400 font-mono">--</span>
+          </div>
+          <div class="flex justify-between items-end mb-2">
+            <span class="text-sm text-slate-500">Total Invested</span>
+            <span id="resDcaTotal" class="text-sm font-mono text-slate-300">--</span>
+          </div>
+          <div class="flex justify-between items-end">
+            <span class="text-sm text-slate-500">New Liq Price</span>
+            <span id="resDcaLiq" class="text-sm font-mono text-orange-400">--</span>
+          </div>
+        </div>
+
+        <div
+          class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-violet-500/30 transition-colors">
+          <div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
+            <i class="fas fa-brain text-4xl text-violet-500"></i>
+          </div>
+          <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-3">Kelly Criterion</p>
+          <div class="flex justify-between items-end mb-2">
+            <span class="text-sm text-slate-500">Optimal Risk</span>
+            <span id="resKelly" class="text-2xl font-bold text-violet-400 font-mono">--%</span>
+          </div>
+          <div class="flex justify-between items-end mb-1">
+            <span class="text-sm text-slate-500">Half Kelly</span>
+            <span id="resHalfKelly" class="text-sm font-mono text-violet-300">--%</span>
+          </div>
+          <div class="flex justify-between items-end">
+            <span class="text-sm text-slate-500">Quarter Kelly</span>
+            <span id="resQuarterKelly" class="text-sm font-mono text-slate-400">--%</span>
+          </div>
+          <div class="mt-3 pt-2 border-t border-slate-800">
+            <div class="flex justify-between text-[10px]">
+              <span class="text-slate-500">Your Risk vs Kelly</span>
+              <span id="kellyVsRisk" class="font-mono">--</span>
+            </div>
+            <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden mt-1">
+              <div id="kellyBar" class="bg-violet-500 h-full w-0 transition-all duration-500"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button onclick="saveTrade()"
+        class="mt-4 w-full py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-sm transition-all shadow-lg shadow-blue-500/20 z-10">
+        <i class="fas fa-save mr-2"></i>Save Trade to Journal
+      </button>
+
+      <div
+        class="mt-4 pt-4 border-t border-slate-800 text-sm text-slate-400 flex justify-between items-center opacity-60 hover:opacity-100 transition-opacity z-10">
+        <div class="flex gap-4">
+          <div><span class="text-slate-600">Entry:</span> <span id="footerEntry" class="font-mono">-</span></div>
+          <div><span class="text-slate-600">Stop:</span> <span id="footerStop" class="font-mono">-</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="journalSection" class="w-full max-w-5xl hidden">
+    <div class="bg-slate-900 rounded-2xl border border-slate-800 p-6 overflow-hidden">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-lg font-bold text-slate-300"><i class="fas fa-book mr-2 text-blue-400"></i>Trade Journal</h2>
+        <div class="flex items-center gap-3">
+          <button onclick="exportCSV()" class="text-xs text-blue-400 hover:text-blue-300"><i
+              class="fas fa-file-csv mr-1"></i>Export CSV</button>
+          <button onclick="clearJournal()" class="text-xs text-red-400 hover:text-red-300"><i
+              class="fas fa-trash mr-1"></i>Clear All</button>
+        </div>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="text-xs text-slate-500 uppercase border-b border-slate-800">
+              <th class="py-2 text-left">Date</th>
+              <th class="py-2">Sym</th>
+              <th class="py-2">Dir</th>
+              <th class="py-2 text-right">Entry</th>
+              <th class="py-2 text-right">Stop</th>
+              <th class="py-2 text-right">TP</th>
+              <th class="py-2 text-right">Lev</th>
+              <th class="py-2 text-right">Risk$</th>
+              <th class="py-2 text-right">Net P/L</th>
+              <th class="py-2 text-right">RRR</th>
+              <th class="py-2"></th>
+            </tr>
+          </thead>
+          <tbody id="journalBody"></tbody>
+        </table>
+      </div>
+      <p id="journalEmpty" class="text-center text-slate-600 text-sm py-6">No trades saved yet.</p>
+
+      <div id="equityCurveSection" class="hidden mt-4 pt-4 border-t border-slate-800">
+        <h3 class="text-sm font-bold text-slate-400 mb-3"><i class="fas fa-chart-area mr-2 text-emerald-400"></i>Equity
+          Curve (Planned)</h3>
+        <div class="bg-slate-950 rounded-xl p-4 border border-slate-800">
+          <canvas id="equityCanvas" height="180" class="w-full"></canvas>
+        </div>
+        <div class="flex justify-between text-[10px] text-slate-600 mt-2">
+          <span id="eqStart">Start: --</span>
+          <span id="eqEnd">Current: --</span>
+          <span id="eqReturn">Return: --</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // STATE
+    let direction = 'long';
+    let calcMode = 'risk'; // 'risk' or 'manual'
+
+    // --- MULTIPLE ENTRY PRICE FUNCTIONS ---
+    function addEntryRow() {
+      const container = document.getElementById('entryRowsContainer');
+      const row = document.createElement('div');
+      row.className = 'input-group rounded-xl flex items-center px-3';
+      row.setAttribute('data-entry-row', '');
+      row.innerHTML = `
+        <span class="text-slate-500 mr-2">@</span>
+        <input type="number"
+          class="entry-price-input w-full bg-transparent py-3 text-sm font-mono focus:outline-none placeholder-slate-600"
+          placeholder="0.00" oninput="onEntryInput()">
+        <button onclick="removeEntryRow(this)" class="text-red-400 hover:text-red-300 ml-2 text-sm" title="Remove">
+          <i class="fas fa-times"></i>
+        </button>
+      `;
+      container.appendChild(row);
+      row.querySelector('input').focus();
+    }
+
+    function removeEntryRow(btn) {
+      const container = document.getElementById('entryRowsContainer');
+      if (container.querySelectorAll('[data-entry-row]').length <= 1) return; // keep at least one
+      btn.closest('[data-entry-row]').remove();
+      onEntryInput();
+    }
+
+    function onEntryInput() {
+      const inputs = document.querySelectorAll('.entry-price-input');
+      let sum = 0, count = 0;
+      inputs.forEach(inp => {
+        const v = parseFloat(inp.value);
+        if (v > 0) { sum += v; count++; }
+      });
+      const avg = count > 0 ? sum / count : 0;
+      document.getElementById('entry').value = avg > 0 ? avg : '';
+
+      const avgDisplay = document.getElementById('avgEntryDisplay');
+      if (count > 1) {
+        avgDisplay.textContent = 'Avg: ' + formatNum(avg, 4);
+        avgDisplay.classList.remove('hidden');
+      } else {
+        avgDisplay.classList.add('hidden');
+      }
+
+      calculate();
+    }
+    let marginMode = 'iso';
+    let leverage = 20;
+    let feeEntryType = 'limit';
+    let feeExitType = 'market';
+
+    // ELEMENTS
+    const els = {
+      balance: document.getElementById('balance'),
+      symbol: document.getElementById('symbol'),
+      riskPercent: document.getElementById('riskPercent'),
+      manualQty: document.getElementById('manualQty'),
+      entry: document.getElementById('entry'),
+      stop: document.getElementById('stop'),
+      target: document.getElementById('target'),
+      leverage: document.getElementById('leverage'),
+
+      // UI Toggles
+      riskGroup: document.getElementById('riskInputGroup'),
+      qtyGroup: document.getElementById('qtyInputGroup'),
+      btnLong: document.getElementById('btnLong'),
+      btnShort: document.getElementById('btnShort'),
+      btnIso: document.getElementById('modeIso'),
+      btnCross: document.getElementById('modeCross'),
+      calcToggle: document.getElementById('calcModeToggle'),
+
+      // Outputs
+      margin: document.getElementById('resMargin'),
+      qty: document.getElementById('resQty'),
+      notional: document.getElementById('resNotional'),
+      loss: document.getElementById('resLoss'),
+      riskPerc: document.getElementById('resRiskPercent'),
+      liq: document.getElementById('resLiq'),
+      liqDist: document.getElementById('liqDist'),
+      liqBar: document.getElementById('liqBar'),
+      liqLabel: document.getElementById('liqModeLabel'),
+      profit: document.getElementById('resProfit'),
+      roe: document.getElementById('resROE'),
+      rrr: document.getElementById('resRRR'),
+      badge: document.getElementById('badge'),
+
+      footerEntry: document.getElementById('footerEntry'),
+      footerStop: document.getElementById('footerStop'),
+      totalFees: document.getElementById('resTotalFees'),
+      netProfit: document.getElementById('resNetProfit'),
+      scaleOutSummary: document.getElementById('scaleOutSummary'),
+      scaleOutRows: document.getElementById('scaleOutRows'),
+      dcaCard: document.getElementById('dcaCard'),
+      dcaAvg: document.getElementById('resDcaAvg'),
+      dcaTotal: document.getElementById('resDcaTotal'),
+      dcaLiq: document.getElementById('resDcaLiq'),
+      journalSection: document.getElementById('journalSection'),
+      journalBody: document.getElementById('journalBody'),
+      journalEmpty: document.getElementById('journalEmpty'),
+      kelly: document.getElementById('resKelly'),
+      halfKelly: document.getElementById('resHalfKelly'),
+      quarterKelly: document.getElementById('resQuarterKelly'),
+      kellyBar: document.getElementById('kellyBar'),
+      kellyVsRisk: document.getElementById('kellyVsRisk'),
+      kellyResult: document.getElementById('kellyResult'),
+      equityCurveSection: document.getElementById('equityCurveSection')
+    };
+
+    // INIT
+    document.querySelectorAll('input:not(.entry-price-input):not(.tp-price-input):not(.tp-pct-input):not(.dca-price-input):not(.dca-amt-input)').forEach(i => i.addEventListener('input', calculate));
+    loadJournal();
+
+    // --- TP FUNCTIONS ---
+    function addTpRow() {
+      const c = document.getElementById('tpRowsContainer');
+      const row = document.createElement('div');
+      row.className = 'flex gap-2 items-center';
+      row.setAttribute('data-tp-row', '');
+      row.innerHTML = `<div class="input-group rounded-xl flex items-center px-3 border-l-4 border-l-emerald-500 flex-1"><input type="number" class="tp-price-input w-full bg-transparent py-3 text-sm font-mono focus:outline-none text-emerald-300 placeholder-slate-600" placeholder="TP Price" oninput="calculate()"></div><div class="input-group rounded-xl flex items-center px-2 w-20"><input type="number" class="tp-pct-input w-full bg-transparent py-2 text-xs font-mono focus:outline-none text-center" value="25" oninput="calculate()"><span class="text-slate-500 text-xs">%</span></div><button onclick="removeTpRow(this)" class="text-red-400 hover:text-red-300 text-sm"><i class="fas fa-times"></i></button>`;
+      c.appendChild(row);
+      row.querySelector('.tp-price-input').focus();
+      calculate();
+    }
+    function removeTpRow(btn) {
+      const c = document.getElementById('tpRowsContainer');
+      if (c.querySelectorAll('[data-tp-row]').length <= 1) return;
+      btn.closest('[data-tp-row]').remove();
+      calculate();
+    }
+
+    // --- DCA FUNCTIONS ---
+    function toggleDca() {
+      const s = document.getElementById('dcaSection');
+      s.classList.toggle('hidden');
+      document.getElementById('dcaToggleBtn').innerHTML = s.classList.contains('hidden') ? '<i class="fas fa-chevron-down"></i>' : '<i class="fas fa-chevron-up"></i>';
+    }
+    function addDcaRow() {
+      const c = document.getElementById('dcaRowsContainer');
+      const row = document.createElement('div');
+      row.className = 'flex gap-2 items-center';
+      row.setAttribute('data-dca-row', '');
+      row.innerHTML = `<div class="input-group rounded-xl flex items-center px-3 flex-1"><span class="text-slate-500 text-[10px] mr-1">@</span><input type="number" class="dca-price-input w-full bg-transparent py-2 text-sm font-mono focus:outline-none placeholder-slate-600" placeholder="Price" oninput="calculate()"></div><div class="input-group rounded-xl flex items-center px-3 w-28"><span class="text-slate-500 text-[10px] mr-1">$</span><input type="number" class="dca-amt-input w-full bg-transparent py-2 text-sm font-mono focus:outline-none placeholder-slate-600" placeholder="Amount" oninput="calculate()"></div><button onclick="removeDcaRow(this)" class="text-red-400 hover:text-red-300 text-sm"><i class="fas fa-times"></i></button>`;
+      c.appendChild(row);
+      row.querySelector('.dca-price-input').focus();
+      calculate();
+    }
+    function removeDcaRow(btn) {
+      btn.closest('[data-dca-row]').remove();
+      calculate();
+    }
+
+    // --- FEE TYPE TOGGLE ---
+    function toggleFeeType(side) {
+      const btn = document.getElementById(side === 'entry' ? 'feeEntryType' : 'feeExitType');
+      if (side === 'entry') {
+        feeEntryType = feeEntryType === 'limit' ? 'market' : 'limit';
+        btn.textContent = 'Entry: ' + (feeEntryType === 'limit' ? 'Limit' : 'Market');
+      } else {
+        feeExitType = feeExitType === 'limit' ? 'market' : 'limit';
+        btn.textContent = 'Exit: ' + (feeExitType === 'limit' ? 'Limit' : 'Market');
+      }
+      calculate();
+    }
+
+    // --- JOURNAL FUNCTIONS ---
+    function saveTrade() {
+      const entry = parseFloat(els.entry.value); if (!entry) return;
+      const stop = parseFloat(els.stop.value) || 0;
+      const tpInputs = document.querySelectorAll('.tp-price-input');
+      let tpStr = []; tpInputs.forEach(i => { if (parseFloat(i.value)) tpStr.push(parseFloat(i.value)); });
+      const netPL = els.netProfit.textContent;
+      const rrrVal = els.rrr.textContent;
+      const riskVal = els.loss.textContent;
+      const symbolVal = els.symbol.value.toUpperCase() || 'N/A';
+      const trades = JSON.parse(localStorage.getItem('tradeJournal') || '[]');
+      trades.unshift({ id: Date.now(), date: new Date().toLocaleDateString(), symbol: symbolVal, dir: direction, entry: entry.toFixed(2), stop: stop.toFixed(2), tp: tpStr.join('/'), lev: leverage + 'x', risk: riskVal, netPL, rrr: rrrVal });
+      localStorage.setItem('tradeJournal', JSON.stringify(trades));
+      renderJournal(trades);
+    }
+    function loadJournal() {
+      const trades = JSON.parse(localStorage.getItem('tradeJournal') || '[]');
+      renderJournal(trades);
+    }
+    function clearJournal() {
+      localStorage.removeItem('tradeJournal');
+      renderJournal([]);
+    }
+    function deleteTrade(id) {
+      let trades = JSON.parse(localStorage.getItem('tradeJournal') || '[]');
+      trades = trades.filter(t => t.id !== id);
+      localStorage.setItem('tradeJournal', JSON.stringify(trades));
+      renderJournal(trades);
+    }
+    function renderJournal(trades) {
+      if (trades.length === 0) {
+        els.journalSection.classList.add('hidden');
+        els.journalEmpty.classList.remove('hidden');
+        els.journalBody.innerHTML = '';
+        drawEquityCurve([]);
+        return;
+      }
+      els.journalSection.classList.remove('hidden');
+      els.journalEmpty.classList.add('hidden');
+      els.journalBody.innerHTML = trades.map(t => `<tr class="journal-row border-b border-slate-800/50"><td class="py-2 text-slate-400 text-xs">${t.date}</td><td class="py-2 text-xs font-bold text-slate-300 font-mono">${t.symbol || '--'}</td><td class="py-2 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-bold ${t.dir === 'long' ? 'bg-emerald-900/50 text-emerald-400' : 'bg-red-900/50 text-red-400'}">${t.dir.toUpperCase()}</span></td><td class="py-2 text-right font-mono text-xs">${t.entry}</td><td class="py-2 text-right font-mono text-xs text-red-400">${t.stop}</td><td class="py-2 text-right font-mono text-xs text-emerald-400">${t.tp || '--'}</td><td class="py-2 text-right font-mono text-xs">${t.lev}</td><td class="py-2 text-right font-mono text-xs">${t.risk}</td><td class="py-2 text-right font-mono text-xs font-bold">${t.netPL}</td><td class="py-2 text-right font-mono text-xs">${t.rrr}</td><td class="py-2 text-right"><button onclick="deleteTrade(${t.id})" class="text-red-400 hover:text-red-300 text-xs"><i class="fas fa-times"></i></button></td></tr>`).join('');
+      drawEquityCurve(trades);
+    }
+
+    function setDirection(dir) {
+      direction = dir;
+      if (dir === 'long') {
+        els.btnLong.className = "flex-1 py-2 rounded-lg text-sm font-bold transition-all bg-emerald-500 text-white shadow-lg shadow-emerald-500/20";
+        els.btnShort.className = "flex-1 py-2 rounded-lg text-sm font-bold text-slate-400 hover:text-white transition-all";
+      } else {
+        els.btnShort.className = "flex-1 py-2 rounded-lg text-sm font-bold transition-all bg-red-500 text-white shadow-lg shadow-red-500/20";
+        els.btnLong.className = "flex-1 py-2 rounded-lg text-sm font-bold text-slate-400 hover:text-white transition-all";
+      }
+      calculate();
+    }
+
+    function setMarginMode(m) {
+      marginMode = m;
+      els.liqLabel.textContent = m === 'iso' ? 'Iso' : 'Cross';
+
+      if (m === 'iso') {
+        els.btnIso.className = "flex-1 py-2 rounded-lg text-xs font-bold transition-all bg-slate-600 text-white shadow";
+        els.btnCross.className = "flex-1 py-2 rounded-lg text-xs font-bold text-slate-400 hover:text-white";
+      } else {
+        els.btnCross.className = "flex-1 py-2 rounded-lg text-xs font-bold transition-all bg-slate-600 text-white shadow";
+        els.btnIso.className = "flex-1 py-2 rounded-lg text-xs font-bold text-slate-400 hover:text-white";
+      }
+      calculate();
+    }
+
+    function toggleCalcMode() {
+      if (calcMode === 'risk') {
+        calcMode = 'manual';
+        els.riskGroup.classList.add('hidden');
+        els.qtyGroup.classList.remove('hidden');
+        els.calcToggle.innerHTML = `Switch to Risk % <i class="fas fa-exchange-alt ml-1"></i>`;
+      } else {
+        calcMode = 'risk';
+        els.riskGroup.classList.remove('hidden');
+        els.qtyGroup.classList.add('hidden');
+        els.calcToggle.innerHTML = `Switch to Manual Qty <i class="fas fa-exchange-alt ml-1"></i>`;
+      }
+      calculate();
+    }
+
+    function updateLev(val) {
+      leverage = parseFloat(val);
+      document.getElementById('levDisplay').textContent = val + 'x';
+      calculate();
+    }
+
+    function calculate() {
+      const bal = parseFloat(els.balance.value) || 0;
+      const entry = parseFloat(els.entry.value);
+      const stop = parseFloat(els.stop.value);
+      const target = parseFloat(els.target.value);
+
+      // Basic Validations
+      if (!entry) {
+        resetUI();
+        return;
+      }
+
+      els.footerEntry.textContent = entry;
+      els.footerStop.textContent = stop || '-';
+
+      // 1. Determine Quantity (Coins)
+      let qty = 0;
+      let riskAmount = 0;
+      let calculatedRiskPerc = 0;
+
+      if (calcMode === 'risk' && stop && bal) {
+        const riskP = parseFloat(els.riskPercent.value) || 0;
+        riskAmount = bal * (riskP / 100);
+        const dist = Math.abs(entry - stop);
+        if (dist > 0) {
+          qty = riskAmount / dist;
+          calculatedRiskPerc = riskP;
+        }
+      } else if (calcMode === 'manual') {
+        qty = parseFloat(els.manualQty.value) || 0;
+        if (stop && bal) {
+          const dist = Math.abs(entry - stop);
+          riskAmount = qty * dist;
+          calculatedRiskPerc = (riskAmount / bal) * 100;
+        }
+      }
+
+      // 2. Logic Validation
+      let error = false;
+      if (stop) {
+        if (direction === 'long' && stop >= entry) error = true;
+        if (direction === 'short' && stop <= entry) error = true;
+      }
+
+      if (error) {
+        els.badge.textContent = "Invalid Stop Loss";
+        els.badge.className = "px-3 py-1 bg-red-900/50 text-red-400 rounded-full text-xs font-mono border border-red-700";
+      } else {
+        els.badge.textContent = "Live Calculation";
+        els.badge.className = "px-3 py-1 bg-emerald-900/50 text-emerald-400 rounded-full text-xs font-mono border border-emerald-700";
+      }
+
+      // 3. Core Metrics
+      const notional = qty * entry;
+      const margin = notional / leverage;
+
+      // 4. Liquidation Logic (The Fix)
+      let liqPrice = 0;
+      let isSafe = false;
+
+      if (entry > 0) {
+        if (marginMode === 'iso') {
+          // ISOLATED: Based on Leverage (Entry * (1 +/- 1/Lev))
+          // Simplified Bankruptcy Estimate
+          if (direction === 'long') {
+            liqPrice = entry * (1 - (1 / leverage));
+          } else {
+            liqPrice = entry * (1 + (1 / leverage));
+          }
+        } else {
+          // CROSS: Based on Balance (Entry +/- Bal/Qty)
+          if (qty > 0 && bal > 0) {
+            if (direction === 'long') {
+              liqPrice = entry - (bal / qty);
+              if (liqPrice < 0) { liqPrice = 0; isSafe = true; }
+            } else {
+              liqPrice = entry + (bal / qty);
+            }
+          }
+        }
+      }
+
+      // 5. Multi-TP Scale-Out + Fees
+      const tpRows = document.querySelectorAll('[data-tp-row]');
+      let totalProfit = 0, totalPctUsed = 0, scaleOutHtml = '';
+      const makerFee = (parseFloat(document.getElementById('feeMaker').value) || 0) / 100;
+      const takerFee = (parseFloat(document.getElementById('feeTaker').value) || 0) / 100;
+      const entryFeeRate = feeEntryType === 'limit' ? makerFee : takerFee;
+      const exitFeeRate = feeExitType === 'limit' ? makerFee : takerFee;
+      const entryFee = notional * entryFeeRate;
+      let exitFee = 0;
+      let hasAnyTp = false;
+
+      tpRows.forEach(row => {
+        const tp = parseFloat(row.querySelector('.tp-price-input').value);
+        const pct = (parseFloat(row.querySelector('.tp-pct-input').value) || 0) / 100;
+        if (tp && pct > 0 && qty > 0) {
+          hasAnyTp = true;
+          const tpQty = qty * pct;
+          const dist = Math.abs(tp - entry);
+          const p = dist * tpQty;
+          const exitNot = tpQty * tp;
+          exitFee += exitNot * exitFeeRate;
+          totalProfit += p;
+          totalPctUsed += pct;
+          scaleOutHtml += `<div class="flex justify-between text-[10px]"><span class="text-slate-500">TP $${formatNum(tp)} (${(pct * 100).toFixed(0)}%)</span><span class="text-emerald-400 font-mono">+$${formatNum(p)}</span></div>`;
+        }
+      });
+      // Feed first TP into hidden target for backward compat
+      const firstTp = document.querySelector('.tp-price-input');
+      document.getElementById('target').value = firstTp ? firstTp.value : '';
+
+      const totalFees = entryFee + exitFee;
+      const netProfit = totalProfit - totalFees;
+      let roe = 0, rrr = 0;
+      if (hasAnyTp && margin > 0) roe = (netProfit / margin) * 100;
+      if (hasAnyTp && riskAmount > 0) rrr = netProfit / riskAmount;
+
+      // 6. DCA Analysis
+      const dcaRows = document.querySelectorAll('[data-dca-row]');
+      let dcaTotalQty = qty, dcaTotalCost = qty * entry, hasDca = false;
+      dcaRows.forEach(row => {
+        const dp = parseFloat(row.querySelector('.dca-price-input').value);
+        const da = parseFloat(row.querySelector('.dca-amt-input').value);
+        if (dp > 0 && da > 0) {
+          hasDca = true;
+          const dq = da / dp;
+          dcaTotalQty += dq;
+          dcaTotalCost += da;
+        }
+      });
+      const dcaAvgEntry = dcaTotalQty > 0 ? dcaTotalCost / dcaTotalQty : 0;
+      let dcaLiq = 0;
+      if (hasDca && dcaTotalQty > 0 && dcaAvgEntry > 0) {
+        if (marginMode === 'iso') {
+          dcaLiq = direction === 'long' ? dcaAvgEntry * (1 - 1 / leverage) : dcaAvgEntry * (1 + 1 / leverage);
+        } else if (bal > 0) {
+          dcaLiq = direction === 'long' ? dcaAvgEntry - (bal / dcaTotalQty) : dcaAvgEntry + (bal / dcaTotalQty);
+          if (dcaLiq < 0) dcaLiq = 0;
+        }
+      }
+
+      // --- UPDATE UI ---
+
+      // Money
+      els.margin.textContent = margin > 0 ? '$' + formatNum(margin) : '--';
+      els.qty.textContent = qty > 0 ? formatNum(qty, 4) + ' Coins' : '--';
+      els.notional.textContent = notional > 0 ? '$' + formatNum(notional) : '--';
+
+      // Risk
+      if (stop && qty > 0) {
+        const netLoss = riskAmount + entryFee;
+        els.loss.textContent = '-$' + formatNum(netLoss);
+        els.riskPerc.textContent = calculatedRiskPerc.toFixed(2) + '%';
+      } else {
+        els.loss.textContent = '--';
+        els.riskPerc.textContent = '--%';
+      }
+
+      // Liquidation Display
+      if (entry > 0) {
+        if (isSafe && marginMode === 'cross') {
+          els.liq.textContent = 'Safe';
+          els.liq.className = "text-2xl font-bold text-emerald-500 font-mono mb-2";
+          els.liqDist.textContent = "No Risk";
+          els.liqBar.style.width = '100%';
+          els.liqBar.className = "h-full bg-emerald-500";
+        } else if (liqPrice > 0) {
+          els.liq.textContent = '$' + formatNum(liqPrice);
+          els.liq.className = "text-2xl font-bold text-orange-500 font-mono mb-2";
+          const liqDistRaw = Math.abs(entry - liqPrice);
+          const liqDistPerc = (liqDistRaw / entry) * 100;
+          els.liqDist.textContent = liqDistPerc.toFixed(2) + '% away';
+          let barWidth = Math.min(liqDistPerc * 4, 100);
+          els.liqBar.style.width = barWidth + '%';
+          if (liqDistPerc < 5) els.liqBar.className = "h-full bg-red-500 transition-all duration-500";
+          else if (liqDistPerc < 15) els.liqBar.className = "h-full bg-orange-500 transition-all duration-500";
+          else els.liqBar.className = "h-full bg-emerald-500 transition-all duration-500";
+        } else {
+          els.liq.textContent = '--';
+          els.liqBar.style.width = '0%';
+        }
+      }
+
+      // Profit & Fees
+      if (hasAnyTp && qty > 0) {
+        els.profit.textContent = '+$' + formatNum(totalProfit);
+        els.profit.className = netProfit >= 0 ? "text-xl font-bold text-emerald-400 font-mono" : "text-xl font-bold text-red-400 font-mono";
+        els.totalFees.textContent = '-$' + formatNum(totalFees);
+        els.netProfit.textContent = (netProfit >= 0 ? '+$' : '-$') + formatNum(Math.abs(netProfit));
+        els.netProfit.className = netProfit >= 0 ? "text-lg font-bold font-mono text-emerald-300" : "text-lg font-bold font-mono text-red-300";
+        els.roe.textContent = roe.toFixed(2) + '%';
+        els.rrr.textContent = rrr > 0 ? '1:' + rrr.toFixed(2) : '--';
+        if (tpRows.length > 1) {
+          els.scaleOutSummary.classList.remove('hidden');
+          els.scaleOutRows.innerHTML = scaleOutHtml;
+        } else {
+          els.scaleOutSummary.classList.add('hidden');
+        }
+      } else {
+        els.profit.textContent = '--';
+        els.totalFees.textContent = entryFee > 0 ? '-$' + formatNum(entryFee) : '--';
+        els.netProfit.textContent = '--';
+        els.roe.textContent = '--';
+        els.rrr.textContent = '--';
+        els.scaleOutSummary.classList.add('hidden');
+      }
+
+      // DCA
+      if (hasDca && qty > 0) {
+        els.dcaCard.classList.remove('hidden');
+        els.dcaAvg.textContent = '$' + formatNum(dcaAvgEntry, 4);
+        els.dcaTotal.textContent = '$' + formatNum(dcaTotalCost);
+        els.dcaLiq.textContent = dcaLiq > 0 ? '$' + formatNum(dcaLiq) : 'Safe';
+      } else {
+        els.dcaCard.classList.add('hidden');
+      }
+
+      // 7. Kelly Criterion
+      const winRate = (parseFloat(document.getElementById('winRate').value) || 0) / 100;
+      if (winRate > 0 && winRate < 1 && rrr > 0) {
+        const absRRR = Math.abs(rrr);
+        const kellyPct = (winRate - ((1 - winRate) / absRRR)) * 100;
+        const clampedKelly = Math.max(kellyPct, 0);
+        els.kelly.textContent = clampedKelly.toFixed(2) + '%';
+        els.halfKelly.textContent = (clampedKelly / 2).toFixed(2) + '%';
+        els.quarterKelly.textContent = (clampedKelly / 4).toFixed(2) + '%';
+        els.kellyResult.textContent = (clampedKelly / 2).toFixed(2) + '%';
+        // Compare user's risk vs kelly
+        const userRisk = calculatedRiskPerc || (parseFloat(els.riskPercent.value) || 0);
+        if (clampedKelly > 0) {
+          const ratio = (userRisk / clampedKelly) * 100;
+          els.kellyBar.style.width = Math.min(ratio, 100) + '%';
+          if (ratio > 100) {
+            els.kellyVsRisk.textContent = 'Over-risking!';
+            els.kellyVsRisk.className = 'font-mono text-red-400';
+            els.kellyBar.className = 'bg-red-500 h-full transition-all duration-500';
+          } else if (ratio > 60) {
+            els.kellyVsRisk.textContent = 'Aggressive';
+            els.kellyVsRisk.className = 'font-mono text-yellow-400';
+            els.kellyBar.className = 'bg-yellow-500 h-full transition-all duration-500';
+          } else {
+            els.kellyVsRisk.textContent = 'Conservative';
+            els.kellyVsRisk.className = 'font-mono text-emerald-400';
+            els.kellyBar.className = 'bg-emerald-500 h-full transition-all duration-500';
+          }
+        }
+      } else {
+        els.kelly.textContent = '--%';
+        els.halfKelly.textContent = '--%';
+        els.quarterKelly.textContent = '--%';
+        els.kellyResult.textContent = '--%';
+        els.kellyVsRisk.textContent = '--';
+        els.kellyVsRisk.className = 'font-mono';
+        els.kellyBar.style.width = '0%';
+      }
+    }
+
+    function formatNum(n, d = 2) {
+      return n.toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
+    }
+
+    function resetUI() {
+      els.margin.textContent = '--';
+      els.qty.textContent = '--';
+      els.notional.textContent = '--';
+      els.loss.textContent = '--';
+      els.liq.textContent = '--';
+      els.profit.textContent = '--';
+      els.totalFees.textContent = '--';
+      els.netProfit.textContent = '--';
+      els.roe.textContent = '--';
+      els.rrr.textContent = '--';
+      els.scaleOutSummary.classList.add('hidden');
+      els.dcaCard.classList.add('hidden');
+      els.kelly.textContent = '--%';
+      els.halfKelly.textContent = '--%';
+      els.quarterKelly.textContent = '--%';
+      els.kellyResult.textContent = '--%';
+      els.kellyBar.style.width = '0%';
+    }
+
+    // --- EXPORT CSV ---
+    function exportCSV() {
+      const trades = JSON.parse(localStorage.getItem('tradeJournal') || '[]');
+      if (!trades.length) return;
+      const headers = 'Date,Symbol,Direction,Entry,Stop,TP,Leverage,Risk,Net P/L,RRR\n';
+      const rows = trades.map(t => `${t.date},${t.symbol || ''},${t.dir},${t.entry},${t.stop},"${t.tp}",${t.lev},"${t.risk}","${t.netPL}","${t.rrr}"`).join('\n');
+      const blob = new Blob([headers + rows], { type: 'text/csv' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'trade_journal_' + new Date().toISOString().slice(0, 10) + '.csv';
+      a.click();
+    }
+
+    // --- EQUITY CURVE ---
+    function drawEquityCurve(trades) {
+      const section = document.getElementById('equityCurveSection');
+      if (!trades || trades.length < 2) { section.classList.add('hidden'); return; }
+      section.classList.remove('hidden');
+      const canvas = document.getElementById('equityCanvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = canvas.offsetWidth * 2;
+      canvas.height = 360;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Build equity points from trades (newest first, so reverse)
+      const reversed = [...trades].reverse();
+      const startBal = 10000;
+      let points = [startBal];
+      reversed.forEach(t => {
+        const last = points[points.length - 1];
+        const pl = parseFloat(t.netPL.replace(/[^\d.-]/g, '')) || 0;
+        const sign = t.netPL.includes('-') ? -1 : 1;
+        points.push(last + (pl * sign));
+      });
+
+      const maxV = Math.max(...points);
+      const minV = Math.min(...points);
+      const range = maxV - minV || 1;
+      const pad = 30;
+      const w = canvas.width - pad * 2;
+      const h = canvas.height - pad * 2;
+
+      // Grid lines
+      ctx.strokeStyle = '#1e293b';
+      ctx.lineWidth = 1;
+      for (let i = 0; i <= 4; i++) {
+        const y = pad + (h / 4) * i;
+        ctx.beginPath(); ctx.moveTo(pad, y); ctx.lineTo(pad + w, y); ctx.stroke();
+      }
+
+      // Draw line
+      ctx.beginPath();
+      ctx.strokeStyle = '#10b981';
+      ctx.lineWidth = 3;
+      ctx.lineJoin = 'round';
+      points.forEach((v, i) => {
+        const x = pad + (i / (points.length - 1)) * w;
+        const y = pad + h - ((v - minV) / range) * h;
+        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      });
+      ctx.stroke();
+
+      // Gradient fill
+      const grad = ctx.createLinearGradient(0, pad, 0, pad + h);
+      grad.addColorStop(0, 'rgba(16,185,129,0.3)');
+      grad.addColorStop(1, 'rgba(16,185,129,0)');
+      ctx.lineTo(pad + w, pad + h);
+      ctx.lineTo(pad, pad + h);
+      ctx.fillStyle = grad;
+      ctx.fill();
+
+      // Dots
+      ctx.fillStyle = '#10b981';
+      points.forEach((v, i) => {
+        const x = pad + (i / (points.length - 1)) * w;
+        const y = pad + h - ((v - minV) / range) * h;
+        ctx.beginPath(); ctx.arc(x, y, 4, 0, Math.PI * 2); ctx.fill();
+      });
+
+      // Labels
+      const finalVal = points[points.length - 1];
+      const ret = ((finalVal - startBal) / startBal) * 100;
+      document.getElementById('eqStart').textContent = 'Start: $' + formatNum(startBal);
+      document.getElementById('eqEnd').textContent = 'Current: $' + formatNum(finalVal);
+      document.getElementById('eqReturn').textContent = 'Return: ' + (ret >= 0 ? '+' : '') + ret.toFixed(2) + '%';
+    }
+  </script>
+</body>
+
+</html>

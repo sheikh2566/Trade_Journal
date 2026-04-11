@@ -15,28 +15,12 @@
       "key": "D"
     }
   ],
-  "journalit:switch-template": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "T"
-    }
-  ],
   "journalit:open-account-dashboard": [
     {
       "modifiers": [
         "Mod"
       ],
       "key": "A"
-    }
-  ],
-  "journalit:open-layout-builder": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "B"
     }
   ],
   "journalit:create-monthly-review": [
@@ -53,14 +37,6 @@
         "Mod"
       ],
       "key": "Q"
-    }
-  ],
-  "journalit:open-trade-log": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "L"
     }
   ],
   "journalit:create-weekly-review": [
@@ -113,5 +89,42 @@
       ],
       "key": "P"
     }
-  ]
+  ],
+  "footnotes:open": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "F"
+    }
+  ],
+  "workspace:close": [],
+  "file-explorer:new-file": [],
+  "editor:delete-paragraph": [],
+  "editor:toggle-bold": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "B"
+    }
+  ],
+  "journalit:open-layout-builder": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "B"
+    }
+  ],
+  "journalit:open-trade-log": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "L"
+    }
+  ],
+  "editor:toggle-checklist-status": []
 }

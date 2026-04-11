@@ -3,5 +3,13 @@
   "showUnsupportedFiles": false,
   "trashOption": "local",
   "newFileLocation": "folder",
-  "newFileFolderPath": "Market Analysis"
+  "newFileFolderPath": "Market Analysis",
+  "attachmentFolderPath": "Market Analysis/Attachments Images",
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "2",
+    "downscalePercent": 100
+  }
 }
