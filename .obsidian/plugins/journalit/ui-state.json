@@ -2,244 +2,15 @@
   "recentItems": [
     {
       "type": "file",
-      "title": "W15-Review",
-      "path": "!Journalit/2026/Q2/04/W15/W15-Review.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-11T18:15:42.977Z"
-    },
-    {
-      "type": "view",
-      "title": "Account Dashboard",
-      "viewType": "account-dashboard",
-      "icon": "users",
-      "openedAt": "2026-04-11T17:56:05.836Z"
-    },
-    {
-      "type": "file",
       "title": "Risk Calc",
       "path": "Risk Calc.html",
       "icon": "file-text",
-      "openedAt": "2026-04-11T17:38:40.035Z"
-    },
-    {
-      "type": "view",
-      "title": "Trade Log",
-      "viewType": "journalit-trade-log-view",
-      "icon": "folder-tree",
-<<<<<<< HEAD
-      "openedAt": "2026-04-11T18:03:49.017Z"
-    },
-    {
-      "type": "file",
-      "title": "HYPE-110426-T1",
-      "path": "!Journalit/2026/Q2/04/W15/trades/HYPE-110426-T1.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-11T18:03:46.851Z"
-    },
-    {
-      "type": "file",
-      "title": "ETH-110426-T1",
-      "path": "!Journalit/2026/Q2/04/W15/trades/ETH-110426-T1.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-11T18:03:27.767Z"
-    },
-    {
-      "type": "view",
-      "title": "Account Dashboard",
-      "viewType": "account-dashboard",
-      "icon": "users",
-      "openedAt": "2026-04-11T18:03:08.949Z"
-    },
-    {
-      "type": "file",
-      "title": "11",
-      "path": "Market Analysis/2026/04/11.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-11T17:46:00.276Z"
-    },
-    {
-      "type": "file",
-      "title": "Untitled",
-      "path": "Untitled.canvas",
-      "icon": "file-text",
-      "openedAt": "2026-04-11T17:45:57.434Z"
-    },
-    {
-      "type": "file",
-      "title": "04-Review",
-      "path": "!Journalit/2026/Q2/04/04-Review.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-11T17:41:13.431Z"
-    },
-    {
-      "type": "file",
-      "title": "DRC-010426",
-      "path": "!Journalit/2026/Q2/04/W14/DRC-010426.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-11T17:41:12.285Z"
-    },
-    {
-      "type": "file",
-      "title": "Todo List",
-      "path": "!Journalit/Todo List.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-11T17:41:05.555Z"
-=======
-      "openedAt": "2026-04-11T17:29:15.566Z"
-    },
-    {
-      "type": "file",
-      "title": "6th April 2026",
-      "path": "Market Analysis/6th April 2026.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-07T17:38:01.489Z"
-    },
-    {
-      "type": "file",
-      "title": "Final Trade Calc",
-      "path": "Final Trade Calc.html",
-      "icon": "file-text",
-      "openedAt": "2026-04-07T17:37:06.892Z"
->>>>>>> 2dbede455bedeb981c94c7de777fab2e84ce89db
-    },
-    {
-      "type": "file",
-      "title": "Market Analysis Template",
-      "path": "Market Analysis/Templates/Market Analysis Template.md",
-      "icon": "file-text",
-<<<<<<< HEAD
-      "openedAt": "2026-04-11T17:40:49.550Z"
-    },
-    {
-      "type": "file",
-      "title": "Recording 20260405220717",
-      "path": "Recording 20260405220717.m4a",
-      "icon": "file-text",
-      "openedAt": "2026-04-11T17:39:56.434Z"
-    },
-    {
-      "type": "file",
-      "title": "Untitled 1",
-      "path": "Market Analysis/Untitled 1.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-05T17:05:13.864Z"
-=======
-      "openedAt": "2026-04-06T18:14:38.078Z"
->>>>>>> 2dbede455bedeb981c94c7de777fab2e84ce89db
-    },
-    {
-      "type": "file",
-      "title": "Untitled",
-      "path": "Market Analysis/Untitled.md",
-      "icon": "file-text",
-<<<<<<< HEAD
-      "openedAt": "2026-04-05T17:03:28.806Z"
-=======
-      "openedAt": "2026-04-06T18:03:54.495Z"
-    },
-    {
-      "type": "file",
-      "title": "Pasted image 20260406230022",
-      "path": "Pasted image 20260406230022.png",
-      "icon": "file-text",
-      "openedAt": "2026-04-06T18:03:12.054Z"
-    },
-    {
-      "type": "file",
-      "title": "2026-Review",
-      "path": "!Journalit/2026/2026-Review.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-06T17:51:59.329Z"
-    },
-    {
-      "type": "file",
-      "title": "README",
-      "path": "README.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-06T17:40:58.826Z"
->>>>>>> 2dbede455bedeb981c94c7de777fab2e84ce89db
-    },
-    {
-      "type": "view",
-      "title": "Dashboard",
-      "viewType": "journalit-dashboard-view",
-      "icon": "grip",
-<<<<<<< HEAD
-      "openedAt": "2026-04-05T17:01:46.718Z"
-=======
-      "openedAt": "2026-04-06T17:07:26.970Z"
->>>>>>> 2dbede455bedeb981c94c7de777fab2e84ce89db
-    },
-    {
-      "type": "file",
-      "title": "W14-Review",
-      "path": "!Journalit/2026/Q2/04/W14/W14-Review.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-05T12:00:58.447Z"
-    },
-    {
-      "type": "view",
-      "title": "Account: BitFunded",
-      "viewType": "journalit-account-page-view",
-      "icon": "user",
-      "openedAt": "2026-04-05T11:59:54.714Z"
-    },
-    {
-      "type": "file",
-      "title": "ETH-010426-T1",
-      "path": "!Journalit/2026/Q2/04/W14/trades/ETH-010426-T1.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-05T11:58:22.490Z"
-    },
-    {
-      "type": "file",
-      "title": "BTC-010426-T1",
-      "path": "!Journalit/2026/Q2/04/W14/trades/BTC-010426-T1.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-05T11:41:03.186Z"
-    },
-    {
-      "type": "view",
-      "title": "Account: Sheikh",
-      "viewType": "journalit-account-page-view",
-      "icon": "user",
-      "openedAt": "2026-04-05T10:01:31.489Z"
-<<<<<<< HEAD
-=======
-    },
-    {
-      "type": "file",
-      "title": "BTC-010426-T1",
-      "path": "Journalit/2026/Q2/04/W14/trades/BTC-010426-T1.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-05T09:43:31.644Z"
-    },
-    {
-      "type": "view",
-      "title": "Journalit Onboarding",
-      "viewType": "journalit-onboarding-view",
-      "icon": "circle-dot-dashed",
-      "openedAt": "2026-04-05T09:42:50.056Z"
-    },
-    {
-      "type": "file",
-      "title": "Market-Analysis-2026-04-04",
-      "path": "Market Analysis/Templates/Market-Analysis-2026-04-04.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-04T17:31:48.937Z"
-    },
-    {
-      "type": "file",
-      "title": "Analyse No 33822a7c866a8049b991c0a1e671ddb2",
-      "path": "Market Analysis/Templates/Analyse No 33822a7c866a8049b991c0a1e671ddb2.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-04T17:19:52.016Z"
->>>>>>> 2dbede455bedeb981c94c7de777fab2e84ce89db
+      "openedAt": "2026-04-11T18:20:48.544Z"
     }
   ],
-  "gettingStartedDismissed": true,
-  "gettingStartedOpenedTradeLog": true,
-  "gettingStartedOpenedLayoutBuilder": true,
+  "gettingStartedDismissed": false,
+  "gettingStartedOpenedTradeLog": false,
+  "gettingStartedOpenedLayoutBuilder": false,
   "lastUsedFilters": {
     "dateRange": [
       null,
@@ -271,8 +42,8 @@
     },
     "tradelog": {
       "dateRange": [
-        "2026-04-05T19:00:00.000Z",
-        "2026-04-11T18:59:59.999Z"
+        null,
+        null
       ],
       "viewLevel": "trades",
       "tradeTypes": [],
@@ -289,11 +60,14 @@
       "tickers": [],
       "setups": [],
       "tags": [],
+      "mistakes": [],
       "tradeTypes": [],
-      "statuses": []
+      "statuses": [],
+      "customFieldFilters": {}
     }
   },
   "tradeLog": {
+    "expandedMode": false,
     "columnVisibility": {
       "select": false,
       "image": true,
@@ -336,12 +110,5 @@
   },
   "selectedPeriod": "lifetime",
   "dashboardActiveLayout": "Default",
-  "homeActiveLayout": "Default",
-  "lastFuturesSymbol": "ES",
-  "lastForexSymbol": "EURUSD",
-  "lastAssetType": "crypto",
-  "selectedHomeAccounts": [
-    "BitFunded"
-  ],
-  "homeAccountFilterSelectAllActive": true
+  "homeActiveLayout": "Default"
 }
