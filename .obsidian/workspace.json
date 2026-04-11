@@ -74,7 +74,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "20c6a57e5d2e7e8c",
@@ -186,18 +187,19 @@
       "audio-recorder:Start/stop recording": false,
       "obsidian-git:Open Git source control": false,
       "templater-obsidian:Templater": false,
-      "obsidian42-brat:BRAT": false
+      "obsidian42-brat:BRAT": false,
+      "journalit:Open Journalit": false
     }
   },
   "active": "ae28446d82c1c4fd",
   "lastOpenFiles": [
+    "Market Analysis/2026/04/11.md",
     "Market Analysis/6th April 2026.md",
     "Recording 20260405220717.m4a",
     "Untitled.canvas",
     "conflict-files-obsidian-git.md",
     "Market Analysis/Untitled.md",
     "Market Analysis/Untitled 1.md",
-    "Market Analysis/2026/04/11.md",
     "Market Analysis/2026/04",
     "Market Analysis/2026",
     "!Journalit/2026/Q2/04/W15/trades/ETH-110426-T1.md",
