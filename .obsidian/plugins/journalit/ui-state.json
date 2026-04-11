@@ -2,6 +2,13 @@
   "recentItems": [
     {
       "type": "file",
+      "title": "6th April 2026",
+      "path": "Market Analysis/6th April 2026.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-11T18:31:41.377Z"
+    },
+    {
+      "type": "file",
       "title": "Recording 20260405220717",
       "path": "Recording 20260405220717.m4a",
       "icon": "file-text",
@@ -41,13 +48,6 @@
       "viewType": "journalit-trade-log-view",
       "icon": "folder-tree",
       "openedAt": "2026-04-11T17:29:15.566Z"
-    },
-    {
-      "type": "file",
-      "title": "6th April 2026",
-      "path": "Market Analysis/6th April 2026.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-07T17:38:01.489Z"
     },
     {
       "type": "file",
