@@ -1,6 +1,13 @@
 {
   "recentItems": [
     {
+      "type": "view",
+      "title": "Account Dashboard",
+      "viewType": "account-dashboard",
+      "icon": "users",
+      "openedAt": "2026-04-11T17:39:53.347Z"
+    },
+    {
       "type": "file",
       "title": "Risk Calc",
       "path": "Risk Calc.html",
@@ -13,13 +20,6 @@
       "viewType": "journalit-trade-log-view",
       "icon": "folder-tree",
       "openedAt": "2026-04-11T17:29:15.566Z"
-    },
-    {
-      "type": "view",
-      "title": "Account Dashboard",
-      "viewType": "account-dashboard",
-      "icon": "users",
-      "openedAt": "2026-04-11T17:26:55.212Z"
     },
     {
       "type": "file",

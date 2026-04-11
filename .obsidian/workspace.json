@@ -28,9 +28,19 @@
               "icon": "circle-dot-dashed",
               "title": "Journalit"
             }
+          },
+          {
+            "id": "02b46702cfc16657",
+            "type": "leaf",
+            "state": {
+              "type": "account-dashboard",
+              "state": {},
+              "icon": "users",
+              "title": "Account Dashboard"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -186,7 +196,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -203,7 +214,7 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "896607c58a2393b9",
+  "active": "02b46702cfc16657",
   "lastOpenFiles": [
     "Market Analysis/6th April 2026.md",
     "Final Trade Calc.html",
