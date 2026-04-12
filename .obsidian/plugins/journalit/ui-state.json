@@ -2,17 +2,31 @@
   "recentItems": [
     {
       "type": "view",
-      "title": "Dashboard",
-      "viewType": "journalit-dashboard-view",
-      "icon": "grip",
-      "openedAt": "2026-04-11T18:39:50.767Z"
-    },
-    {
-      "type": "view",
       "title": "Trade Log",
       "viewType": "journalit-trade-log-view",
       "icon": "folder-tree",
-      "openedAt": "2026-04-11T18:39:46.092Z"
+      "openedAt": "2026-04-11T18:42:21.226Z"
+    },
+    {
+      "type": "view",
+      "title": "Account Dashboard",
+      "viewType": "account-dashboard",
+      "icon": "users",
+      "openedAt": "2026-04-11T18:42:19.788Z"
+    },
+    {
+      "type": "view",
+      "title": "Account: BitFunded",
+      "viewType": "journalit-account-page-view",
+      "icon": "user",
+      "openedAt": "2026-04-11T18:40:55.464Z"
+    },
+    {
+      "type": "view",
+      "title": "Dashboard",
+      "viewType": "journalit-dashboard-view",
+      "icon": "grip",
+      "openedAt": "2026-04-11T18:40:52.313Z"
     },
     {
       "type": "file",
@@ -48,13 +62,6 @@
       "path": "conflict-files-obsidian-git.md",
       "icon": "file-text",
       "openedAt": "2026-04-11T18:29:09.956Z"
-    },
-    {
-      "type": "view",
-      "title": "Account Dashboard",
-      "viewType": "account-dashboard",
-      "icon": "users",
-      "openedAt": "2026-04-11T18:22:39.546Z"
     },
     {
       "type": "file",
@@ -111,13 +118,6 @@
       "path": "!Journalit/2026/Q2/04/W14/W14-Review.md",
       "icon": "file-text",
       "openedAt": "2026-04-05T12:00:58.447Z"
-    },
-    {
-      "type": "view",
-      "title": "Account: BitFunded",
-      "viewType": "journalit-account-page-view",
-      "icon": "user",
-      "openedAt": "2026-04-05T11:59:54.714Z"
     },
     {
       "type": "file",

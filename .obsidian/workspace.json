@@ -16,29 +16,8 @@
               "icon": "circle-dot-dashed",
               "title": "Journalit"
             }
-          },
-          {
-            "id": "b1c08f95cadccb41",
-            "type": "leaf",
-            "state": {
-              "type": "journalit-trade-log-view",
-              "state": {},
-              "icon": "folder-tree",
-              "title": "Trade Log"
-            }
-          },
-          {
-            "id": "46145c6ded69b594",
-            "type": "leaf",
-            "state": {
-              "type": "journalit-dashboard-view",
-              "state": {},
-              "icon": "grip",
-              "title": "Dashboard"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -212,7 +191,7 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "46145c6ded69b594",
+  "active": "ae28446d82c1c4fd",
   "lastOpenFiles": [
     "Market Analysis/2026/04/11.md",
     "Market Analysis/6th April 2026.md",
