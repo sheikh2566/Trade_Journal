@@ -1096,7 +1096,7 @@
     "showSyncNotifications": true,
     "showNewTradeNotifications": true,
     "showUpdateNotifications": true,
-    "lastSeenVersion": "1.7.0",
+    "lastSeenVersion": "1.7.1",
     "dismissedVersion": "1.7.0",
     "authToken": "",
     "userEmail": "",

@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b0f7248176d8e809",
+        "id": "da186269c98ca881",
         "type": "tabs",
         "children": [
           {
-            "id": "b03ddd437ff9f8dc",
+            "id": "eb4282d486ee7273",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "journalit-home-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "icon": "circle-dot-dashed",
+              "title": "Journalit"
             }
           }
         ]
@@ -190,7 +190,7 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "b03ddd437ff9f8dc",
+  "active": "eb4282d486ee7273",
   "lastOpenFiles": [
     "Risk Calc.html",
     "Market Analysis/2026/04/11.md",
