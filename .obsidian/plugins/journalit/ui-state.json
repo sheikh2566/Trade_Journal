@@ -1,6 +1,13 @@
 {
   "recentItems": [
     {
+      "type": "file",
+      "title": "Risk Calc",
+      "path": "Risk Calc.html",
+      "icon": "file-text",
+      "openedAt": "2026-04-14T18:22:07.508Z"
+    },
+    {
       "type": "view",
       "title": "Dashboard",
       "viewType": "journalit-dashboard-view",
@@ -13,13 +20,6 @@
       "viewType": "account-dashboard",
       "icon": "users",
       "openedAt": "2026-04-14T15:04:48.268Z"
-    },
-    {
-      "type": "file",
-      "title": "Risk Calc",
-      "path": "Risk Calc.html",
-      "icon": "file-text",
-      "openedAt": "2026-04-14T15:01:32.816Z"
     },
     {
       "type": "view",

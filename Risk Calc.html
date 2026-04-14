@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<!-- saved from url=(0065)file:///C:/Users/mawai/OneDrive/Journal/Final%20Trade%20Calc.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ultimate Futures Terminal</title>
-  <script src="./Risk Calc_files/saved_resource"></script>
-  <link href="./Risk Calc_files/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <style>
     body {
       background-color: #0f172a;
@@ -80,16 +81,18 @@
       background: #1e293b;
     }
   </style>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.right-0{right:0px}.top-0{top:0px}.z-10{z-index:10}.col-span-2{grid-column:span 2 / span 2}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-6{margin-bottom:1.5rem}.ml-1{margin-left:0.25rem}.mr-1{margin-right:0.25rem}.mr-2{margin-right:0.5rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-6{margin-top:1.5rem}.mb-4{margin-bottom:1rem}.mt-4{margin-top:1rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-1\.5{height:0.375rem}.h-8{height:2rem}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-0{width:0px}.w-20{width:5rem}.w-8{width:2rem}.w-full{width:100%}.max-w-5xl{max-width:64rem}.flex-1{flex:1 1 0%}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.content-start{align-content:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-l-blue-500{--tw-border-opacity:1;border-left-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.border-l-emerald-500{--tw-border-opacity:1;border-left-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}.border-l-orange-500{--tw-border-opacity:1;border-left-color:rgb(249 115 22 / var(--tw-border-opacity, 1))}.border-l-purple-500{--tw-border-opacity:1;border-left-color:rgb(168 85 247 / var(--tw-border-opacity, 1))}.border-l-red-500{--tw-border-opacity:1;border-left-color:rgb(239 68 68 / var(--tw-border-opacity, 1))}.border-l-violet-500{--tw-border-opacity:1;border-left-color:rgb(139 92 246 / var(--tw-border-opacity, 1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-orange-500{--tw-bg-opacity:1;background-color:rgb(249 115 22 / var(--tw-bg-opacity, 1))}.bg-slate-600{--tw-bg-opacity:1;background-color:rgb(71 85 105 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-800\/50{background-color:rgb(30 41 59 / 0.5)}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-900\/50{background-color:rgb(15 23 42 / 0.5)}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}.bg-transparent{background-color:transparent}.bg-violet-500{--tw-bg-opacity:1;background-color:rgb(139 92 246 / var(--tw-bg-opacity, 1))}.bg-gradient-to-tr{background-image:linear-gradient(to top right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-blue-500{--tw-gradient-from:#3b82f6 var(--tw-gradient-from-position);--tw-gradient-to:rgb(59 130 246 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-blue-600{--tw-gradient-from:#2563eb var(--tw-gradient-from-position);--tw-gradient-to:rgb(37 99 235 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-indigo-600{--tw-gradient-to:#4f46e5 var(--tw-gradient-to-position)}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-4{padding:1rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pt-2{padding-top:0.5rem}.pt-4{padding-top:1rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.font-sans{font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}.text-2xl{font-size:1.5rem;line-height:2rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-cyan-400{--tw-text-opacity:1;color:rgb(34 211 238 / var(--tw-text-opacity, 1))}.text-cyan-500{--tw-text-opacity:1;color:rgb(6 182 212 / var(--tw-text-opacity, 1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-emerald-500{--tw-text-opacity:1;color:rgb(16 185 129 / var(--tw-text-opacity, 1))}.text-orange-400{--tw-text-opacity:1;color:rgb(251 146 60 / var(--tw-text-opacity, 1))}.text-orange-500{--tw-text-opacity:1;color:rgb(249 115 22 / var(--tw-text-opacity, 1))}.text-red-300{--tw-text-opacity:1;color:rgb(252 165 165 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-violet-300{--tw-text-opacity:1;color:rgb(196 181 253 / var(--tw-text-opacity, 1))}.text-violet-400{--tw-text-opacity:1;color:rgb(167 139 250 / var(--tw-text-opacity, 1))}.text-violet-500{--tw-text-opacity:1;color:rgb(139 92 246 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-400{--tw-text-opacity:1;color:rgb(250 204 21 / var(--tw-text-opacity, 1))}.placeholder-slate-600::placeholder{--tw-placeholder-opacity:1;color:rgb(71 85 105 / var(--tw-placeholder-opacity, 1))}.opacity-10{opacity:0.1}.opacity-5{opacity:0.05}.opacity-60{opacity:0.6}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-emerald-500\/20{--tw-shadow-color:rgb(16 185 129 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-blue-500\/20{--tw-shadow-color:rgb(59 130 246 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-500{transition-duration:500ms}.hover\:border-blue-500\/30:hover{border-color:rgb(59 130 246 / 0.3)}.hover\:border-cyan-500\/30:hover{border-color:rgb(6 182 212 / 0.3)}.hover\:border-emerald-500\/30:hover{border-color:rgb(16 185 129 / 0.3)}.hover\:border-orange-500\/30:hover{border-color:rgb(249 115 22 / 0.3)}.hover\:border-red-500\/30:hover{border-color:rgb(239 68 68 / 0.3)}.hover\:border-violet-500\/30:hover{border-color:rgb(139 92 246 / 0.3)}.hover\:from-blue-500:hover{--tw-gradient-from:#3b82f6 var(--tw-gradient-from-position);--tw-gradient-to:rgb(59 130 246 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:to-indigo-500:hover{--tw-gradient-to:#6366f1 var(--tw-gradient-to-position)}.hover\:text-blue-300:hover{--tw-text-opacity:1;color:rgb(147 197 253 / var(--tw-text-opacity, 1))}.hover\:text-emerald-300:hover{--tw-text-opacity:1;color:rgb(110 231 183 / var(--tw-text-opacity, 1))}.hover\:text-slate-300:hover{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:text-red-300:hover{--tw-text-opacity:1;color:rgb(252 165 165 / var(--tw-text-opacity, 1))}.hover\:opacity-100:hover{opacity:1}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.group:hover .group-hover\:opacity-20{opacity:0.2}@media (min-width: 640px){.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:p-6{padding:1.5rem}.sm\:p-8{padding:2rem}.sm\:pt-10{padding-top:2.5rem}}@media (min-width: 1024px){.lg\:w-5\/12{width:41.666667%}.lg\:w-7\/12{width:58.333333%}.lg\:flex-row{flex-direction:row}.lg\:border-b-0{border-bottom-width:0px}.lg\:border-r{border-right-width:1px}}</style></head>
+</head>
 
 <body class="text-slate-200 min-h-screen flex flex-col items-center p-2 sm:p-6 sm:pt-10 font-sans gap-6">
 
-  <div class="w-full max-w-5xl bg-slate-900 rounded-3xl shadow-2xl border border-slate-800 overflow-hidden flex flex-col lg:flex-row">
+  <div
+    class="w-full max-w-5xl bg-slate-900 rounded-3xl shadow-2xl border border-slate-800 overflow-hidden flex flex-col lg:flex-row">
 
     <div class="w-full lg:w-5/12 p-6 sm:p-8 border-b lg:border-b-0 lg:border-r border-slate-800 bg-slate-900/50">
 
       <div class="flex items-center gap-3 mb-6">
-        <div class="w-8 h-8 rounded bg-gradient-to-tr from-blue-500 to-indigo-600 flex items-center justify-center font-bold text-white">
+        <div
+          class="w-8 h-8 rounded bg-gradient-to-tr from-blue-500 to-indigo-600 flex items-center justify-center font-bold text-white">
           ⚡</div>
         <h1 class="text-xl font-bold tracking-tight text-white">Trade Planner</h1>
       </div>
@@ -98,13 +101,17 @@
 
         <div class="grid grid-cols-2 gap-3">
           <div class="bg-slate-800 p-1 rounded-xl flex border border-slate-700">
-            <button id="btnLong" onclick="setDirection(&#39;long&#39;)" class="flex-1 py-2 rounded-lg text-sm font-bold transition-all bg-emerald-500 text-white shadow-lg shadow-emerald-500/20">Long</button>
-            <button id="btnShort" onclick="setDirection(&#39;short&#39;)" class="flex-1 py-2 rounded-lg text-sm font-bold text-slate-400 hover:text-white transition-all">Short</button>
+            <button id="btnLong" onclick="setDirection('long')"
+              class="flex-1 py-2 rounded-lg text-sm font-bold transition-all bg-emerald-500 text-white shadow-lg shadow-emerald-500/20">Long</button>
+            <button id="btnShort" onclick="setDirection('short')"
+              class="flex-1 py-2 rounded-lg text-sm font-bold text-slate-400 hover:text-white transition-all">Short</button>
           </div>
 
           <div class="bg-slate-800 p-1 rounded-xl flex border border-slate-700 relative">
-            <button id="modeIso" onclick="setMarginMode(&#39;iso&#39;)" class="flex-1 py-2 rounded-lg text-xs font-bold transition-all bg-slate-600 text-white">Isolated</button>
-            <button id="modeCross" onclick="setMarginMode(&#39;cross&#39;)" class="flex-1 py-2 rounded-lg text-xs font-bold text-slate-400 hover:text-white">Cross</button>
+            <button id="modeIso" onclick="setMarginMode('iso')"
+              class="flex-1 py-2 rounded-lg text-xs font-bold transition-all bg-slate-600 text-white">Isolated</button>
+            <button id="modeCross" onclick="setMarginMode('cross')"
+              class="flex-1 py-2 rounded-lg text-xs font-bold text-slate-400 hover:text-white">Cross</button>
           </div>
         </div>
 
@@ -113,7 +120,9 @@
             ETH)</label>
           <div class="input-group rounded-xl flex items-center px-3 border-l-4 border-l-orange-500">
             <span class="text-slate-500 mr-2"><i class="fas fa-coins"></i></span>
-            <input id="symbol" type="text" class="w-full bg-transparent py-3 text-sm font-mono focus:outline-none uppercase" placeholder="BTCUSDT" value="BTCUSDT">
+            <input id="symbol" type="text"
+              class="w-full bg-transparent py-3 text-sm font-mono focus:outline-none uppercase" placeholder="BTCUSDT"
+              value="BTCUSDT">
           </div>
         </div>
 
@@ -124,19 +133,22 @@
             <span>Leverage</span>
             <span id="levDisplay" class="text-blue-400 font-mono">5x</span>
           </div>
-          <input id="leverage" type="range" min="1" max="50" value="5" class="w-full mb-2" oninput="updateLev(this.value)">
+          <input id="leverage" type="range" min="1" max="50" value="5" class="w-full mb-2"
+            oninput="updateLev(this.value)">
         </div>
 
         <div>
           <label class="text-xs text-slate-400 uppercase font-bold ml-1 mb-1 block">Account Balance ($)</label>
           <div class="input-group rounded-xl flex items-center px-3">
             <span class="text-slate-500 mr-2"><i class="fas fa-wallet"></i></span>
-            <input id="balance" type="number" class="w-full bg-transparent py-3 text-sm font-mono focus:outline-none" placeholder="10000" value="10000">
+            <input id="balance" type="number" class="w-full bg-transparent py-3 text-sm font-mono focus:outline-none"
+              placeholder="10000" value="10000">
           </div>
         </div>
 
         <div class="flex justify-end mb-1">
-          <button onclick="toggleCalcMode()" id="calcModeToggle" class="text-[10px] uppercase font-bold text-blue-400 hover:text-blue-300">
+          <button onclick="toggleCalcMode()" id="calcModeToggle"
+            class="text-[10px] uppercase font-bold text-blue-400 hover:text-blue-300">
             Switch to Manual Qty <i class="fas fa-exchange-alt ml-1"></i>
           </button>
         </div>
@@ -145,7 +157,8 @@
           <label class="text-xs text-slate-400 uppercase font-bold ml-1 mb-1 block">Risk per Trade (%)</label>
           <div class="input-group rounded-xl flex items-center px-3 border-l-4 border-l-blue-500">
             <span class="text-slate-500 mr-2"><i class="fas fa-shield-alt"></i></span>
-            <input id="riskPercent" type="number" class="w-full bg-transparent py-3 text-sm font-mono focus:outline-none" value="1">
+            <input id="riskPercent" type="number"
+              class="w-full bg-transparent py-3 text-sm font-mono focus:outline-none" value="1">
             <span class="text-slate-500 text-xs font-bold">%</span>
           </div>
         </div>
@@ -154,7 +167,8 @@
           <label class="text-xs text-slate-400 uppercase font-bold ml-1 mb-1 block">Position Size (Coins)</label>
           <div class="input-group rounded-xl flex items-center px-3 border-l-4 border-l-purple-500">
             <span class="text-slate-500 mr-2"><i class="fas fa-coins"></i></span>
-            <input id="manualQty" type="number" class="w-full bg-transparent py-3 text-sm font-mono focus:outline-none" placeholder="e.g 0.5">
+            <input id="manualQty" type="number" class="w-full bg-transparent py-3 text-sm font-mono focus:outline-none"
+              placeholder="e.g 0.5">
           </div>
         </div>
 
@@ -164,15 +178,19 @@
               <label class="text-xs text-slate-400 uppercase font-bold ml-1">Entry Prices</label>
               <div class="flex items-center gap-2">
                 <span id="avgEntryDisplay" class="text-[10px] font-mono text-blue-400 hidden">Avg: --</span>
-                <button onclick="addEntryRow()" class="text-[10px] uppercase font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1">
+                <button onclick="addEntryRow()"
+                  class="text-[10px] uppercase font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1">
                   <i class="fas fa-plus"></i> Add Entry
                 </button>
               </div>
             </div>
             <div id="entryRowsContainer" class="space-y-2">
-              <div class="input-group rounded-xl flex items-center px-3" data-entry-row="">
+              <div class="input-group rounded-xl flex items-center px-3" data-entry-row>
                 <span class="text-slate-500 mr-2">@</span>
-                <input type="number" class="entry-price-input w-full bg-transparent py-3 text-sm font-mono focus:outline-none placeholder-slate-600" placeholder="0.00" oninput="onEntryInput()">
+                <input type="number"
+                  class="entry-price-input w-full bg-transparent py-3 text-sm font-mono focus:outline-none placeholder-slate-600"
+                  placeholder="0.00" oninput="onEntryInput()">
+                <button onclick="copyInputVal(this)" class="text-slate-500 hover:text-white px-2 py-3" title="Copy"><i class="fas fa-copy"></i></button>
               </div>
             </div>
             <input id="entry" type="hidden">
@@ -181,22 +199,32 @@
           <div>
             <label class="text-xs text-slate-400 uppercase font-bold ml-1 mb-1 block">Stop Loss</label>
             <div class="input-group rounded-xl flex items-center px-3 border-l-4 border-l-red-500">
-              <input id="stop" type="number" class="w-full bg-transparent py-3 text-sm font-mono focus:outline-none text-red-300 placeholder-slate-600" placeholder="0.00">
+              <input id="stop" type="number"
+                class="w-full bg-transparent py-3 text-sm font-mono focus:outline-none text-red-300 placeholder-slate-600"
+                placeholder="0.00">
+              <button onclick="copyInputVal(this)" class="text-slate-500 hover:text-white px-2 py-3" title="Copy"><i class="fas fa-copy"></i></button>
             </div>
           </div>
 
           <div class="col-span-2">
             <div class="flex justify-between items-center mb-1">
               <label class="text-xs text-slate-400 uppercase font-bold ml-1">Take Profits</label>
-              <button onclick="addTpRow()" class="text-[10px] uppercase font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1"><i class="fas fa-plus"></i> Add TP</button>
+              <button onclick="addTpRow()"
+                class="text-[10px] uppercase font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1"><i
+                  class="fas fa-plus"></i> Add TP</button>
             </div>
             <div id="tpRowsContainer" class="space-y-2">
-              <div class="flex gap-2 items-center" data-tp-row="">
+              <div class="flex gap-2 items-center" data-tp-row>
                 <div class="input-group rounded-xl flex items-center px-3 border-l-4 border-l-emerald-500 flex-1">
-                  <input type="number" class="tp-price-input w-full bg-transparent py-3 text-sm font-mono focus:outline-none text-emerald-300 placeholder-slate-600" placeholder="TP Price" oninput="calculate()">
+                  <input type="number"
+                    class="tp-price-input w-full bg-transparent py-3 text-sm font-mono focus:outline-none text-emerald-300 placeholder-slate-600"
+                    placeholder="TP Price" oninput="calculate()">
+                  <button onclick="copyInputVal(this)" class="text-slate-500 hover:text-white px-2 py-3" title="Copy"><i class="fas fa-copy"></i></button>
                 </div>
                 <div class="input-group rounded-xl flex items-center px-2 w-20">
-                  <input type="number" class="tp-pct-input w-full bg-transparent py-2 text-xs font-mono focus:outline-none text-center" value="100" oninput="calculate()">
+                  <input type="number"
+                    class="tp-pct-input w-full bg-transparent py-2 text-xs font-mono focus:outline-none text-center"
+                    value="100" oninput="calculate()">
                   <span class="text-slate-500 text-xs">%</span>
                 </div>
               </div>
@@ -208,12 +236,15 @@
         <hr class="border-slate-800">
         <div>
           <div class="flex justify-between items-center">
-            <label class="text-xs text-slate-400 uppercase font-bold ml-1 flex items-center gap-1"><i class="fas fa-layer-group text-[10px]"></i> DCA Orders</label>
-            <button onclick="toggleDca()" id="dcaToggleBtn" class="text-[10px] text-blue-400 hover:text-blue-300"><i class="fas fa-chevron-down"></i></button>
+            <label class="text-xs text-slate-400 uppercase font-bold ml-1 flex items-center gap-1"><i
+                class="fas fa-layer-group text-[10px]"></i> DCA Orders</label>
+            <button onclick="toggleDca()" id="dcaToggleBtn" class="text-[10px] text-blue-400 hover:text-blue-300"><i
+                class="fas fa-chevron-down"></i></button>
           </div>
           <div id="dcaSection" class="hidden mt-2 space-y-2">
             <div id="dcaRowsContainer" class="space-y-2"></div>
-            <button onclick="addDcaRow()" class="w-full py-2 rounded-xl border border-dashed border-slate-700 text-slate-500 hover:text-slate-300 text-xs">+
+            <button onclick="addDcaRow()"
+              class="w-full py-2 rounded-xl border border-dashed border-slate-700 text-slate-500 hover:text-slate-300 text-xs">+
               Add Safety Order</button>
           </div>
         </div>
@@ -224,29 +255,38 @@
           <div class="grid grid-cols-2 gap-2">
             <div class="input-group rounded-xl flex items-center px-3">
               <span class="text-slate-500 text-[10px] mr-1">Mkr</span>
-              <input id="feeMaker" type="number" class="w-full bg-transparent py-2 text-sm font-mono focus:outline-none text-center" value="0.04" oninput="calculate()">
+              <input id="feeMaker" type="number"
+                class="w-full bg-transparent py-2 text-sm font-mono focus:outline-none text-center" value="0.04"
+                oninput="calculate()">
               <span class="text-slate-500 text-xs">%</span>
             </div>
             <div class="input-group rounded-xl flex items-center px-3">
               <span class="text-slate-500 text-[10px] mr-1">Tkr</span>
-              <input id="feeTaker" type="number" class="w-full bg-transparent py-2 text-sm font-mono focus:outline-none text-center" value="0.04" oninput="calculate()">
+              <input id="feeTaker" type="number"
+                class="w-full bg-transparent py-2 text-sm font-mono focus:outline-none text-center" value="0.04"
+                oninput="calculate()">
               <span class="text-slate-500 text-xs">%</span>
             </div>
           </div>
           <div class="flex gap-1 mt-2">
-            <button id="feeEntryType" onclick="toggleFeeType(&#39;entry&#39;)" class="flex-1 py-1 rounded-lg bg-slate-800 border border-slate-700 text-[10px] font-bold text-slate-300">Entry:
+            <button id="feeEntryType" onclick="toggleFeeType('entry')"
+              class="flex-1 py-1 rounded-lg bg-slate-800 border border-slate-700 text-[10px] font-bold text-slate-300">Entry:
               Limit</button>
-            <button id="feeExitType" onclick="toggleFeeType(&#39;exit&#39;)" class="flex-1 py-1 rounded-lg bg-slate-800 border border-slate-700 text-[10px] font-bold text-slate-300">Exit:
+            <button id="feeExitType" onclick="toggleFeeType('exit')"
+              class="flex-1 py-1 rounded-lg bg-slate-800 border border-slate-700 text-[10px] font-bold text-slate-300">Exit:
               Market</button>
           </div>
         </div>
 
         <hr class="border-slate-800">
         <div>
-          <label class="text-xs text-slate-400 uppercase font-bold ml-1 mb-2 block"><i class="fas fa-brain text-[10px] mr-1"></i>Kelly Criterion</label>
+          <label class="text-xs text-slate-400 uppercase font-bold ml-1 mb-2 block"><i
+              class="fas fa-brain text-[10px] mr-1"></i>Kelly Criterion</label>
           <div class="input-group rounded-xl flex items-center px-3 border-l-4 border-l-violet-500">
             <span class="text-slate-500 text-[10px] mr-2">Win Rate</span>
-            <input id="winRate" type="number" class="w-full bg-transparent py-2 text-sm font-mono focus:outline-none text-center text-violet-300" value="85" oninput="calculate()">
+            <input id="winRate" type="number"
+              class="w-full bg-transparent py-2 text-sm font-mono focus:outline-none text-center text-violet-300"
+              value="85" oninput="calculate()">
             <span class="text-slate-500 text-xs">%</span>
           </div>
           <div class="mt-2 bg-slate-800/50 rounded-lg p-2 flex justify-between items-center">
@@ -257,24 +297,27 @@
       </div>
 
       <p class="text-[10px] text-slate-600 mt-6 text-center">
-        Leverage affects Liq &amp; Margin only.<br>
+        Leverage affects Liq & Margin only.<br>
         Developed by Sheikh Awais
       </p>
     </div>
 
     <div class="w-full lg:w-7/12 bg-slate-950 p-6 sm:p-8 flex flex-col relative">
 
-      <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(#3b82f6 1px, transparent 1px); background-size: 20px 20px;"></div>
+      <div class="absolute inset-0 opacity-5 pointer-events-none"
+        style="background-image: radial-gradient(#3b82f6 1px, transparent 1px); background-size: 20px 20px;"></div>
 
       <div class="flex justify-between items-center mb-6 z-10">
         <h2 class="text-lg font-bold text-slate-300">Analysis Dashboard</h2>
-        <span id="badge" class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-500 border border-slate-700">Waiting
+        <span id="badge"
+          class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-500 border border-slate-700">Waiting
           for data...</span>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 z-10 flex-1 content-start">
 
-        <div class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-blue-500/30 transition-colors">
+        <div
+          class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-blue-500/30 transition-colors">
           <div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
             <i class="fas fa-layer-group text-4xl text-blue-500"></i>
           </div>
@@ -293,7 +336,8 @@
           </div>
         </div>
 
-        <div class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-red-500/30 transition-colors">
+        <div
+          class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-red-500/30 transition-colors">
           <div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
             <i class="fas fa-heart-broken text-4xl text-red-500"></i>
           </div>
@@ -309,11 +353,13 @@
           </div>
         </div>
 
-        <div class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-orange-500/30 transition-colors">
+        <div
+          class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-orange-500/30 transition-colors">
           <div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
             <i class="fas fa-skull text-4xl text-orange-500"></i>
           </div>
-          <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-3">Safety (<span id="liqModeLabel">Iso</span>)</p>
+          <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-3">Safety (<span
+              id="liqModeLabel">Iso</span>)</p>
 
           <div class="mb-1">
             <span class="text-sm text-slate-500">Liquidation Price</span>
@@ -330,11 +376,12 @@
           </div>
         </div>
 
-        <div class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-emerald-500/30 transition-colors">
+        <div
+          class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-emerald-500/30 transition-colors">
           <div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
             <i class="fas fa-chart-line text-4xl text-emerald-500"></i>
           </div>
-          <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-3">Profit &amp; Fees</p>
+          <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-3">Profit & Fees</p>
           <div class="flex justify-between items-end mb-1">
             <span class="text-sm text-slate-500">Gross Profit</span>
             <span id="resProfit" class="text-xl font-bold text-emerald-400 font-mono">--</span>
@@ -348,8 +395,10 @@
             <span id="resNetProfit" class="text-lg font-bold font-mono text-emerald-300">--</span>
           </div>
           <div class="flex justify-between items-center mt-2">
-            <div class="bg-slate-800 px-2 py-1 rounded text-[10px] text-slate-400">ROE: <span id="resROE" class="text-white font-mono">--</span></div>
-            <div class="bg-slate-800 px-2 py-1 rounded text-[10px] text-slate-400">RRR: <span id="resRRR" class="text-white font-mono">--</span></div>
+            <div class="bg-slate-800 px-2 py-1 rounded text-[10px] text-slate-400">ROE: <span id="resROE"
+                class="text-white font-mono">--</span></div>
+            <div class="bg-slate-800 px-2 py-1 rounded text-[10px] text-slate-400">RRR: <span id="resRRR"
+                class="text-white font-mono">--</span></div>
           </div>
           <div id="scaleOutSummary" class="mt-3 pt-2 border-t border-slate-800 hidden">
             <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Scale-Out</p>
@@ -357,7 +406,8 @@
           </div>
         </div>
 
-        <div id="dcaCard" class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-cyan-500/30 transition-colors hidden">
+        <div id="dcaCard"
+          class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-cyan-500/30 transition-colors hidden">
           <div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
             <i class="fas fa-layer-group text-4xl text-cyan-500"></i>
           </div>
@@ -376,7 +426,8 @@
           </div>
         </div>
 
-        <div class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-violet-500/30 transition-colors">
+        <div
+          class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-violet-500/30 transition-colors">
           <div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
             <i class="fas fa-brain text-4xl text-violet-500"></i>
           </div>
@@ -406,11 +457,13 @@
 
       </div>
 
-      <button onclick="saveTrade()" class="mt-4 w-full py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-sm transition-all shadow-lg shadow-blue-500/20 z-10">
+      <button onclick="saveTrade()"
+        class="mt-4 w-full py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-sm transition-all shadow-lg shadow-blue-500/20 z-10">
         <i class="fas fa-save mr-2"></i>Save Trade to Journal
       </button>
 
-      <div class="mt-4 pt-4 border-t border-slate-800 text-sm text-slate-400 flex justify-between items-center opacity-60 hover:opacity-100 transition-opacity z-10">
+      <div
+        class="mt-4 pt-4 border-t border-slate-800 text-sm text-slate-400 flex justify-between items-center opacity-60 hover:opacity-100 transition-opacity z-10">
         <div class="flex gap-4">
           <div><span class="text-slate-600">Entry:</span> <span id="footerEntry" class="font-mono">-</span></div>
           <div><span class="text-slate-600">Stop:</span> <span id="footerStop" class="font-mono">-</span></div>
@@ -425,8 +478,10 @@
       <div class="flex justify-between items-center mb-4">
         <h2 class="text-lg font-bold text-slate-300"><i class="fas fa-book mr-2 text-blue-400"></i>Trade Journal</h2>
         <div class="flex items-center gap-3">
-          <button onclick="exportCSV()" class="text-xs text-blue-400 hover:text-blue-300"><i class="fas fa-file-csv mr-1"></i>Export CSV</button>
-          <button onclick="clearJournal()" class="text-xs text-red-400 hover:text-red-300"><i class="fas fa-trash mr-1"></i>Clear All</button>
+          <button onclick="exportCSV()" class="text-xs text-blue-400 hover:text-blue-300"><i
+              class="fas fa-file-csv mr-1"></i>Export CSV</button>
+          <button onclick="clearJournal()" class="text-xs text-red-400 hover:text-red-300"><i
+              class="fas fa-trash mr-1"></i>Clear All</button>
         </div>
       </div>
       <div class="overflow-x-auto">
@@ -482,7 +537,8 @@
         <input type="number"
           class="entry-price-input w-full bg-transparent py-3 text-sm font-mono focus:outline-none placeholder-slate-600"
           placeholder="0.00" oninput="onEntryInput()">
-        <button onclick="removeEntryRow(this)" class="text-red-400 hover:text-red-300 ml-2 text-sm" title="Remove">
+        <button onclick="copyInputVal(this)" class="text-slate-500 hover:text-white px-2 text-sm" title="Copy"><i class="fas fa-copy"></i></button>
+        <button onclick="removeEntryRow(this)" class="text-red-400 hover:text-red-300 ml-1 text-sm" title="Remove">
           <i class="fas fa-times"></i>
         </button>
       `;
@@ -583,13 +639,24 @@
     document.querySelectorAll('input:not(.entry-price-input):not(.tp-price-input):not(.tp-pct-input):not(.dca-price-input):not(.dca-amt-input)').forEach(i => i.addEventListener('input', calculate));
     loadJournal();
 
+    function copyInputVal(btn) {
+      const input = btn.parentElement.querySelector('input');
+      if (input && input.value) {
+        navigator.clipboard.writeText(input.value).then(() => {
+          const icon = btn.querySelector('i');
+          icon.className = 'fas fa-check text-emerald-400';
+          setTimeout(() => { icon.className = 'fas fa-copy'; }, 1500);
+        });
+      }
+    }
+
     // --- TP FUNCTIONS ---
     function addTpRow() {
       const c = document.getElementById('tpRowsContainer');
       const row = document.createElement('div');
       row.className = 'flex gap-2 items-center';
       row.setAttribute('data-tp-row', '');
-      row.innerHTML = `<div class="input-group rounded-xl flex items-center px-3 border-l-4 border-l-emerald-500 flex-1"><input type="number" class="tp-price-input w-full bg-transparent py-3 text-sm font-mono focus:outline-none text-emerald-300 placeholder-slate-600" placeholder="TP Price" oninput="calculate()"></div><div class="input-group rounded-xl flex items-center px-2 w-20"><input type="number" class="tp-pct-input w-full bg-transparent py-2 text-xs font-mono focus:outline-none text-center" value="25" oninput="calculate()"><span class="text-slate-500 text-xs">%</span></div><button onclick="removeTpRow(this)" class="text-red-400 hover:text-red-300 text-sm"><i class="fas fa-times"></i></button>`;
+      row.innerHTML = `<div class="input-group rounded-xl flex items-center px-3 border-l-4 border-l-emerald-500 flex-1"><input type="number" class="tp-price-input w-full bg-transparent py-3 text-sm font-mono focus:outline-none text-emerald-300 placeholder-slate-600" placeholder="TP Price" oninput="calculate()"><button onclick="copyInputVal(this)" class="text-slate-500 hover:text-white px-2 py-3" title="Copy"><i class="fas fa-copy"></i></button></div><div class="input-group rounded-xl flex items-center px-2 w-20"><input type="number" class="tp-pct-input w-full bg-transparent py-2 text-xs font-mono focus:outline-none text-center" value="25" oninput="calculate()"><span class="text-slate-500 text-xs">%</span></div><button onclick="removeTpRow(this)" class="text-red-400 hover:text-red-300 text-sm pl-1"><i class="fas fa-times"></i></button>`;
       c.appendChild(row);
       row.querySelector('.tp-price-input').focus();
       calculate();
@@ -879,9 +946,11 @@
         const netLoss = riskAmount + entryFee;
         els.loss.textContent = '-$' + formatNum(netLoss);
         els.riskPerc.textContent = calculatedRiskPerc.toFixed(2) + '%';
+        els.riskPerc.className = 'text-sm font-mono ' + (calculatedRiskPerc > 3 ? 'text-red-400 font-bold' : calculatedRiskPerc < 1 ? 'text-emerald-400' : 'text-slate-300');
       } else {
         els.loss.textContent = '--';
         els.riskPerc.textContent = '--%';
+        els.riskPerc.className = 'text-sm font-mono text-slate-300';
       }
 
       // Liquidation Display
@@ -918,6 +987,7 @@
         els.netProfit.className = netProfit >= 0 ? "text-lg font-bold font-mono text-emerald-300" : "text-lg font-bold font-mono text-red-300";
         els.roe.textContent = roe.toFixed(2) + '%';
         els.rrr.textContent = rrr > 0 ? '1:' + rrr.toFixed(2) : '--';
+        els.rrr.className = 'font-bold ' + (rrr >= 2 ? 'font-mono text-emerald-400' : rrr >= 1 ? 'font-mono text-yellow-400' : 'font-mono text-red-500');
         if (tpRows.length > 1) {
           els.scaleOutSummary.classList.remove('hidden');
           els.scaleOutRows.innerHTML = scaleOutHtml;
@@ -930,6 +1000,7 @@
         els.netProfit.textContent = '--';
         els.roe.textContent = '--';
         els.rrr.textContent = '--';
+        els.rrr.className = 'font-bold text-white';
         els.scaleOutSummary.classList.add('hidden');
       }
 
@@ -1094,6 +1165,6 @@
       document.getElementById('eqReturn').textContent = 'Return: ' + (ret >= 0 ? '+' : '') + ret.toFixed(2) + '%';
     }
   </script>
+</body>
 
-
-</body></html>
+</html>

@@ -16,8 +16,21 @@
               "icon": "circle-dot-dashed",
               "title": "Journalit"
             }
+          },
+          {
+            "id": "2dea226392aa64ac",
+            "type": "leaf",
+            "state": {
+              "type": "html-view",
+              "state": {
+                "file": "Risk Calc.html"
+              },
+              "icon": "code-glyph",
+              "title": "Risk Calc"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -74,7 +87,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "20c6a57e5d2e7e8c",
@@ -190,9 +204,10 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "eb4282d486ee7273",
+  "active": "2dea226392aa64ac",
   "lastOpenFiles": [
     "Risk Calc.html",
+    "Final Trade Calc.html",
     "Market Analysis/2026/04/11.md",
     "Market Analysis/6th April 2026.md",
     "Recording 20260405220717.m4a",
@@ -207,7 +222,6 @@
     "!Journalit/2026/Q2/04/W15/trades",
     "!Journalit/2026/Q2/04/W15/DRC-110426.md",
     "!Journalit/2026/Q2/04/W15",
-    "Final Trade Calc.html",
     "Market Analysis/Attachments Images/Recording 20260407221704.m4a",
     "Market Analysis/Attachments Images/_BTC Liquidation Heatmap(24 hour)-2026-04-06_23_09_07.png",
     "Market Analysis/Attachments Images/Pasted image 20260406231130.png",
