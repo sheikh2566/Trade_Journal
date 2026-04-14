@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ultimate Futures Terminal</title>
+  <title>Trade Planner</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <style>
@@ -278,22 +278,6 @@
           </div>
         </div>
 
-        <hr class="border-slate-800">
-        <div>
-          <label class="text-xs text-slate-400 uppercase font-bold ml-1 mb-2 block"><i
-              class="fas fa-brain text-[10px] mr-1"></i>Kelly Criterion</label>
-          <div class="input-group rounded-xl flex items-center px-3 border-l-4 border-l-violet-500">
-            <span class="text-slate-500 text-[10px] mr-2">Win Rate</span>
-            <input id="winRate" type="number"
-              class="w-full bg-transparent py-2 text-sm font-mono focus:outline-none text-center text-violet-300"
-              value="85" oninput="calculate()">
-            <span class="text-slate-500 text-xs">%</span>
-          </div>
-          <div class="mt-2 bg-slate-800/50 rounded-lg p-2 flex justify-between items-center">
-            <span class="text-[10px] text-slate-500">Suggested Risk:</span>
-            <span id="kellyResult" class="text-sm font-mono font-bold text-violet-400">--%</span>
-          </div>
-        </div>
       </div>
 
       <p class="text-[10px] text-slate-600 mt-6 text-center">
@@ -406,6 +390,42 @@
           </div>
         </div>
 
+        <div id="partialExitCard"
+          class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-teal-500/30 transition-colors hidden sm:col-span-2">
+          <div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
+            <i class="fas fa-code-branch text-4xl text-teal-500"></i>
+          </div>
+          <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-3">Multi-TP Partial Exits</p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
+            <div class="bg-slate-800/70 rounded-lg px-2 py-1">
+              <div class="text-[10px] text-slate-500">Targets</div>
+              <div id="partialTpCount" class="text-sm font-mono text-slate-200">--</div>
+            </div>
+            <div class="bg-slate-800/70 rounded-lg px-2 py-1">
+              <div class="text-[10px] text-slate-500">Allocation</div>
+              <div id="partialAlloc" class="text-sm font-mono text-slate-200">--</div>
+            </div>
+            <div class="bg-slate-800/70 rounded-lg px-2 py-1">
+              <div class="text-[10px] text-slate-500">Weighted TP</div>
+              <div id="partialWeightedTp" class="text-sm font-mono text-cyan-300">--</div>
+            </div>
+            <div class="bg-slate-800/70 rounded-lg px-2 py-1">
+              <div class="text-[10px] text-slate-500">Blended RRR</div>
+              <div id="partialBlendedRrr" class="text-sm font-mono text-emerald-300">--</div>
+            </div>
+          </div>
+
+          <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden mb-2">
+            <div id="partialAllocBar" class="h-full bg-teal-500 w-0 transition-all duration-500"></div>
+          </div>
+          <div id="partialAllocHint" class="text-[10px] text-slate-500 mb-2">Add TP prices and % allocations.</div>
+
+          <div class="max-h-28 overflow-y-auto pr-1">
+            <div id="partialRows" class="space-y-1"></div>
+          </div>
+        </div>
+
         <div id="dcaCard"
           class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-cyan-500/30 transition-colors hidden">
           <div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
@@ -423,35 +443,6 @@
           <div class="flex justify-between items-end">
             <span class="text-sm text-slate-500">New Liq Price</span>
             <span id="resDcaLiq" class="text-sm font-mono text-orange-400">--</span>
-          </div>
-        </div>
-
-        <div
-          class="glass-panel p-5 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-violet-500/30 transition-colors">
-          <div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
-            <i class="fas fa-brain text-4xl text-violet-500"></i>
-          </div>
-          <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-3">Kelly Criterion</p>
-          <div class="flex justify-between items-end mb-2">
-            <span class="text-sm text-slate-500">Optimal Risk</span>
-            <span id="resKelly" class="text-2xl font-bold text-violet-400 font-mono">--%</span>
-          </div>
-          <div class="flex justify-between items-end mb-1">
-            <span class="text-sm text-slate-500">Half Kelly</span>
-            <span id="resHalfKelly" class="text-sm font-mono text-violet-300">--%</span>
-          </div>
-          <div class="flex justify-between items-end">
-            <span class="text-sm text-slate-500">Quarter Kelly</span>
-            <span id="resQuarterKelly" class="text-sm font-mono text-slate-400">--%</span>
-          </div>
-          <div class="mt-3 pt-2 border-t border-slate-800">
-            <div class="flex justify-between text-[10px]">
-              <span class="text-slate-500">Your Risk vs Kelly</span>
-              <span id="kellyVsRisk" class="font-mono">--</span>
-            </div>
-            <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden mt-1">
-              <div id="kellyBar" class="bg-violet-500 h-full w-0 transition-all duration-500"></div>
-            </div>
           </div>
         </div>
 
@@ -619,6 +610,14 @@
       netProfit: document.getElementById('resNetProfit'),
       scaleOutSummary: document.getElementById('scaleOutSummary'),
       scaleOutRows: document.getElementById('scaleOutRows'),
+      partialExitCard: document.getElementById('partialExitCard'),
+      partialTpCount: document.getElementById('partialTpCount'),
+      partialAlloc: document.getElementById('partialAlloc'),
+      partialWeightedTp: document.getElementById('partialWeightedTp'),
+      partialBlendedRrr: document.getElementById('partialBlendedRrr'),
+      partialAllocBar: document.getElementById('partialAllocBar'),
+      partialAllocHint: document.getElementById('partialAllocHint'),
+      partialRows: document.getElementById('partialRows'),
       dcaCard: document.getElementById('dcaCard'),
       dcaAvg: document.getElementById('resDcaAvg'),
       dcaTotal: document.getElementById('resDcaTotal'),
@@ -626,18 +625,35 @@
       journalSection: document.getElementById('journalSection'),
       journalBody: document.getElementById('journalBody'),
       journalEmpty: document.getElementById('journalEmpty'),
-      kelly: document.getElementById('resKelly'),
-      halfKelly: document.getElementById('resHalfKelly'),
-      quarterKelly: document.getElementById('resQuarterKelly'),
-      kellyBar: document.getElementById('kellyBar'),
-      kellyVsRisk: document.getElementById('kellyVsRisk'),
-      kellyResult: document.getElementById('kellyResult'),
       equityCurveSection: document.getElementById('equityCurveSection')
     };
 
     // INIT
     document.querySelectorAll('input:not(.entry-price-input):not(.tp-price-input):not(.tp-pct-input):not(.dca-price-input):not(.dca-amt-input)').forEach(i => i.addEventListener('input', calculate));
     loadJournal();
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter') return;
+      const active = document.activeElement;
+      if (!active || active.tagName !== 'INPUT') return;
+      const nonTextInputTypes = ['hidden', 'range', 'button', 'submit', 'reset', 'checkbox', 'radio', 'file'];
+      if (nonTextInputTypes.includes(active.type)) return;
+
+      const inputs = Array.from(document.querySelectorAll('input'))
+        .filter(inp => !inp.disabled)
+        .filter(inp => inp.type !== 'hidden' && inp.type !== 'range')
+        .filter(inp => inp.offsetParent !== null);
+
+      const currentIndex = inputs.indexOf(active);
+      if (currentIndex === -1) return;
+
+      e.preventDefault();
+      const step = e.shiftKey ? -1 : 1;
+      const targetIndex = (currentIndex + step + inputs.length) % inputs.length;
+      const targetInput = inputs[targetIndex];
+      targetInput.focus();
+      if (typeof targetInput.select === 'function') targetInput.select();
+    });
 
     function copyInputVal(btn) {
       const input = btn.parentElement.querySelector('input');
@@ -884,12 +900,17 @@
       const entryFee = notional * entryFeeRate;
       let exitFee = 0;
       let hasAnyTp = false;
+      let validTpCount = 0;
+      let weightedTpNumerator = 0;
+      let weightedTpDenominator = 0;
+      let partialRowsHtml = '';
 
       tpRows.forEach(row => {
         const tp = parseFloat(row.querySelector('.tp-price-input').value);
         const pct = (parseFloat(row.querySelector('.tp-pct-input').value) || 0) / 100;
         if (tp && pct > 0 && qty > 0) {
           hasAnyTp = true;
+          validTpCount++;
           const tpQty = qty * pct;
           const dist = Math.abs(tp - entry);
           const p = dist * tpQty;
@@ -897,7 +918,10 @@
           exitFee += exitNot * exitFeeRate;
           totalProfit += p;
           totalPctUsed += pct;
+          weightedTpNumerator += tp * pct;
+          weightedTpDenominator += pct;
           scaleOutHtml += `<div class="flex justify-between text-[10px]"><span class="text-slate-500">TP $${formatNum(tp)} (${(pct * 100).toFixed(0)}%)</span><span class="text-emerald-400 font-mono">+$${formatNum(p)}</span></div>`;
+          partialRowsHtml += `<div class="flex justify-between text-[10px]"><span class="text-slate-500">TP ${validTpCount}: $${formatNum(tp)} | ${(pct * 100).toFixed(0)}%</span><span class="font-mono ${p >= 0 ? 'text-emerald-400' : 'text-red-400'}">${p >= 0 ? '+' : '-'}$${formatNum(Math.abs(p))}</span></div>`;
         }
       });
       // Feed first TP into hidden target for backward compat
@@ -994,6 +1018,35 @@
         } else {
           els.scaleOutSummary.classList.add('hidden');
         }
+
+        if (validTpCount > 1) {
+          const allocPct = totalPctUsed * 100;
+          const unallocPct = Math.max(0, 100 - allocPct);
+          const weightedTp = weightedTpDenominator > 0 ? (weightedTpNumerator / weightedTpDenominator) : 0;
+          els.partialExitCard.classList.remove('hidden');
+          els.partialTpCount.textContent = String(validTpCount);
+          els.partialAlloc.textContent = allocPct.toFixed(1) + '%';
+          els.partialWeightedTp.textContent = weightedTp > 0 ? '$' + formatNum(weightedTp, 4) : '--';
+          els.partialBlendedRrr.textContent = rrr > 0 ? '1:' + rrr.toFixed(2) : '--';
+          els.partialRows.innerHTML = partialRowsHtml;
+
+          els.partialAllocBar.style.width = Math.min(allocPct, 100) + '%';
+          if (allocPct > 100) {
+            els.partialAllocBar.className = 'h-full bg-red-500 transition-all duration-500';
+            els.partialAllocHint.textContent = 'Over-allocated by ' + (allocPct - 100).toFixed(1) + '%. Reduce TP allocations.';
+            els.partialAllocHint.className = 'text-[10px] text-red-400 mb-2';
+          } else if (allocPct < 100) {
+            els.partialAllocBar.className = 'h-full bg-yellow-500 transition-all duration-500';
+            els.partialAllocHint.textContent = unallocPct.toFixed(1) + '% position remains without TP allocation.';
+            els.partialAllocHint.className = 'text-[10px] text-yellow-400 mb-2';
+          } else {
+            els.partialAllocBar.className = 'h-full bg-emerald-500 transition-all duration-500';
+            els.partialAllocHint.textContent = 'Perfect allocation. 100% of position is distributed across TP targets.';
+            els.partialAllocHint.className = 'text-[10px] text-emerald-400 mb-2';
+          }
+        } else {
+          els.partialExitCard.classList.add('hidden');
+        }
       } else {
         els.profit.textContent = '--';
         els.totalFees.textContent = entryFee > 0 ? '-$' + formatNum(entryFee) : '--';
@@ -1002,6 +1055,7 @@
         els.rrr.textContent = '--';
         els.rrr.className = 'font-bold text-white';
         els.scaleOutSummary.classList.add('hidden');
+        els.partialExitCard.classList.add('hidden');
       }
 
       // DCA
@@ -1014,44 +1068,6 @@
         els.dcaCard.classList.add('hidden');
       }
 
-      // 7. Kelly Criterion
-      const winRate = (parseFloat(document.getElementById('winRate').value) || 0) / 100;
-      if (winRate > 0 && winRate < 1 && rrr > 0) {
-        const absRRR = Math.abs(rrr);
-        const kellyPct = (winRate - ((1 - winRate) / absRRR)) * 100;
-        const clampedKelly = Math.max(kellyPct, 0);
-        els.kelly.textContent = clampedKelly.toFixed(2) + '%';
-        els.halfKelly.textContent = (clampedKelly / 2).toFixed(2) + '%';
-        els.quarterKelly.textContent = (clampedKelly / 4).toFixed(2) + '%';
-        els.kellyResult.textContent = (clampedKelly / 2).toFixed(2) + '%';
-        // Compare user's risk vs kelly
-        const userRisk = calculatedRiskPerc || (parseFloat(els.riskPercent.value) || 0);
-        if (clampedKelly > 0) {
-          const ratio = (userRisk / clampedKelly) * 100;
-          els.kellyBar.style.width = Math.min(ratio, 100) + '%';
-          if (ratio > 100) {
-            els.kellyVsRisk.textContent = 'Over-risking!';
-            els.kellyVsRisk.className = 'font-mono text-red-400';
-            els.kellyBar.className = 'bg-red-500 h-full transition-all duration-500';
-          } else if (ratio > 60) {
-            els.kellyVsRisk.textContent = 'Aggressive';
-            els.kellyVsRisk.className = 'font-mono text-yellow-400';
-            els.kellyBar.className = 'bg-yellow-500 h-full transition-all duration-500';
-          } else {
-            els.kellyVsRisk.textContent = 'Conservative';
-            els.kellyVsRisk.className = 'font-mono text-emerald-400';
-            els.kellyBar.className = 'bg-emerald-500 h-full transition-all duration-500';
-          }
-        }
-      } else {
-        els.kelly.textContent = '--%';
-        els.halfKelly.textContent = '--%';
-        els.quarterKelly.textContent = '--%';
-        els.kellyResult.textContent = '--%';
-        els.kellyVsRisk.textContent = '--';
-        els.kellyVsRisk.className = 'font-mono';
-        els.kellyBar.style.width = '0%';
-      }
     }
 
     function formatNum(n, d = 2) {
@@ -1070,12 +1086,16 @@
       els.roe.textContent = '--';
       els.rrr.textContent = '--';
       els.scaleOutSummary.classList.add('hidden');
+      els.partialExitCard.classList.add('hidden');
+      els.partialTpCount.textContent = '--';
+      els.partialAlloc.textContent = '--';
+      els.partialWeightedTp.textContent = '--';
+      els.partialBlendedRrr.textContent = '--';
+      els.partialRows.innerHTML = '';
+      els.partialAllocBar.style.width = '0%';
+      els.partialAllocHint.textContent = 'Add TP prices and % allocations.';
+      els.partialAllocHint.className = 'text-[10px] text-slate-500 mb-2';
       els.dcaCard.classList.add('hidden');
-      els.kelly.textContent = '--%';
-      els.halfKelly.textContent = '--%';
-      els.quarterKelly.textContent = '--%';
-      els.kellyResult.textContent = '--%';
-      els.kellyBar.style.width = '0%';
     }
 
     // --- EXPORT CSV ---

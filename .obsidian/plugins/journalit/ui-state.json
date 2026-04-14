@@ -2,6 +2,13 @@
   "recentItems": [
     {
       "type": "file",
+      "title": "Trade Planner",
+      "path": "Trade Planner.html",
+      "icon": "file-text",
+      "openedAt": "2026-04-14T18:43:07.212Z"
+    },
+    {
+      "type": "file",
       "title": "Risk Calc",
       "path": "Risk Calc.html",
       "icon": "file-text",
@@ -132,13 +139,6 @@
       "path": "!Journalit/2026/Q2/04/W14/trades/BTC-010426-T1.md",
       "icon": "file-text",
       "openedAt": "2026-04-05T11:41:03.186Z"
-    },
-    {
-      "type": "view",
-      "title": "Account: Sheikh",
-      "viewType": "journalit-account-page-view",
-      "icon": "user",
-      "openedAt": "2026-04-05T10:01:31.489Z"
     }
   ],
   "gettingStartedDismissed": true,

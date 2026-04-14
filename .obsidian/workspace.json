@@ -4,33 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "da186269c98ca881",
+        "id": "382276b6599923c8",
         "type": "tabs",
         "children": [
           {
-            "id": "eb4282d486ee7273",
+            "id": "c30f6fa613232701",
             "type": "leaf",
             "state": {
-              "type": "journalit-home-view",
+              "type": "empty",
               "state": {},
-              "icon": "circle-dot-dashed",
-              "title": "Journalit"
-            }
-          },
-          {
-            "id": "2dea226392aa64ac",
-            "type": "leaf",
-            "state": {
-              "type": "html-view",
-              "state": {
-                "file": "Risk Calc.html"
-              },
-              "icon": "code-glyph",
-              "title": "Risk Calc"
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -204,8 +191,9 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "2dea226392aa64ac",
+  "active": "c30f6fa613232701",
   "lastOpenFiles": [
+    "Trade Planner.html",
     "Risk Calc.html",
     "Final Trade Calc.html",
     "Market Analysis/2026/04/11.md",
@@ -244,7 +232,6 @@
     "!Journalit/2026/Q2/Q2-Review.md",
     "!Journalit/2026/Q2/04/04-Review.md",
     "!Journalit/2026/Q2/04/W14/DRC-010426.md",
-    "!Journalit/2026/Q2/04/W14/trades",
-    "!Journalit/2026/Q2/04/W14"
+    "!Journalit/2026/Q2/04/W14/trades"
   ]
 }
