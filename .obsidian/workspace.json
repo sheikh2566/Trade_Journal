@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "901b5c0694d33d70",
+        "id": "44115491576da9b9",
         "type": "tabs",
         "children": [
           {
-            "id": "ae28446d82c1c4fd",
+            "id": "c9c83c83c416430f",
             "type": "leaf",
             "state": {
               "type": "journalit-home-view",
@@ -74,8 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "20c6a57e5d2e7e8c",
@@ -187,11 +186,13 @@
       "audio-recorder:Start/stop recording": false,
       "obsidian-git:Open Git source control": false,
       "templater-obsidian:Templater": false,
-      "obsidian42-brat:BRAT": false
+      "obsidian42-brat:BRAT": false,
+      "journalit:Open Journalit": false
     }
   },
-  "active": "17c11d40a2467c8f",
+  "active": "c9c83c83c416430f",
   "lastOpenFiles": [
+    "Risk Calc.html",
     "Market Analysis/2026/04/11.md",
     "Market Analysis/6th April 2026.md",
     "Recording 20260405220717.m4a",

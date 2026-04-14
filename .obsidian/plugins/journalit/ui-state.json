@@ -2,17 +2,24 @@
   "recentItems": [
     {
       "type": "view",
+      "title": "Account Dashboard",
+      "viewType": "account-dashboard",
+      "icon": "users",
+      "openedAt": "2026-04-14T14:44:22.199Z"
+    },
+    {
+      "type": "file",
+      "title": "Risk Calc",
+      "path": "Risk Calc.html",
+      "icon": "file-text",
+      "openedAt": "2026-04-14T14:43:49.747Z"
+    },
+    {
+      "type": "view",
       "title": "Trade Log",
       "viewType": "journalit-trade-log-view",
       "icon": "folder-tree",
       "openedAt": "2026-04-11T18:42:21.226Z"
-    },
-    {
-      "type": "view",
-      "title": "Account Dashboard",
-      "viewType": "account-dashboard",
-      "icon": "users",
-      "openedAt": "2026-04-11T18:42:19.788Z"
     },
     {
       "type": "view",
@@ -62,13 +69,6 @@
       "path": "conflict-files-obsidian-git.md",
       "icon": "file-text",
       "openedAt": "2026-04-11T18:29:09.956Z"
-    },
-    {
-      "type": "file",
-      "title": "Risk Calc",
-      "path": "Risk Calc.html",
-      "icon": "file-text",
-      "openedAt": "2026-04-11T17:38:40.035Z"
     },
     {
       "type": "file",
