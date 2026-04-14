@@ -2,17 +2,24 @@
   "recentItems": [
     {
       "type": "view",
+      "title": "Dashboard",
+      "viewType": "journalit-dashboard-view",
+      "icon": "grip",
+      "openedAt": "2026-04-14T15:04:55.886Z"
+    },
+    {
+      "type": "view",
       "title": "Account Dashboard",
       "viewType": "account-dashboard",
       "icon": "users",
-      "openedAt": "2026-04-14T14:44:22.199Z"
+      "openedAt": "2026-04-14T15:04:48.268Z"
     },
     {
       "type": "file",
       "title": "Risk Calc",
       "path": "Risk Calc.html",
       "icon": "file-text",
-      "openedAt": "2026-04-14T14:43:49.747Z"
+      "openedAt": "2026-04-14T15:01:32.816Z"
     },
     {
       "type": "view",
@@ -27,13 +34,6 @@
       "viewType": "journalit-account-page-view",
       "icon": "user",
       "openedAt": "2026-04-11T18:40:55.464Z"
-    },
-    {
-      "type": "view",
-      "title": "Dashboard",
-      "viewType": "journalit-dashboard-view",
-      "icon": "grip",
-      "openedAt": "2026-04-11T18:40:52.313Z"
     },
     {
       "type": "file",
