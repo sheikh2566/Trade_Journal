@@ -781,6 +781,42 @@
         padding: 24px 16px 60px;
       }
     }
+    .kbd-hint {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 24px;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.03em;
+    }
+
+    .kbd-hint span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    kbd {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--text);
+      background: linear-gradient(160deg, #1e2540, #141928);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 5px;
+      padding: 2px 7px;
+      min-width: 22px;
+      box-shadow:
+        0 1px 0 rgba(255,255,255,0.06) inset,
+        0 3px 0 #07090f,
+        0 4px 8px rgba(0,0,0,0.4);
+      letter-spacing: 0.04em;
+    }
   </style>
 </head>
 
@@ -803,6 +839,12 @@
       <div class="hero-tag">Pre-Trade Protocol</div>
       <h1>Pre-Trade Checklist</h1>
       <p>Complete every point before entering a position. Protect your account and stay within challenge rules.</p>
+    </div>
+
+    <!-- Keyboard hint strip -->
+    <div class="kbd-hint" style="margin-bottom: 12px; justify-content: flex-end;">
+      <span><kbd>R</kbd> Reset</span>
+      <span><kbd>Enter</kbd> Confirm Trade</span>
     </div>
 
     <!-- Progress -->
@@ -1032,7 +1074,7 @@
 
     <!-- Actions -->
     <div class="action-bar">
-      <button class="btn btn-ghost" onclick="resetAll()">↺ Reset</button>
+      <button class="btn btn-ghost" id="resetBtn" onclick="resetAll()">↺ Reset</button>
       <button class="btn btn-primary" id="tradeBtn" disabled onclick="confirmTrade()">
         ✓ &nbsp;All Clear — Ready to Trade
       </button>
@@ -1127,7 +1169,7 @@
       card.addEventListener('mousemove', e => {
         if (card.classList.contains('checked')) return;
         const r = card.getBoundingClientRect();
-        const x = (e.clientX - r.left) / r.width - 0.5; // -0.5 … 0.5
+        const x = (e.clientX - r.left) / r.width - 0.5;
         const y = (e.clientY - r.top) / r.height - 0.5;
         card.style.transform =
           `perspective(700px) rotateX(${(-y * 14).toFixed(2)}deg) rotateY(${(x * 14).toFixed(2)}deg) translateZ(8px)`;
@@ -1139,6 +1181,34 @@
       card.addEventListener('click', () => {
         card.style.transform = '';
       });
+    });
+
+    // ── Keyboard shortcuts ──
+    document.addEventListener('keydown', e => {
+      // Ignore when focus is inside an input / textarea
+      if (['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)) return;
+
+      if (e.key === 'r' || e.key === 'R') {
+        e.preventDefault();
+        resetAll();
+        // Flash Reset button
+        const rb = document.getElementById('resetBtn');
+        rb.style.transition = 'none';
+        rb.style.filter = 'brightness(2)';
+        setTimeout(() => { rb.style.filter = ''; rb.style.transition = ''; }, 180);
+      }
+
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        const tb = document.getElementById('tradeBtn');
+        if (!tb.disabled) {
+          confirmTrade();
+          // Flash Confirm button
+          tb.style.transition = 'none';
+          tb.style.filter = 'brightness(1.4)';
+          setTimeout(() => { tb.style.filter = ''; tb.style.transition = ''; }, 200);
+        }
+      }
     });
   </script>
 </body>

@@ -8,17 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c30f6fa613232701",
+            "id": "22bbdcd2c8ed6007",
             "type": "leaf",
             "state": {
-              "type": "journalit-home-view",
-              "state": {},
-              "icon": "circle-dot-dashed",
-              "title": "Journalit"
+              "type": "html-view",
+              "state": {
+                "file": "Trade Planner.html"
+              },
+              "icon": "code-glyph",
+              "title": "Trade Planner"
             }
           },
           {
-            "id": "22bbdcd2c8ed6007",
+            "id": "72b5f22af6606ced",
             "type": "leaf",
             "state": {
               "type": "html-view",
@@ -27,6 +29,16 @@
               },
               "icon": "code-glyph",
               "title": "Checklist"
+            }
+          },
+          {
+            "id": "c30f6fa613232701",
+            "type": "leaf",
+            "state": {
+              "type": "journalit-home-view",
+              "state": {},
+              "icon": "circle-dot-dashed",
+              "title": "Journalit"
             }
           }
         ],
@@ -87,7 +99,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "20c6a57e5d2e7e8c",
@@ -186,7 +199,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -203,7 +217,7 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "22bbdcd2c8ed6007",
+  "active": "72b5f22af6606ced",
   "lastOpenFiles": [
     "Checklist.html",
     "Trade Planner.html",
