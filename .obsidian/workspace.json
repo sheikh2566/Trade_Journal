@@ -16,8 +16,21 @@
               "icon": "circle-dot-dashed",
               "title": "Journalit"
             }
+          },
+          {
+            "id": "22bbdcd2c8ed6007",
+            "type": "leaf",
+            "state": {
+              "type": "html-view",
+              "state": {
+                "file": "Checklist.html"
+              },
+              "icon": "code-glyph",
+              "title": "Checklist"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -74,8 +87,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "20c6a57e5d2e7e8c",
@@ -191,8 +203,9 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "c30f6fa613232701",
+  "active": "22bbdcd2c8ed6007",
   "lastOpenFiles": [
+    "Checklist.html",
     "Trade Planner.html",
     "Risk Calc.html",
     "Final Trade Calc.html",
@@ -231,7 +244,6 @@
     "!Journalit/2026/Q2/04/W14/trades/BTC-010426-T1.md",
     "!Journalit/2026/Q2/Q2-Review.md",
     "!Journalit/2026/Q2/04/04-Review.md",
-    "!Journalit/2026/Q2/04/W14/DRC-010426.md",
-    "!Journalit/2026/Q2/04/W14/trades"
+    "!Journalit/2026/Q2/04/W14/DRC-010426.md"
   ]
 }

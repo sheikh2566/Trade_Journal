@@ -2,6 +2,13 @@
   "recentItems": [
     {
       "type": "file",
+      "title": "Checklist",
+      "path": "Checklist.html",
+      "icon": "file-text",
+      "openedAt": "2026-04-17T06:25:47.111Z"
+    },
+    {
+      "type": "file",
       "title": "Trade Planner",
       "path": "Trade Planner.html",
       "icon": "file-text",
@@ -132,13 +139,6 @@
       "path": "!Journalit/2026/Q2/04/W14/trades/ETH-010426-T1.md",
       "icon": "file-text",
       "openedAt": "2026-04-05T11:58:22.490Z"
-    },
-    {
-      "type": "file",
-      "title": "BTC-010426-T1",
-      "path": "!Journalit/2026/Q2/04/W14/trades/BTC-010426-T1.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-05T11:41:03.186Z"
     }
   ],
   "gettingStartedDismissed": true,
