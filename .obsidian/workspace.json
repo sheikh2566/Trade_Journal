@@ -11,10 +11,10 @@
             "id": "c30f6fa613232701",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "journalit-home-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "icon": "circle-dot-dashed",
+              "title": "Journalit"
             }
           }
         ]

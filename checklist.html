@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pre-Trade Checklist</title>
+  <meta name="description"
+    content="Pre-trade compliance checklist for BitFunded challenge traders. Verify all risk rules before entering a trade." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #07090f;
+      --surface: #0f1221;
+      --card: #131829;
+      --border: #1a2140;
+      --accent: #5b7cfa;
+      --accent2: #7c5bfa;
+      --success: #22c55e;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --text: #e8eaf6;
+      --muted: #6b7280;
+      --glow: rgba(91, 124, 250, 0.22);
+      --card-extrude: #090c18;
+      --card-hi: rgba(255, 255, 255, 0.055);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      background-image:
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(91, 124, 250, 0.13) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 90% 80%, rgba(124, 91, 250, 0.09) 0%, transparent 60%);
+      position: relative;
+    }
+
+    /* ── Perspective grid overlay ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image:
+        linear-gradient(rgba(91, 124, 250, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(91, 124, 250, 0.06) 1px, transparent 1px);
+      background-size: 48px 48px;
+      transform: perspective(420px) rotateX(55deg) scaleY(2.2) translateY(-30%);
+      transform-origin: 50% 0%;
+      height: 100vh;
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.55) 0%, transparent 55%);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.55) 0%, transparent 55%);
+    }
+
+    header,
+    main {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── Header ── */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 12, 18, 0.85);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      box-shadow: 0 0 16px var(--glow);
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .date-badge {
+      font-size: 12px;
+      color: var(--muted);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Main ── */
+    main {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 36px 32px 80px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(91, 124, 250, 0.12);
+      border: 1px solid rgba(91, 124, 250, 0.3);
+      border-radius: 100px;
+      padding: 5px 14px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero-tag::before {
+      content: '⬡';
+      font-size: 10px;
+    }
+
+    .hero h1 {
+      font-size: clamp(26px, 5vw, 38px);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #fff 30%, rgba(255, 255, 255, 0.55));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ── Progress bar ── */
+    .progress-wrap {
+      background: linear-gradient(145deg, #131829, #0f1221);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px 28px;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      box-shadow:
+        0 2px 0 rgba(255, 255, 255, 0.04) inset,
+        0 -1px 0 rgba(0, 0, 0, 0.5) inset,
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        0 2px 8px rgba(91, 124, 250, 0.08);
+    }
+
+    .progress-info {
+      flex: 1;
+    }
+
+    .progress-label {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .progress-bar-bg {
+      background: #070a14;
+      border-radius: 100px;
+      height: 10px;
+      overflow: hidden;
+      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.7), inset 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      border-radius: 100px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      transition: width 0.5s cubic-bezier(.4, 0, .2, 1);
+      box-shadow: 0 0 14px rgba(91, 124, 250, 0.7), 0 0 4px rgba(124, 91, 250, 0.5);
+      width: 0%;
+      position: relative;
+    }
+
+    .progress-bar-fill::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 40%;
+      background: rgba(255, 255, 255, 0.18);
+      border-radius: 100px;
+    }
+
+    .progress-count {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .progress-num {
+      font-size: 32px;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+    }
+
+    .progress-total {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    /* ── Status pill ── */
+    .status-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .status-pill {
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 20px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      transition: all 0.3s ease;
+      letter-spacing: 0.02em;
+    }
+
+    .status-pill.not-ready {
+      border-color: rgba(239, 68, 68, 0.4);
+      color: var(--danger);
+      background: rgba(239, 68, 68, 0.08);
+    }
+
+    .status-pill.partial {
+      border-color: rgba(245, 158, 11, 0.4);
+      color: var(--warning);
+      background: rgba(245, 158, 11, 0.08);
+    }
+
+    .status-pill.ready {
+      border-color: rgba(34, 197, 94, 0.4);
+      color: var(--success);
+      background: rgba(34, 197, 94, 0.08);
+    }
+
+    /* ── Section ── */
+    .section {
+      margin-bottom: 36px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      padding: 10px 14px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.05) inset,
+        0 4px 16px rgba(0, 0, 0, 0.35),
+        0 1px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .section-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.08) inset;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .section-badge {
+      margin-left: auto;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--muted);
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border);
+      padding: 3px 10px;
+      border-radius: 100px;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ── Check grid ── */
+    .check-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      perspective: 900px;
+    }
+
+    /* Colour themes per section */
+    .sec-risk .section-icon {
+      background: rgba(239, 68, 68, 0.12);
+      color: #ef4444;
+    }
+
+    .sec-risk .section-title {
+      color: #ef4444;
+    }
+
+    .sec-pos .section-icon {
+      background: rgba(245, 158, 11, 0.12);
+      color: #f59e0b;
+    }
+
+    .sec-pos .section-title {
+      color: #f59e0b;
+    }
+
+    .sec-rules .section-icon {
+      background: rgba(91, 124, 250, 0.12);
+      color: var(--accent);
+    }
+
+    .sec-rules .section-title {
+      color: var(--accent);
+    }
+
+    .sec-mental .section-icon {
+      background: rgba(34, 197, 94, 0.12);
+      color: var(--success);
+    }
+
+    .sec-mental .section-title {
+      color: var(--success);
+    }
+
+    /* ── Check item (3D tile) ── */
+    .check-item {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: linear-gradient(160deg, #1a2038 0%, #131829 60%, #0f1424 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px 16px 14px;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: perspective(700px) rotateX(0deg) rotateY(0deg) translateZ(0px);
+      transition: border-color 0.18s, box-shadow 0.18s, transform 0.08s ease-out;
+      will-change: transform;
+      /* top-edge highlight + bottom extrusion shadow */
+      box-shadow:
+        0 1px 0 var(--card-hi) inset,
+        0 -1px 0 rgba(0, 0, 0, 0.5) inset,
+        1px 0 0 rgba(255, 255, 255, 0.03) inset,
+        0 6px 0 var(--card-extrude),
+        0 8px 16px rgba(0, 0, 0, 0.6),
+        0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    /* shimmer / gloss line */
+    .check-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 12px;
+      right: 12px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+      border-radius: 100px;
+      pointer-events: none;
+    }
+
+    .check-item:hover {
+      border-color: rgba(91, 124, 250, 0.5);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.09) inset,
+        0 -1px 0 rgba(0, 0, 0, 0.4) inset,
+        0 2px 0 var(--card-extrude),
+        0 4px 8px rgba(0, 0, 0, 0.5),
+        0 0 24px rgba(91, 124, 250, 0.2);
+    }
+
+    .check-item.checked {
+      border-color: rgba(34, 197, 94, 0.45);
+      background: linear-gradient(160deg, #132a1c 0%, #0f2018 60%, #0c1a14 100%);
+      box-shadow:
+        0 1px 0 rgba(34, 197, 94, 0.12) inset,
+        0 3px 0 #060e09,
+        0 6px 16px rgba(0, 0, 0, 0.55),
+        0 0 20px rgba(34, 197, 94, 0.08);
+      transform: perspective(700px) translateZ(-3px) !important;
+    }
+
+    .check-item.checked:hover {
+      border-color: rgba(34, 197, 94, 0.65);
+      box-shadow:
+        0 1px 0 rgba(34, 197, 94, 0.15) inset,
+        0 2px 0 #060e09,
+        0 8px 24px rgba(0, 0, 0, 0.4),
+        0 0 28px rgba(34, 197, 94, 0.15);
+    }
+
+    /* top row: checkbox + tag */
+    .check-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Custom checkbox */
+    .check-box {
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: linear-gradient(160deg, #0d1120, #080c18);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.22s cubic-bezier(.4, 0, .2, 1);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.05) inset,
+        inset 0 2px 5px rgba(0, 0, 0, 0.7),
+        0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .check-item.checked .check-box {
+      background: linear-gradient(135deg, #2edb72, #16a34a);
+      border-color: rgba(34, 197, 94, 0.6);
+      box-shadow:
+        0 0 0 3px rgba(34, 197, 94, 0.2),
+        0 0 18px rgba(34, 197, 94, 0.55),
+        0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    }
+
+    .check-icon {
+      font-size: 12px;
+      color: #fff;
+      opacity: 0;
+      transform: scale(0.5);
+      transition: all 0.2s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    .check-item.checked .check-icon {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .check-content {
+      flex: 1;
+    }
+
+    .check-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+      margin-bottom: 6px;
+      transition: color 0.2s;
+    }
+
+    .check-item.checked .check-label {
+      color: var(--muted);
+    }
+
+    .check-desc {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .check-tag {
+      display: inline-flex;
+      align-items: center;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .tag-critical {
+      background: rgba(239, 68, 68, 0.15);
+      color: #ef4444;
+    }
+
+    .tag-warning {
+      background: rgba(245, 158, 11, 0.15);
+      color: #f59e0b;
+    }
+
+    .tag-empty {
+      visibility: hidden;
+      width: 1px;
+    }
+
+    /* ── Action bar ── */
+    .action-bar {
+      display: flex;
+      gap: 12px;
+      margin-top: 40px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 13px 24px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      cursor: pointer;
+      transition: all 0.18s ease;
+      letter-spacing: 0.02em;
+      position: relative;
+    }
+
+    .btn-primary {
+      flex: 1;
+      background: linear-gradient(135deg, #6b8cff, #7c5bfa 60%, #5b7cfa);
+      color: #fff;
+      border-color: rgba(91, 124, 250, 0.4);
+      justify-content: center;
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.15) inset,
+        0 6px 0 #2d3a8a,
+        0 8px 24px rgba(91, 124, 250, 0.4);
+    }
+
+    .btn-primary:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.2) inset,
+        0 4px 0 #2d3a8a,
+        0 12px 32px rgba(91, 124, 250, 0.55);
+    }
+
+    .btn-primary:active:not(:disabled) {
+      transform: translateY(3px);
+      box-shadow:
+        0 1px 0 rgba(0, 0, 0, 0.3) inset,
+        0 1px 0 #2d3a8a,
+        0 4px 12px rgba(91, 124, 250, 0.3);
+    }
+
+    .btn-primary:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    .btn-ghost {
+      background: linear-gradient(160deg, #131829, #0f1221);
+      color: var(--muted);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.05) inset,
+        0 4px 0 #07090f,
+        0 6px 16px rgba(0, 0, 0, 0.45);
+    }
+
+    .btn-ghost:hover {
+      color: var(--text);
+      border-color: rgba(91, 124, 250, 0.3);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.07) inset,
+        0 2px 0 #07090f,
+        0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    /* ── All-clear overlay ── */
+    .ready-banner {
+      display: none;
+      background: linear-gradient(160deg, #132a1c, #0c1f14);
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      border-radius: 18px;
+      padding: 32px 36px;
+      text-align: center;
+      margin-top: 32px;
+      animation: fadeIn 0.5s ease;
+      box-shadow:
+        0 1px 0 rgba(34, 197, 94, 0.1) inset,
+        0 8px 0 #060f09,
+        0 12px 40px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(34, 197, 94, 0.12);
+    }
+
+    .ready-banner.show {
+      display: block;
+    }
+
+    .ready-banner .emoji {
+      font-size: 40px;
+      margin-bottom: 12px;
+      display: block;
+      animation: bounce 0.6s ease;
+    }
+
+    .ready-banner h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--success);
+      margin-bottom: 6px;
+    }
+
+    .ready-banner p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    /* ── Tooltip ── */
+    .tip {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--border);
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 16px;
+      cursor: help;
+      margin-left: 6px;
+      flex-shrink: 0;
+      margin-top: 3px;
+      position: relative;
+    }
+
+    .tip:hover::after {
+      content: attr(data-tip);
+      position: absolute;
+      top: 50%;
+      left: 26px;
+      transform: translateY(-50%);
+      background: #1e2540;
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 11px;
+      font-weight: 400;
+      width: 220px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      z-index: 999;
+      line-height: 1.5;
+      white-space: normal;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .check-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      header {
+        padding: 14px 18px;
+      }
+
+      .hero h1 {
+        font-size: 26px;
+      }
+
+      .progress-wrap {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .action-bar {
+        flex-direction: column;
+      }
+
+      .check-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      main {
+        padding: 24px 16px 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="brand-icon">⚡</div>
+      <span class="brand-name">Checklist</span>
+    </div>
+    <div class="header-right">
+      <span class="date-badge" id="liveDate"></span>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-tag">Pre-Trade Protocol</div>
+      <h1>Pre-Trade Checklist</h1>
+      <p>Complete every point before entering a position. Protect your account and stay within challenge rules.</p>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-wrap">
+      <div class="progress-info">
+        <div class="progress-label">Completion Progress</div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progressFill"></div>
+        </div>
+      </div>
+      <div class="progress-count">
+        <div class="progress-num" id="progressNum">0</div>
+        <div class="progress-total" id="progressTotal">/ 0 done</div>
+      </div>
+    </div>
+
+    <!-- Status -->
+    <div class="status-strip">
+      <div class="status-pill" id="statusPill">— Select items above —</div>
+    </div>
+
+    <!-- ═══════════ SECTION 1: Risk Limits ═══════════ -->
+    <div class="section sec-risk">
+      <div class="section-header">
+        <div class="section-icon">🛡</div>
+        <span class="section-title">Risk Limits</span>
+        <span class="section-badge" id="badge-risk">0 / 4</span>
+      </div>
+
+      <div class="check-grid">
+
+        <div class="check-item" data-section="risk" onclick="toggle(this)">
+          <div class="check-top">
+            <div class="check-box"><span class="check-icon">✓</span></div>
+            <span class="check-tag tag-critical">CRITICAL</span>
+          </div>
+          <div class="check-content">
+            <div class="check-label">Daily loss within limit</div>
+            <div class="check-desc">Max 5% daily loss (Two-Step) · 3% (Instant). Resets 00:00 UTC+8.</div>
+          </div>
+        </div>
+
+        <div class="check-item" data-section="risk" onclick="toggle(this)">
+          <div class="check-top">
+            <div class="check-box"><span class="check-icon">✓</span></div>
+            <span class="check-tag tag-critical">CRITICAL</span>
+          </div>
+          <div class="check-content">
+            <div class="check-label">Max loss headroom safe</div>
+            <div class="check-desc">10% S1 / 8% S2+ (Two-Step) · 6% (Instant). Floating losses count.</div>
+          </div>
+        </div>
+
+        <div class="check-item" data-section="risk" onclick="toggle(this)">
+          <div class="check-top">
+            <div class="check-box"><span class="check-icon">✓</span></div>
+            <span class="check-tag tag-critical">CRITICAL</span>
+          </div>
+          <div class="check-content">
+            <div class="check-label">Margin usage &lt; 65%</div>
+            <div class="check-desc">All positions &lt;65% of capital. Over = profit penalty up to 70%.</div>
+          </div>
+        </div>
+
+        <div class="check-item" data-section="risk" onclick="toggle(this)">
+          <div class="check-top">
+            <div class="check-box"><span class="check-icon">✓</span></div>
+            <span class="check-tag tag-empty">–</span>
+          </div>
+          <div class="check-content">
+            <div class="check-label">Fees in P&amp;L target</div>
+            <div class="check-desc">0.08% round-trip cost. Deduct before sizing.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══════════ SECTION 2: Position Rules ═══════════ -->
+    <div class="section sec-pos">
+      <div class="section-header">
+        <div class="section-icon">📐</div>
+        <span class="section-title">Position Rules</span>
+        <span class="section-badge" id="badge-pos">0 / 4</span>
+      </div>
+
+      <div class="check-grid">
+
+        <div class="check-item" data-section="pos" onclick="toggle(this)">
+          <div class="check-top">
+            <div class="check-box"><span class="check-icon">✓</span></div>
+            <span class="check-tag tag-warning">RULE</span>
+          </div>
+          <div class="check-content">
+            <div class="check-label">Max 10 open trades</div>
+            <div class="check-desc">Maximum 10 simultaneous positions across all pairs.</div>
+          </div>
+        </div>
+
+        <div class="check-item" data-section="pos" onclick="toggle(this)">
+          <div class="check-top">
+            <div class="check-box"><span class="check-icon">✓</span></div>
+            <span class="check-tag tag-warning">RULE</span>
+          </div>
+          <div class="check-content">
+            <div class="check-label">Holding time OK</div>
+            <div class="check-desc">Major Crypto ≤10d · Minor ≤7d · XAU/TSLA ≤5d.</div>
+          </div>
+        </div>
+
+        <div class="check-item" data-section="pos" onclick="toggle(this)">
+          <div class="check-top">
+            <div class="check-box"><span class="check-icon">✓</span></div>
+            <span class="check-tag tag-critical">CRITICAL</span>
+          </div>
+          <div class="check-content">
+            <div class="check-label">No hedging / opposing</div>
+            <div class="check-desc">No opposing positions on same asset. Detected = terminated.</div>
+          </div>
+        </div>
+
+        <div class="check-item" data-section="pos" onclick="toggle(this)">
+          <div class="check-top">
+            <div class="check-box"><span class="check-icon">✓</span></div>
+            <span class="check-tag tag-empty">–</span>
+          </div>
+          <div class="check-content">
+            <div class="check-label">Leverage ≤ 1:5</div>
+            <div class="check-desc">Max 1:5 leverage. Verify platform setting.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══════════ SECTION 3: Compliance ═══════════ -->
+    <div class="section sec-rules">
+      <div class="section-header">
+        <div class="section-icon">📋</div>
+        <span class="section-title">Compliance Check</span>
+        <span class="section-badge" id="badge-rules">0 / 3</span>
+      </div>
+
+      <div class="check-grid">
+
+        <div class="check-item" data-section="rules" onclick="toggle(this)">
+          <div class="check-top">
+            <div class="check-box"><span class="check-icon">✓</span></div>
+            <span class="check-tag tag-critical">CRITICAL</span>
+          </div>
+          <div class="check-content">
+            <div class="check-label">No prohibited strategy</div>
+            <div class="check-desc">No All-In, hedging, manipulation, or arbitrage.</div>
+          </div>
+        </div>
+
+        <div class="check-item" data-section="rules" onclick="toggle(this)">
+          <div class="check-top">
+            <div class="check-box"><span class="check-icon">✓</span></div>
+            <span class="check-tag tag-empty">–</span>
+          </div>
+          <div class="check-content">
+            <div class="check-label">Correct single account</div>
+            <div class="check-desc">One account only. Confirm this is your registered challenge account.</div>
+          </div>
+        </div>
+
+        <div class="check-item" data-section="rules" onclick="toggle(this)">
+          <div class="check-top">
+            <div class="check-box"><span class="check-icon">✓</span></div>
+            <span class="check-tag tag-empty">–</span>
+          </div>
+          <div class="check-content">
+            <div class="check-label">Profit target status</div>
+            <div class="check-desc">S1 = 8% · S2 = 5% realized profit. Close all before advancing.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══════════ SECTION 4: Mindset ═══════════ -->
+    <div class="section sec-mental">
+      <div class="section-header">
+        <div class="section-icon">🧠</div>
+        <span class="section-title">Mindset &amp; Execution</span>
+        <span class="section-badge" id="badge-mental">0 / 3</span>
+      </div>
+
+      <div class="check-grid">
+
+        <div class="check-item" data-section="mental" onclick="toggle(this)">
+          <div class="check-top">
+            <div class="check-box"><span class="check-icon">✓</span></div>
+            <span class="check-tag tag-empty">–</span>
+          </div>
+          <div class="check-content">
+            <div class="check-label">Stop-Loss placed</div>
+            <div class="check-desc">SL placed before entry. Respects daily loss limit.</div>
+          </div>
+        </div>
+
+        <div class="check-item" data-section="mental" onclick="toggle(this)">
+          <div class="check-top">
+            <div class="check-box"><span class="check-icon">✓</span></div>
+            <span class="check-tag tag-empty">–</span>
+          </div>
+          <div class="check-content">
+            <div class="check-label">R:R ≥ 1:2</div>
+            <div class="check-desc">Reward is at least 2× risk after fees.</div>
+          </div>
+        </div>
+
+        <div class="check-item" data-section="mental" onclick="toggle(this)">
+          <div class="check-top">
+            <div class="check-box"><span class="check-icon">✓</span></div>
+            <span class="check-tag tag-empty">–</span>
+          </div>
+          <div class="check-content">
+            <div class="check-label">Strategy aligned</div>
+            <div class="check-desc">Setup matches plan. No FOMO, revenge, or boredom trades.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="action-bar">
+      <button class="btn btn-ghost" onclick="resetAll()">↺ Reset</button>
+      <button class="btn btn-primary" id="tradeBtn" disabled onclick="confirmTrade()">
+        ✓ &nbsp;All Clear — Ready to Trade
+      </button>
+    </div>
+
+    <!-- All-clear banner -->
+    <div class="ready-banner" id="readyBanner">
+      <span class="emoji">🚀</span>
+      <h2>Checklist Complete!</h2>
+      <p>All rules verified. You're cleared to enter your trade. Trade with discipline.</p>
+    </div>
+
+  </main>
+
+  <script>
+    // ── Live date ──
+    function updateDate() {
+      const d = new Date();
+      document.getElementById('liveDate').textContent =
+        d.toLocaleDateString('en-GB', { weekday: 'short', day: '2-digit', month: 'short', year: 'numeric' });
+    }
+    updateDate();
+
+    // ── Track per-section counts ──
+    const sections = { risk: 4, pos: 4, rules: 3, mental: 3 };
+    const total = Object.values(sections).reduce((a, b) => a + b, 0);
+    document.getElementById('progressTotal').textContent = `/ ${total} done`;
+
+    function getChecked(sec) {
+      return document.querySelectorAll(`.check-item[data-section="${sec}"].checked`).length;
+    }
+
+    function getAllChecked() {
+      return document.querySelectorAll('.check-item.checked').length;
+    }
+
+    function updateUI() {
+      const done = getAllChecked();
+      const pct = Math.round((done / total) * 100);
+
+      document.getElementById('progressFill').style.width = pct + '%';
+      document.getElementById('progressNum').textContent = done;
+
+      // Section badges
+      Object.keys(sections).forEach(sec => {
+        document.getElementById(`badge-${sec}`).textContent =
+          `${getChecked(sec)} / ${sections[sec]}`;
+      });
+
+      // Status pill
+      const pill = document.getElementById('statusPill');
+      pill.className = 'status-pill';
+      if (done === 0) {
+        pill.textContent = '⛔ Not Ready — Complete the checklist';
+        pill.classList.add('not-ready');
+      } else if (done < total) {
+        pill.textContent = `⚠️ Partially Complete — ${total - done} item${total - done > 1 ? 's' : ''} remaining`;
+        pill.classList.add('partial');
+      } else {
+        pill.textContent = '✅ All Clear — Ready to Trade';
+        pill.classList.add('ready');
+      }
+
+      // Trade button
+      const btn = document.getElementById('tradeBtn');
+      btn.disabled = done < total;
+    }
+
+    function toggle(el) {
+      el.classList.toggle('checked');
+      document.getElementById('readyBanner').classList.remove('show');
+      updateUI();
+    }
+
+    function resetAll() {
+      document.querySelectorAll('.check-item.checked').forEach(el => el.classList.remove('checked'));
+      document.getElementById('readyBanner').classList.remove('show');
+      updateUI();
+    }
+
+    function confirmTrade() {
+      if (getAllChecked() === total) {
+        document.getElementById('readyBanner').classList.add('show');
+        document.getElementById('readyBanner').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    updateUI();
+
+    // ── 3D mouse-tilt on cards ──
+    document.querySelectorAll('.check-item').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        if (card.classList.contains('checked')) return;
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5; // -0.5 … 0.5
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform =
+          `perspective(700px) rotateX(${(-y * 14).toFixed(2)}deg) rotateY(${(x * 14).toFixed(2)}deg) translateZ(8px)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        if (card.classList.contains('checked')) return;
+        card.style.transform = '';
+      });
+      card.addEventListener('click', () => {
+        card.style.transform = '';
+      });
+    });
+  </script>
+</body>
+
+</html>
