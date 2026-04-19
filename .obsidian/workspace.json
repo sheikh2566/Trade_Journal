@@ -40,9 +40,19 @@
               "icon": "circle-dot-dashed",
               "title": "Journalit"
             }
+          },
+          {
+            "id": "0a606d6986d8b5cc",
+            "type": "leaf",
+            "state": {
+              "type": "journalit-trade-log-view",
+              "state": {},
+              "icon": "folder-tree",
+              "title": "Trade Log"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -217,10 +227,10 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "72b5f22af6606ced",
+  "active": "0a606d6986d8b5cc",
   "lastOpenFiles": [
-    "Checklist.html",
     "Trade Planner.html",
+    "Checklist.html",
     "Risk Calc.html",
     "Final Trade Calc.html",
     "Market Analysis/2026/04/11.md",
