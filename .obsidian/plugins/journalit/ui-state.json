@@ -1,25 +1,32 @@
 {
   "recentItems": [
     {
-      "type": "view",
-      "title": "Trade Log",
-      "viewType": "journalit-trade-log-view",
-      "icon": "folder-tree",
-      "openedAt": "2026-04-19T11:04:37.064Z"
+      "type": "file",
+      "title": "Trade Planner",
+      "path": "Trade Planner.html",
+      "icon": "file-text",
+      "openedAt": "2026-04-20T02:22:15.364Z"
     },
     {
       "type": "file",
       "title": "Checklist",
       "path": "Checklist.html",
       "icon": "file-text",
-      "openedAt": "2026-04-17T11:45:45.102Z"
+      "openedAt": "2026-04-19T11:05:17.513Z"
+    },
+    {
+      "type": "view",
+      "title": "Trade Log",
+      "viewType": "journalit-trade-log-view",
+      "icon": "folder-tree",
+      "openedAt": "2026-04-19T11:05:09.773Z"
     },
     {
       "type": "file",
-      "title": "Trade Planner",
-      "path": "Trade Planner.html",
+      "title": "ETH-110426-T1",
+      "path": "!Journalit/2026/Q2/04/W15/trades/ETH-110426-T1.md",
       "icon": "file-text",
-      "openedAt": "2026-04-17T11:45:43.674Z"
+      "openedAt": "2026-04-19T11:04:43.762Z"
     },
     {
       "type": "file",
@@ -132,13 +139,6 @@
       "path": "!Journalit/2026/Q2/04/W14/W14-Review.md",
       "icon": "file-text",
       "openedAt": "2026-04-05T12:00:58.447Z"
-    },
-    {
-      "type": "file",
-      "title": "ETH-010426-T1",
-      "path": "!Journalit/2026/Q2/04/W14/trades/ETH-010426-T1.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-05T11:58:22.490Z"
     }
   ],
   "gettingStartedDismissed": true,
