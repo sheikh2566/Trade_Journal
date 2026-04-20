@@ -12,7 +12,7 @@
     "use24HourTime": false,
     "skipWeekends": false,
     "weekStartDay": "monday",
-    "useDirectPnLInput": true,
+    "useDirectPnLInput": false,
     "useDollarValueInput": false,
     "maeMfeInputMode": "dollar",
     "tradingDayCutoffTime": "00:00",

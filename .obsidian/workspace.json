@@ -99,7 +99,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "20c6a57e5d2e7e8c",
@@ -215,7 +216,7 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "22bbdcd2c8ed6007",
+  "active": "c30f6fa613232701",
   "lastOpenFiles": [
     "Checklist.html",
     "!Journalit/2026/Q2/04/W15/trades/ETH-110426-T1.md",

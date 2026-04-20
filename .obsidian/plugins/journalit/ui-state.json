@@ -1,6 +1,13 @@
 {
   "recentItems": [
     {
+      "type": "view",
+      "title": "Trade Log",
+      "viewType": "journalit-trade-log-view",
+      "icon": "folder-tree",
+      "openedAt": "2026-04-20T02:27:39.699Z"
+    },
+    {
       "type": "file",
       "title": "Trade Planner",
       "path": "Trade Planner.html",
@@ -13,13 +20,6 @@
       "path": "Checklist.html",
       "icon": "file-text",
       "openedAt": "2026-04-19T11:05:17.513Z"
-    },
-    {
-      "type": "view",
-      "title": "Trade Log",
-      "viewType": "journalit-trade-log-view",
-      "icon": "folder-tree",
-      "openedAt": "2026-04-19T11:05:09.773Z"
     },
     {
       "type": "file",
