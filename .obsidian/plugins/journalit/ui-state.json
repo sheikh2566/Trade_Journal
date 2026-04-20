@@ -2,6 +2,13 @@
   "recentItems": [
     {
       "type": "view",
+      "title": "Account Dashboard",
+      "viewType": "account-dashboard",
+      "icon": "users",
+      "openedAt": "2026-04-20T09:28:43.269Z"
+    },
+    {
+      "type": "view",
       "title": "Trade Log",
       "viewType": "journalit-trade-log-view",
       "icon": "folder-tree",
@@ -41,13 +48,6 @@
       "viewType": "journalit-dashboard-view",
       "icon": "grip",
       "openedAt": "2026-04-14T15:04:55.886Z"
-    },
-    {
-      "type": "view",
-      "title": "Account Dashboard",
-      "viewType": "account-dashboard",
-      "icon": "users",
-      "openedAt": "2026-04-14T15:04:48.268Z"
     },
     {
       "type": "view",
