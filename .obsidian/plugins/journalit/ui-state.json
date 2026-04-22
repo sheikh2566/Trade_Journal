@@ -1,11 +1,25 @@
 {
   "recentItems": [
     {
+      "type": "file",
+      "title": "Trade Planner",
+      "path": "Trade Planner.html",
+      "icon": "file-text",
+      "openedAt": "2026-04-22T03:00:19.380Z"
+    },
+    {
+      "type": "file",
+      "title": "Checklist",
+      "path": "Checklist.html",
+      "icon": "file-text",
+      "openedAt": "2026-04-20T16:50:24.711Z"
+    },
+    {
       "type": "view",
       "title": "Account Dashboard",
       "viewType": "account-dashboard",
       "icon": "users",
-      "openedAt": "2026-04-20T09:28:43.269Z"
+      "openedAt": "2026-04-20T16:50:22.724Z"
     },
     {
       "type": "view",
@@ -13,20 +27,6 @@
       "viewType": "journalit-trade-log-view",
       "icon": "folder-tree",
       "openedAt": "2026-04-20T02:27:39.699Z"
-    },
-    {
-      "type": "file",
-      "title": "Trade Planner",
-      "path": "Trade Planner.html",
-      "icon": "file-text",
-      "openedAt": "2026-04-20T02:22:15.364Z"
-    },
-    {
-      "type": "file",
-      "title": "Checklist",
-      "path": "Checklist.html",
-      "icon": "file-text",
-      "openedAt": "2026-04-19T11:05:17.513Z"
     },
     {
       "type": "file",

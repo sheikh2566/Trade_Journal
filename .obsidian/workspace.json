@@ -41,8 +41,7 @@
               "title": "Journalit"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -217,11 +216,11 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "c30f6fa613232701",
+  "active": "22bbdcd2c8ed6007",
   "lastOpenFiles": [
     "Checklist.html",
-    "!Journalit/2026/Q2/04/W15/trades/ETH-110426-T1.md",
     "Trade Planner.html",
+    "!Journalit/2026/Q2/04/W15/trades/ETH-110426-T1.md",
     "Risk Calc.html",
     "Final Trade Calc.html",
     "Market Analysis/2026/04/11.md",
