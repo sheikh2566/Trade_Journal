@@ -2,10 +2,17 @@
   "recentItems": [
     {
       "type": "file",
+      "title": "6th April 2026",
+      "path": "Market Analysis/6th April 2026.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-23T17:39:49.297Z"
+    },
+    {
+      "type": "file",
       "title": "Trade Planner",
       "path": "Trade Planner.html",
       "icon": "file-text",
-      "openedAt": "2026-04-22T03:00:19.380Z"
+      "openedAt": "2026-04-23T17:39:36.470Z"
     },
     {
       "type": "file",
@@ -62,13 +69,6 @@
       "path": "Market Analysis/2026/04/11.md",
       "icon": "file-text",
       "openedAt": "2026-04-11T18:39:19.488Z"
-    },
-    {
-      "type": "file",
-      "title": "6th April 2026",
-      "path": "Market Analysis/6th April 2026.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-11T18:31:41.377Z"
     },
     {
       "type": "file",
