@@ -12,12 +12,15 @@ Trend:
   - Bearish
 Confidence: ⭐⭐⭐
 ---
-
+# Name:  
 # 📊 Market Analysis: <% tp.date.now("dddd, Do MMMM YYYY, h:mm a") %>
 
 ## <span style="background: rgba(74, 222, 128, 0.1); border: 1px solid #4ade80; color: #4ade80; padding: 4px 12px; border-radius: 20px; font-size: 0.9em; display: inline-flex; align-items: center; gap: 6px;">📈 Technical Analysis</span>
 
-### Name:
+### Chart:
+### 4H:
+
+### 1H:
 
 
 ---

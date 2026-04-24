@@ -1099,8 +1099,8 @@
     "showSyncNotifications": true,
     "showNewTradeNotifications": true,
     "showUpdateNotifications": true,
-    "lastSeenVersion": "1.7.1",
-    "dismissedVersion": "1.7.1",
+    "lastSeenVersion": "1.7.2",
+    "dismissedVersion": "1.7.2",
     "authToken": "",
     "userEmail": "",
     "subscriptionTier": "free",
@@ -1352,6 +1352,18 @@
       "completed": true,
       "skipped": false,
       "completedAt": 1775382203129
+    },
+    "viewGuides": {
+      "schemaVersion": 1,
+      "guides": {
+        "home.main": {
+          "guideId": "home.main",
+          "viewType": "journalit-home-view",
+          "guideVersion": 3,
+          "status": "skipped",
+          "updatedAt": 1777050721167
+        }
+      }
     }
   }
 }

@@ -18,10 +18,13 @@
     "tradingDayCutoffTime": "00:00",
     "breakEvenRangeMin": 0,
     "breakEvenRangeMax": 0,
+    "breakEvenThresholdMode": "fixed",
+    "breakEvenThresholdPercent": 0.05,
     "includeMissedTradesInCalculations": false,
     "defaultRiskAmount": 0,
     "displayRMultiples": false,
     "showCopyTradingPnL": false,
+    "analyticsDateBasis": "entry",
     "lossReview": {
       "enabled": true,
       "sections": [
@@ -1096,7 +1099,7 @@
     "showSyncNotifications": true,
     "showNewTradeNotifications": true,
     "showUpdateNotifications": true,
-    "lastSeenVersion": "1.7.1",
+    "lastSeenVersion": "1.7.2",
     "dismissedVersion": "1.7.1",
     "authToken": "",
     "userEmail": "",
@@ -1115,6 +1118,129 @@
     "event"
   ],
   "symbolMappings": [],
+  "navigation": {
+    "enabled": true,
+    "tabBehavior": "replaceActiveTab",
+    "items": [
+      {
+        "id": "nav-home",
+        "label": "Home",
+        "icon": "circle-dot-dashed",
+        "action": "openHome",
+        "section": "overview",
+        "visible": true,
+        "order": 0
+      },
+      {
+        "id": "nav-dashboard",
+        "label": "Trading Dashboard",
+        "icon": "grip",
+        "action": "openTradingDashboard",
+        "section": "overview",
+        "visible": true,
+        "order": 1
+      },
+      {
+        "id": "nav-trade-log",
+        "label": "Trade Log",
+        "icon": "folder-tree",
+        "action": "openTradeLog",
+        "section": "overview",
+        "visible": true,
+        "order": 2
+      },
+      {
+        "id": "nav-account-dashboard",
+        "label": "Account Dashboard",
+        "icon": "users",
+        "action": "openAccountDashboard",
+        "section": "overview",
+        "visible": true,
+        "order": 3
+      },
+      {
+        "id": "nav-drc",
+        "label": "Today's DRC",
+        "icon": "calendar",
+        "action": "openTodaysDRC",
+        "section": "reviews",
+        "visible": true,
+        "order": 0
+      },
+      {
+        "id": "nav-weekly",
+        "label": "This Week's Review",
+        "icon": "calendar-check",
+        "action": "openWeeklyReview",
+        "section": "reviews",
+        "visible": true,
+        "order": 1
+      },
+      {
+        "id": "nav-monthly",
+        "label": "This Month's Review",
+        "icon": "calendar-range",
+        "action": "openMonthlyReview",
+        "section": "reviews",
+        "visible": true,
+        "order": 2
+      },
+      {
+        "id": "nav-quarterly",
+        "label": "This Quarter's Review",
+        "icon": "calendar-search",
+        "action": "openQuarterlyReview",
+        "section": "reviews",
+        "visible": true,
+        "order": 3
+      },
+      {
+        "id": "nav-yearly",
+        "label": "This Year's Review",
+        "icon": "calendar-heart",
+        "action": "openYearlyReview",
+        "section": "reviews",
+        "visible": true,
+        "order": 4
+      },
+      {
+        "id": "nav-add-trade",
+        "label": "Add Trade",
+        "icon": "plus-circle",
+        "action": "addTrade",
+        "section": "tools",
+        "visible": true,
+        "order": 0
+      },
+      {
+        "id": "nav-layout-builder",
+        "label": "Layout Builder",
+        "icon": "lucide-blocks",
+        "action": "openLayoutBuilder",
+        "section": "tools",
+        "visible": true,
+        "order": 1
+      },
+      {
+        "id": "nav-csv-import",
+        "label": "CSV Import",
+        "icon": "import",
+        "action": "openCSVImport",
+        "section": "tools",
+        "visible": true,
+        "order": 2
+      },
+      {
+        "id": "nav-position-size",
+        "label": "Position Size Calculator",
+        "icon": "calculator",
+        "action": "openPositionSizeCalculator",
+        "section": "tools",
+        "visible": true,
+        "order": 3
+      }
+    ]
+  },
   "customOptions_options": {
     "instrument": [
       {
@@ -1226,6 +1352,18 @@
       "completed": true,
       "skipped": false,
       "completedAt": 1775382203129
+    },
+    "viewGuides": {
+      "schemaVersion": 1,
+      "guides": {
+        "home.main": {
+          "guideId": "home.main",
+          "viewType": "journalit-home-view",
+          "guideVersion": 3,
+          "status": "skipped",
+          "updatedAt": 1777050721167
+        }
+      }
     }
   }
 }

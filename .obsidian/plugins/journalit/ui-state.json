@@ -5,14 +5,21 @@
       "title": "Altcoin Analysis Template",
       "path": "Market Analysis/Templates/Altcoin Analysis Template.md",
       "icon": "file-text",
-      "openedAt": "2026-04-23T17:44:57.059Z"
+      "openedAt": "2026-04-23T17:54:12.638Z"
+    },
+    {
+      "type": "file",
+      "title": "BTC Analysis Template",
+      "path": "Market Analysis/Templates/BTC Analysis Template.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-23T17:54:11.242Z"
     },
     {
       "type": "file",
       "title": "Untitled",
       "path": "Market Analysis/Untitled.md",
       "icon": "file-text",
-      "openedAt": "2026-04-23T17:44:42.448Z"
+      "openedAt": "2026-04-23T17:53:33.153Z"
     },
     {
       "type": "file",
@@ -132,13 +139,6 @@
       "path": "conflict-files-obsidian-git.md",
       "icon": "file-text",
       "openedAt": "2026-04-11T18:29:09.956Z"
-    },
-    {
-      "type": "file",
-      "title": "Final Trade Calc",
-      "path": "Final Trade Calc.html",
-      "icon": "file-text",
-      "openedAt": "2026-04-07T17:37:06.892Z"
     }
   ],
   "gettingStartedDismissed": true,
@@ -243,8 +243,8 @@
   "lastFuturesSymbol": "ES",
   "lastForexSymbol": "EURUSD",
   "lastAssetType": "crypto",
-  "selectedHomeAccounts": [
-    "BitFunded"
-  ],
-  "homeAccountFilterSelectAllActive": true
+  "selectedHomeAccounts": [],
+  "homeAccountFilterSelectAllActive": true,
+  "persistentCacheVersion": "2026-04-account-identity-v1",
+  "tradeIdentityBackfillVersion": "2026-04-trade-identity-backfill-v1"
 }
