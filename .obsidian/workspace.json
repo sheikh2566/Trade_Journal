@@ -29,8 +29,7 @@
               "title": "Journalit"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -203,8 +202,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -221,7 +219,7 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "d2bf8a2122515f65",
+  "active": "b9cc6d237554bb60",
   "lastOpenFiles": [
     "Watchlist Coins.md",
     "Market Analysis/Templates/Altcoin Analysis Template.md",
