@@ -2,6 +2,20 @@
   "recentItems": [
     {
       "type": "file",
+      "title": "Trade Planner",
+      "path": "Trade Planner.html",
+      "icon": "file-text",
+      "openedAt": "2026-04-27T16:24:37.619Z"
+    },
+    {
+      "type": "file",
+      "title": "Untitled",
+      "path": "Market Analysis/Untitled.md",
+      "icon": "file-text",
+      "openedAt": "2026-04-24T17:12:19.136Z"
+    },
+    {
+      "type": "file",
       "title": "Altcoin Analysis Template",
       "path": "Market Analysis/Templates/Altcoin Analysis Template.md",
       "icon": "file-text",
@@ -13,13 +27,6 @@
       "path": "Market Analysis/Templates/BTC Analysis Template.md",
       "icon": "file-text",
       "openedAt": "2026-04-23T17:54:11.242Z"
-    },
-    {
-      "type": "file",
-      "title": "Untitled",
-      "path": "Market Analysis/Untitled.md",
-      "icon": "file-text",
-      "openedAt": "2026-04-23T17:53:33.153Z"
     },
     {
       "type": "file",
@@ -48,13 +55,6 @@
       "path": "Market Analysis/Untitled 1.md",
       "icon": "file-text",
       "openedAt": "2026-04-23T17:43:05.478Z"
-    },
-    {
-      "type": "file",
-      "title": "Trade Planner",
-      "path": "Trade Planner.html",
-      "icon": "file-text",
-      "openedAt": "2026-04-23T17:41:00.810Z"
     },
     {
       "type": "file",
