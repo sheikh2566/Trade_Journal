@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "2a08d62b3837201d",
+        "id": "a38a6d573b3dc41d",
         "type": "tabs",
         "children": [
           {
-            "id": "b9cc6d237554bb60",
+            "id": "4bdb26f2e79afe5a",
             "type": "leaf",
             "state": {
               "type": "html-view",
@@ -17,16 +17,6 @@
               },
               "icon": "code-glyph",
               "title": "Trade Planner"
-            }
-          },
-          {
-            "id": "d2bf8a2122515f65",
-            "type": "leaf",
-            "state": {
-              "type": "journalit-home-view",
-              "state": {},
-              "icon": "circle-dot-dashed",
-              "title": "Journalit"
             }
           }
         ]
@@ -202,7 +192,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -219,14 +210,14 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "b9cc6d237554bb60",
+  "active": "4bdb26f2e79afe5a",
   "lastOpenFiles": [
+    "Trade Planner.html",
     "Watchlist Coins.md",
     "Market Analysis/Templates/Altcoin Analysis Template.md",
     "Market Analysis/Templates/BTC Analysis Template.md",
     "Checklist.html",
     "Market Analysis/Untitled 1.md",
-    "Trade Planner.html",
     "!Journalit/2026/Q2/04/W17/W17-Review.md",
     "!Journalit/2026/Q2/04/W17",
     "Market Analysis/6th April 2026.md",
