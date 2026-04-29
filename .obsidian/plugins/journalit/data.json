@@ -1362,6 +1362,14 @@
           "guideVersion": 3,
           "status": "skipped",
           "updatedAt": 1777050721167
+        },
+        "tradelog.empty": {
+          "guideId": "tradelog.empty",
+          "viewType": "journalit-trade-log-view",
+          "guideVersion": 1,
+          "status": "in_progress",
+          "currentStepId": "intro",
+          "updatedAt": 1777481525996
         }
       }
     }

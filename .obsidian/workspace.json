@@ -8,7 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4bdb26f2e79afe5a",
+            "id": "7ba2034c72141be5",
+            "type": "leaf",
+            "state": {
+              "type": "journalit-home-view",
+              "state": {},
+              "icon": "circle-dot-dashed",
+              "title": "Journalit"
+            }
+          },
+          {
+            "id": "f4f35e2a8b2bddbf",
             "type": "leaf",
             "state": {
               "type": "html-view",
@@ -18,8 +28,19 @@
               "icon": "code-glyph",
               "title": "Trade Planner"
             }
+          },
+          {
+            "id": "de4795a58bdbd947",
+            "type": "leaf",
+            "state": {
+              "type": "journalit-trade-log-view",
+              "state": {},
+              "icon": "folder-tree",
+              "title": "Trade Log"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -210,7 +231,7 @@
       "journalit:Open Journalit": false
     }
   },
-  "active": "4bdb26f2e79afe5a",
+  "active": "de4795a58bdbd947",
   "lastOpenFiles": [
     "Trade Planner.html",
     "Watchlist Coins.md",
